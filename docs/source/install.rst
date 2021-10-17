@@ -6,7 +6,7 @@ Installation
 
 Requirements
 ============
-* Blender_ 2.93 or newer, please install Blender first.
+* Blender_ 2.80 or newer, please install Blender first.
 * ASE_
 
 Optional:
@@ -21,35 +21,58 @@ Optional:
 .. _Pymatgen: https://pymatgen.org/
 .. _scikit-image: https://scikit-image.org/
 
-Install batoms
-======================
-On Linux, go to your Blender python directory, e.g. ``blender-2.93-linux-x64/2.93/python/bin``, run::
+
+Install ASE_ inside Blender
+===============================
+
+
+Then install ASE inside Blender. On Linux, go to your Blender python directory, e.g. ``blender-2.93-linux-x64/2.93/python/bin``, install pip_::
     
     $ ./python3.9 -m ensurepip
-    $ ./pip3 install batoms
+    
+Install ASE_ and scikit-image_ inside Blender::
 
-On Windows, start Blender, open a Python console and run the following code::
+    $ ./pip3 install --upgrade ase
+    
+    $ ./pip3 install scikit-image
+
+On Windows, start Blender (may need administrator), open a Python console and run the following code::
 
     import sys
     import os
     import subprocess
     path = os.path.join(sys.prefix, 'bin', 'python.exe')
     subprocess.call([path, "-m", "ensurepip"])
-    subprocess.call([path, "-m", "pip", "install", "batoms"])
- 
+    subprocess.call([path, "-m", "pip", "install", "--upgrade", "pip"])
+    subprocess.call([path, "-m", "pip", "install", "ase"])
+    subprocess.call([path, "-m", "pip", "install", "scikit-image"])
 
-Install batoms_addon
-========================
 
-- Download the source files from https://github.com/superstar54/batoms_addon. 
 
-- Extract the file, rename the folder to ``batoms_addon``, and move it to ``blender-2.93.4-linux-x64/2.93/scripts/addons/``. 
+
+
+Install batoms inside Blender
+===============================
+
+- Download the source files from https://github.com/superstar54/beautiful-atoms. 
+
+- Extract the file, rename the folder to ``batoms``, and move it to ``blender-2.93.4-linux-x64/2.93/scripts/addons/``. 
 
 - Enable the addon in the Preferences setting. Please vist here to learn how to enable an addon. 
 https://docs.blender.org/manual/en/latest/editors/preferences/addons.html. Or, you can open a Blender Python console, and run the following code to enable the batoms_addon::
 
     import addon_utils
     addon_utils.enable('batoms_addon', default_set=True)
+
+Install batoms-api on your computer
+====================================
+
+On Windows, suggest to install Python with ``Anaconda``, https://docs.anaconda.com/anaconda/install/windows/
+
+First install ASE on your computer. On Windows, open Anaconda Prompt, on Linux, open a terminal, and run::
+    
+    $ pip3 install --upgrade ase
+    $ pip3 install batoms-api
 
 
 Test your installation
@@ -65,6 +88,7 @@ Start Blender, in the python console, run:
    :width: 3cm
    
 If you saw a water molecule, congratulations!
+
 
 
 Others

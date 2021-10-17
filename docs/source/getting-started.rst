@@ -29,12 +29,16 @@ Save the aboved code as a python file (eg. yourfile.py), and run in the command 
    blender -b -P yourfile.py
 
 
-- Use ``render`` function to run Blender without run Blender explicitly.
+- Use ``render`` function from ``batoms-api`` to run Blender without run Blender explicitly.
 
 >>> from ase.build import molecule
->>> from batoms import render
+>>> from batoms-api import render
 >>> atoms = molecule('H2O')
 >>> render_input = {'direction': [1, 0, 0], 'output': 'h2o.png',}
 >>> write_blender(atoms, render_input)
+
+- Use ``batoms`` from command line::
+
+   $ batoms 'h2o.xyz' -m '1'
 
 
