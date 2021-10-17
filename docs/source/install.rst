@@ -90,6 +90,7 @@ Start Blender, in the python console, run:
 If you saw a water molecule, congratulations!
 
 
+Please read :ref:`tips` page for more setup.
 
 Others
 ================================

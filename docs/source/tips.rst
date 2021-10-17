@@ -1,8 +1,21 @@
+.. _tips:
+
 =======
 Tips
 =======
 
 The following setting will make manipulating more easy, thus are strongly suggested.
+
+Save the startup file
+===========================
+In Blender, click on the ``File`` dropdown, ``Defaults`` and click ``Save Startup File``. This will save the entire scene for the startup. For example, delete the ``Cube``, and open a python console, then save this scene as startup. 
+
+
+This is the startup scene of mine:
+
+.. image:: _static/figs/startup.png
+   :width: 20cm
+
 
 
 3-button-mouse and Numpad
@@ -35,7 +48,39 @@ Open preference panel and select:
    :width: 15cm
 
 
+
+Load ``Batoms`` module on startup
+=====================================
+
+On linux, in ``/blender-2.93.4-linux-x64/2.93/scripts\modules\console_python.py``, there is some code regarding the imports / convenience variables. 
+
+Find this line:
+
+>>> import bpy
+
+After the above line, add:
+
+>>> from batoms import Batoms
+
+Find this line:
+
+>>> namespace["bpy"] = bpy
+
+After the above line, add:
+
+>>> namespace["batoms"] = batoms
+>>> from batoms.butils import read_batoms_collection_list
+>>> items = read_batoms_collection_list()
+>>> for item in items:
+      namespace[item] = Batoms(item)
+
+This will load ``Batoms`` module and all ``Batoms`` objects on the pytohn console.
+
+Should be similar on Windows and macOS.
+
+
 The following tips are optional.
+
 
 Grid setting
 =======================
