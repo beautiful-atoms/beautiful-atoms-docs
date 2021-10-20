@@ -22,6 +22,12 @@ Known bugs
 Development topics
 =====================
 
+Default custom setting
+--------------------
+
+- Add a custom configuration file (``~/.batomsrc``), which will be load by batoms to modify the default setting, such as atom color and bond style.
+  
+
 Bond
 ----------
 
@@ -44,12 +50,7 @@ Light
 ----------
 
 - For perspective view, ``SUN`` light bound to camera is not good.
-  
 
-GUI
--------
-
-- Add panel for GUI
 
 
 Algorithm
@@ -59,3 +60,19 @@ Algorithm
 - Find high order bond for aromatics. (eg. using CSD Python API, https://downloads.ccdc.cam.ac.uk/documentation/API/descriptive_docs/substructure_searching.html#)
 - Faster bond-search algorithm.
 - More robust cavity search algorithm.
+  
+Occupancy
+---------------
+
+- How to handle fractional occupancy site?
+
+
+Interface
+------------------
+
+- add support for open-babel. (PyBel)
+
+GUI
+------------------
+
+- Add ``batoms`` commands in the menu (eg. right click menu)

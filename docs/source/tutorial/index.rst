@@ -20,4 +20,5 @@ Tutorials
    blender
    export
    thridparty/index
+   copy
 

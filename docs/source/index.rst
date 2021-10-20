@@ -3,7 +3,7 @@
 ===============================================
 Welcome to Beautiful Atoms's documentation!
 ===============================================
-Beautiful Atoms is a Python package for editing and rendering atoms and molecules objects using blender. A Python interface that allows for automating workflows.
+Beautiful Atoms is a Python package for editing and rendering atoms and molecules objects using Blender. A Python interface that allows for automating workflows.
 
 >>> from batoms import Batoms
 >>> h2o = Batoms('h2o', {'O': [[0, 0, 0.40]], 'H': [[0, -0.76, -0.2], [0, 0.76, -0.2]]})
@@ -31,6 +31,7 @@ Features:
    getting-started
    tutorial/index
    module/index
+   gui/index
    advanced/index
    gallery
    tips

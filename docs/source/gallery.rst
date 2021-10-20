@@ -84,18 +84,32 @@ Nanoparticle
    * - :download:`gallery_wulff.py <_static/gallery_wulff.py>`
 
 
-Surface
+Defect
 ==============
 
+Dislocation
+-----------------------
 
-Oxide surface
------------------
+.. image:: _static/figs/gallery_dislocation.png
+   :width: 15cm
+
+:download:`gallery_dislocation.py <_static/gallery_dislocation.py>`
+
+
+Vacancy
+------------------------
+
+.. image:: _static/figs/vacancy-au111-cycles.png
+   :width: 15cm
+
+:download:`gallery_vacancy.py <_static/gallery_vacancy.py>`
+
 
 
 
 
 View
-----------------
+===========
 
 .. list-table::
    :widths: 25 25 25
@@ -137,7 +151,7 @@ Isosurface
 ============
 
 .. image:: _static/figs/volume_h2o.png
-   :width: 6cm
+   :width: 10cm
 
 :download:`volume_h2o.py <_static/volume_h2o.py>`
 
@@ -145,7 +159,7 @@ Animation
 ============
 
 .. image:: _static/figs/animation_c2h6so.gif
-   :width: 6cm
+   :width: 10cm
 
 :download:`animation.py <_static/animation.py>`
 
@@ -154,7 +168,7 @@ Motion blur
 -------------
 
 .. image:: _static/figs/motion_blur_h2o.png
-   :width: 6cm
+   :width: 10cm
 
 :download:`motion_blur_h2o.py <_static/motion_blur_h2o.py>`
 
@@ -163,7 +177,7 @@ Others
 ============
 
 .. image:: _static/figs/monolayer.png
-   :width: 6cm
+   :width: 10cm
 
 
 
