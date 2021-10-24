@@ -93,6 +93,20 @@ One can change color for a bond pair.
 .. image:: ../_static/figs/bondsetting_ch4_3.png
    :width: 5cm
 
+
+High order bond
+=====================
+
+One can change bond order by:
+
+>>> co2.bondsetting['C-O'].order = 2
+>>> co2.model_type = 2
+
+
+.. image:: ../_static/figs/bondsetting_order.png
+   :width: 5cm
+
+
 List of all Methods
 ===================
 

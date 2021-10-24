@@ -17,6 +17,7 @@ Optional:
 
 .. _Blender: https://www.blender.org/
 .. _Python: https://www.python.org/
+.. _pip: https://pypi.org/project/pip/
 .. _ASE: https://wiki.fysik.dtu.dk/ase/index.html
 .. _Pymatgen: https://pymatgen.org/
 .. _scikit-image: https://scikit-image.org/
@@ -64,6 +65,11 @@ https://docs.blender.org/manual/en/latest/editors/preferences/addons.html. Or, y
     import addon_utils
     addon_utils.enable('batoms_addon', default_set=True)
 
+.. note::
+    On Windows, Blender is in folder like ``C:\\Program Files\\Blender Foundation\\Blender\\``.
+    On MacOS, Blender is in ``/Applications/Blender.app/Contents/MacOS/Blender``.
+    See the directory layout docs. https://docs.blender.org/manual/en/dev/advanced/blender_directory_layout.html#blender-directory-layout
+
 Install batoms-api on your computer
 ====================================
 
@@ -73,6 +79,14 @@ First install ASE on your computer. On Windows, open Anaconda Prompt, on Linux, 
     
     $ pip3 install --upgrade ase
     $ pip3 install batoms-api
+
+Then set a ``BLENDER_COMMAND`` environment variables. On Linux, set these permanently in your :file:`~/.bashrc` file::
+
+    export BLENDER_COMMAND='<path-to-blender>/blender'
+
+On windows, you can add the system environment variables ``BLENDER_COMMAND`` ::
+    
+    'C:\\Program Files\\Blender Foundation\\Blender\\blender.exe'
 
 
 Test your installation

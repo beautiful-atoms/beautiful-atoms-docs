@@ -5,9 +5,9 @@ Export
 
 
 
-Use :meth:`~Batoms.write` to save file. ``local`` keyword to set the relative positions.
+Use :meth:`~Batoms.write` to save file. 
 
+>>> au.write('au111-co.xyz')
 >>> au.write('au111-co.in')
-
->>> au.write('au111-co.in', local = False)
+>>> au.write('POSCAR')
 

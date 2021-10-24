@@ -15,6 +15,8 @@ IDE
 Known bugs
 ===================
 
+- render, get_canvas is wrong when unit cell is not at origin.
+
 - boundary search when some atoms are outside the unit cell.
 
 
