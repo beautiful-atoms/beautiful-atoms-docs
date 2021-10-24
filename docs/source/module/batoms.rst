@@ -13,7 +13,7 @@ The :class:`Batoms` object is a collection of :class:`Batom` object plus :class:
 
 Here, the argument specifies the type of the atoms and their positions. Other
 possible keywords are: ``pbc``, ``cell``, ``atoms``, ``model_type``, ``boundary``, ``show_unit_cell``, ``isosurface``, ``kind_props``,
-``color``, ``add_bonds``, ``remove_bonds`` and ``draw``.
+``color``, and ``draw``.
 
 
 One get and set ``model_type``, ``pbc``, ``show_unit_cell``, ``cell`` and ``boundary`` by:

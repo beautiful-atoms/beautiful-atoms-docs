@@ -11,7 +11,7 @@ cto['Ca'].bsdf = {'Base Color': [0, 1, 0, 1.0], 'Metallic': 0.9, 'Specular': 1.0
 cto['Ti'].bsdf = {'Base Color': [0.7, 0.8, 0, 1.0], 'Metallic': 0.2, 'Specular': 0.2, 'Roughness': 0.6 }
 cto.bondsetting[('Ti', 'O')].search = 0
 cto.boundary = 0.01
-cto.bondsetting.remove_bonds(['Ca', 'O'])
+cto.bondsetting.delete(('Ca', 'O'))
 cto.polyhedrasetting['Ti'].color = [0.7, 0.4, 0.0, 1.0]
 cto.render.set_world(color = [0.2, 0.2, 0.2, 1.0])
 draw_plane(location = [0, 0, -cto['Ti'].size[0]], size = 200, color = (0.9, 0.9, 0.9, 1))
