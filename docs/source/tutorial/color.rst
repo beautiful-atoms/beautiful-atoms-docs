@@ -40,12 +40,12 @@ Bond
 
 One can print the default color by:
 
->>> ch4.bondsetting['C-H'].color1[:]
+>>> ch4.bondsetting[('C', 'H')].color1[:]
 
 One can change color for bond pair ``C-H`` by:
 
->>> ch4.bondsetting['C-H'].color1 = [0.8, 0.1, 0.3, 0.5]
->>> ch4.bondsetting['C-H'].color2 = [0.1, 0.3, 0.2, 1.0]
+>>> ch4.bondsetting[('C', 'H')].color1 = [0.8, 0.1, 0.3, 0.5]
+>>> ch4.bondsetting[('C', 'H')].color2 = [0.1, 0.3, 0.2, 1.0]
 >>> ch4.model_type = 1
 
 ``color1`` is for the first species in the bond pair (``C``), and ``color2`` is for the second species (``H``).
@@ -70,7 +70,7 @@ One can print the default color by:
 One can change color for Polyhedra ``C`` by:
 
 >>> ch4.polyhedrasetting['C'].color = [0.8, 0.1, 0.3, 0.8]
->>> ch4.bondsetting['C-H'].polyhedra = True
+>>> ch4.bondsetting[('C', 'H')].polyhedra = True
 >>> ch4.model_type = 2
 
 .. list-table::

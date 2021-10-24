@@ -62,6 +62,11 @@ Algorithm
 - Find high order bond for aromatics. (eg. using CSD Python API, https://downloads.ccdc.cam.ac.uk/documentation/API/descriptive_docs/substructure_searching.html#)
 - Faster bond-search algorithm.
 - More robust cavity search algorithm.
+
+Symmetry
+-------------
+- Check symmetry of structure
+- Add symmetry operations on Miller indices
   
 Occupancy
 ---------------

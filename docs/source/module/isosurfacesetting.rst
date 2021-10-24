@@ -21,8 +21,8 @@ You can print the default isosurfacesetting by:
 
 One add a isosurfacesetting by. 
 
->>> h2o.isosurfacesetting[1] = [0.002, [1, 1, 0, 0.5]]
->>> h2o.isosurfacesetting[2] = [-0.002, [0, 0, 0.8, 0.5]]
+>>> h2o.isosurfacesetting[1] = {'level': 0.002, 'color': [1, 1, 0, 0.5]}
+>>> h2o.isosurfacesetting[2] = {'level': -0.002, 'color': [0, 0, 0.8, 0.5]}
 >>> h2o.draw_isosurface()
 
 .. image:: ../_static/figs/volume_h2o.png

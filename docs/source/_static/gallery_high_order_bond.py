@@ -21,9 +21,9 @@ c6h6.render.run(engine = 'cycles', ortho_scale = 10, ratio = 0.8, output = 'figs
 for i in range(6):
     c6h6.replace('C', 'C_%s'%i, [0])
 
-c6h6.bondsetting['C_1-C_0'].order = 2
-c6h6.bondsetting['C_3-C_2'].order = 2
-c6h6.bondsetting['C_5-C_4'].order = 2
+c6h6.bondsetting[('C_1', 'C_0')].order = 2
+c6h6.bondsetting[('C_3', 'C_2')].order = 2
+c6h6.bondsetting[('C_5', 'C_4')].order = 2
 c6h6.model_type = 1
 draw_plane(location = [0, 0, c6h6['C_0'][0][2] - c6h6['C_0'].size[0]], size = 400, color = (0.1, 0.1, 0.1, 1))
 c6h6.render.light_type = 'POINT'

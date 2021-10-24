@@ -9,7 +9,7 @@ fe = bulk('Fe', cubic = True)
 del fe[0]
 fe = fe*[7, 6, 6]
 fe = Batoms(label = 'Fe', atoms = fe)
-fe.bondsetting['Fe-Fe'] = {'species1': 'Fe', 
+fe.bondsetting[('Fe', 'Fe')] = {'species1': 'Fe', 
                            'species2': 'Fe', 
                            'max': 3.5, 
                            'color1': [0.2, 0.8, 0.4, 1.0]}
