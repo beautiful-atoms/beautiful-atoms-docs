@@ -44,7 +44,7 @@ In order to represent the cavity by a polyhedral model, we add a ghost site (spe
 >>> x = Batoms('x', {'X':[pos]})
 >>> c60 = c60 + x
 >>> # add bond ()`X', 'C`), and set polyhedra to True
->>> c60.bondsetting[('X', 'C')] = [0, 10, 2, True]
+>>> c60.bondsetting[('X', 'C')] = {'species1': 'X', 'species2': 'C', 'min': 0, 'max': 10, 'search': 2, 'polyhedra': True}
 >>> c60.polyhedrasetting['X'].color = [0.4, 0.4, 0, 1.0]
 >>> c60.model_type = 1
 >>> # draw polyhedral model manually and not show the edge

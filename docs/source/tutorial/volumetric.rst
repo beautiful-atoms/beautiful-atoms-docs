@@ -19,7 +19,7 @@ You can print the default isosurfacesetting by:
 
 One add a isosurfacesetting by:
 
->>> h2o.isosurfacesetting[2] = [-0.002, [0, 0, 0.8, 0.5]]
+>>> h2o.isosurfacesetting[2] = {'level': -0.002, 'color': [0, 0, 0.8, 0.5]}
 >>> h2o.draw_isosurface()
 
 The first value ``-0.002`` is the level for the isosurface, the second value ``[0, 0, 0.8, 0.5]`` is the color. The last value of the color ``0.5`` is used to set the ``transparency``.
