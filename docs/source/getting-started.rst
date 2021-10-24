@@ -35,7 +35,7 @@ Save the aboved code as a python file (eg. yourfile.py), and run in the command 
 >>> from batoms_api import render
 >>> atoms = molecule('H2O')
 >>> render_input = {'direction': [1, 0, 0], 'output': 'h2o.png',}
->>> write_blender(atoms, render_input)
+>>> render(atoms, render_input=render_input)
 
 - Use ``batoms`` from command line::
 
