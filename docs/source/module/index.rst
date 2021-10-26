@@ -15,5 +15,6 @@ Quick links:
   * - :mod:`Bondsetting <batoms.bondsetting>`
   * - :mod:`Polyhedrasetting <batoms.polyhedrasetting>`
   * - :mod:`Isosurfacesetting <batoms.isosurfacesetting>`
+  * - :mod:`Planesetting <batoms.Planesetting>`
   * - :mod:`Render <batoms.render>`
 

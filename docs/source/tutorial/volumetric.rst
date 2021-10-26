@@ -40,3 +40,13 @@ The name of a isosurfacesetting can be any string, for example:
 .. image:: ../_static/figs/volume_h2o.png
    :width: 10cm
 
+
+.. note::
+   If the atoms and the isosurface are not in the same place, probably because the cube file has a origin not at (0, 0, 0). Please read the origin and shfit the atoms:
+
+   >>> cube = read('test.cube', format='cube', read_data=True, full_output=True)
+   >>> volume = cube['data']
+   >>> atoms = cube['atoms']
+   >>> origin = cube['origin']
+   >>> atoms.translate(-origin[0:3])
+   >>> h2o = Batoms('h2o', atoms = atoms, volume = volume, draw = False)

@@ -64,10 +64,11 @@ Search bond mode
  
  - ``0``  Do not search atoms beyond the boundary
  - ``1``  Search additional atoms if species1 is included in the boundary
+ - ``2``  Search bonded atoms of species1 or species2 recursively. This mode is the used for searching molecules.
 
 To change setting for ``Search_bond`` by:
 
->>> tio2.bondsetting[('Ti', 'O')].polyhedra = True
+>>> tio2.bondsetting[('Ti', 'O')].search = 0
 >>> tio2.update_boundary()
 >>> tio2.model_type = 2
 
@@ -99,9 +100,12 @@ High order bond
 
 One can change bond order by:
 
+>>> from ase.build import molecule
+>>> from batoms import Batoms
+>>> co2 = Batoms('co2', atoms = molecule('CO2'))
 >>> co2.bondsetting[('C', 'O')].order = 2
->>> co2.model_type = 2
-
+>>> co2.bondsetting[('C', 'O')].width = 0.05
+>>> co2.model_type = 1
 
 .. image:: ../_static/figs/bondsetting_order.png
    :width: 5cm

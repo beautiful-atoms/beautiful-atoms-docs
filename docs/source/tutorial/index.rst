@@ -10,6 +10,7 @@ Tutorials
    render/index
    bond_polyhedra
    volumetric
+   plane
    boundary
    animation
    color

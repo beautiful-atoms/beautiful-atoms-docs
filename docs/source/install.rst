@@ -31,7 +31,7 @@ Then install ASE inside Blender. On Linux, go to your Blender python directory, 
     
     $ ./python3.9 -m ensurepip
     
-On MacOS you may additionally have to run the following to get the pip execurable installed.
+On MacOS you may additionally have to run the following to get the pip execurable installed::
 
     $ ./python3.9 -m pip install --upgrade pip
     

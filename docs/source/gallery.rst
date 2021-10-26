@@ -55,7 +55,7 @@ MOF
 -------------------
 
 .. image:: _static/figs/gallery_cavity.png
-   :width: 15cm
+   :width: 10cm
 
 :download:`gallery_cavity.py <_static/gallery_cavity.py>`
 
@@ -67,7 +67,7 @@ C60
 -------------------
 
 .. image:: _static/figs/gallery_c60.png
-   :width: 15cm
+   :width: 10cm
 
 :download:`gallery_c60.py <_static/gallery_c60.py>`
 
@@ -76,12 +76,13 @@ C60
 Nanoparticle
 ---------------------
 
-.. list-table::
-   :widths: 10
 
-   * - Wulff
-   * -  .. image:: _static/figs/gallery_wulff.png 
-   * - :download:`gallery_wulff.py <_static/gallery_wulff.py>`
+.. image:: _static/figs/gallery_wulff.png
+   :width: 10cm
+
+:download:`gallery_wulff.py <_static/gallery_wulff.py>`
+
+
 
 
 Defect
@@ -91,7 +92,7 @@ Dislocation
 -----------------------
 
 .. image:: _static/figs/gallery_dislocation.png
-   :width: 15cm
+   :width: 10cm
 
 :download:`gallery_dislocation.py <_static/gallery_dislocation.py>`
 
@@ -100,12 +101,27 @@ Vacancy
 ------------------------
 
 .. image:: _static/figs/vacancy-au111-cycles.png
-   :width: 15cm
+   :width: 10cm
 
 :download:`gallery_vacancy.py <_static/gallery_vacancy.py>`
 
 
 
+Lattice plane
+==============
+
+.. image:: _static/figs/gallery_planesetting_plane.png
+   :width: 10cm
+
+:download:`gallery_lattice_plane.py <_static/gallery_lattice_plane.py>`
+
+Crystal shape
+==============
+
+.. image:: _static/figs/gallery_planesetting_crystal.png
+   :width: 10cm
+
+:download:`gallery_crystal_shape.py <_static/gallery_crystal_shape.py>`
 
 
 View
