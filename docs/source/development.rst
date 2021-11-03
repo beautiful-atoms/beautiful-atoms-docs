@@ -15,8 +15,6 @@ IDE
 Known bugs
 ===================
 
-- render, get_canvas is wrong when unit cell is not at origin.
-
 - boundary search when some atoms are outside the unit cell.
 
 
@@ -30,10 +28,10 @@ Default custom setting
 - Add a custom configuration file (``~/.batomsrc``), which will be load by batoms to modify the default setting, such as atom color and bond style.
   
 
-Bond
-----------
+bond
+-----
 
-- Draw high order bonds.
+- add() function, set different options. (1) use default (2) use cutoff to build (3) copy from other.
 
 
 Polyhedra
@@ -47,39 +45,79 @@ Atom
 - Add vectors (arrows) to atoms to represent magnetic moments and so on
 - boundary cut the original atoms in batoms, how to handle?
 - Add particle system
+- Ellipsoid
+
+Cell
+-------------
+
+- In Gui, use transform matrix instead of supercell
+- draw reciprocal cell
+
 
 Light
 ----------
 
 - For perspective view, ``SUN`` light bound to camera is not good.
 
+Material
+--------------
 
+- add support for mix materials nodes
+
+
+
+Volumetric
+-------------
+
+- Make 2D slices of volumetric data more beautiful
 
 Algorithm
 ------------------
 
-- Add 2D slices of volumetric data in their 3D image.
+
 - Find high order bond for aromatics. (eg. using CSD Python API, https://downloads.ccdc.cam.ac.uk/documentation/API/descriptive_docs/substructure_searching.html#)
 - Faster bond-search algorithm.
 - More robust cavity search algorithm.
 
-Symmetry
+Animations
 -------------
-- Check symmetry of structure
-- Add symmetry operations on Miller indices
-  
+
+- Vibrations
+
 Occupancy
 ---------------
 
-- How to handle fractional occupancy site?
+- How to handle fractional occupancy site? (eg. in ``Batom``, element is a list)
 
 
 Interface
 ------------------
 
+- add support for MaterialProject
+- add support for NOMAD 
 - add support for open-babel. (PyBel)
 
 GUI
 ------------------
 
+
+- Add view from unit cell axis (a, b, c)
 - Add ``batoms`` commands in the menu (eg. right click menu)
+
+Force field
+-----------------
+
+- Can we enforce the force filed while editing (grab rotation)!!!? Could be modal.
+- Add force field to relax the structure (by ASE)
+
+
+Plugin (maybe)
+----------------
+
+- Create a new github repository to shafe Plugin
+
+
+Language
+--------------------
+
+- docs translated into other languages

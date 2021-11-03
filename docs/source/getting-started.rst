@@ -16,7 +16,7 @@ Start Blender, and open a Python console, and run
 
 Rendering the image
 
->>> h2o.render.run(direction = [1, 0 ,0], engine = 'eevee')
+>>> h2o.render.run(direction = [1, 0 ,0], engine = 'eevee', output = 'h2o.png')
 
 .. image:: _static/figs/h2o.png
    :width: 5cm

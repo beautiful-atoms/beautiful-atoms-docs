@@ -19,7 +19,7 @@ Then load it to :meth:`~Batoms.load_frames`:
 
 >>> from batoms import Batoms
 >>> c2h6so = Batoms(label = 'c2h6so', atoms = images)
->>> c2h6so.load_frames()
+>>> c2h6so.set_frames()
 
 
 You can now play the animation using `Timeline` window in Blender. 

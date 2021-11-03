@@ -12,7 +12,9 @@ Requirements
 Optional:
 
 * Scikit-image_
+* spglib_
 * Pymatgen_
+* matplotlib_
 
 
 .. _Blender: https://www.blender.org/
@@ -21,18 +23,16 @@ Optional:
 .. _ASE: https://wiki.fysik.dtu.dk/ase/index.html
 .. _Pymatgen: https://pymatgen.org/
 .. _scikit-image: https://scikit-image.org/
-
+.. _spglib: https://spglib.github.io/spglib/python-spglib.html
+.. _matplotlib: https://matplotlib.org/stable/users/installing.html
 
 Install ASE_ inside Blender
 ===============================
 
 
-Then install ASE inside Blender. On Linux, go to your Blender python directory, e.g. ``blender-2.93-linux-x64/2.93/python/bin``, install pip_::
+Then install ASE inside Blender. On Linux and MacOS, go to your Blender python directory, e.g. ``blender-2.93-linux-x64/2.93/python/bin``, install pip_::
     
     $ ./python3.9 -m ensurepip
-    
-On MacOS you may additionally have to run the following to get the pip execurable installed::
-
     $ ./python3.9 -m pip install --upgrade pip
     
 Install ASE_ and scikit-image_ inside Blender::
@@ -41,16 +41,15 @@ Install ASE_ and scikit-image_ inside Blender::
     
     $ ./pip3 install scikit-image
 
-On Windows, start Blender (may need administrator), open a Python console and run the following code::
+    $ ./pip3 install spglib
 
-    import sys
-    import os
-    import subprocess
-    path = os.path.join(sys.prefix, 'bin', 'python.exe')
-    subprocess.call([path, "-m", "ensurepip"])
-    subprocess.call([path, "-m", "pip", "install", "--upgrade", "pip"])
-    subprocess.call([path, "-m", "pip", "install", "ase"])
-    subprocess.call([path, "-m", "pip", "install", "scikit-image"])
+On Windows, start Blender (need administrator), open a Python console and run the following code::
+
+    import pip
+    pip.main(['install', 'ase'])
+    pip.main(['install', 'scikit-image'])
+
+    For ``spglib``, you may need to install Microsoft visual C++ Build Tools.
 
 
 
@@ -64,10 +63,10 @@ Install batoms inside Blender
 - Extract the file, rename the folder to ``batoms``, and move it to ``blender-2.93.4-linux-x64/2.93/scripts/addons/``. 
 
 - Enable the addon in the Preferences setting. Please vist here to learn how to enable an addon. 
-https://docs.blender.org/manual/en/latest/editors/preferences/addons.html. Or, you can open a Blender Python console, and run the following code to enable the batoms_addon::
+https://docs.blender.org/manual/en/latest/editors/preferences/addons.html. Or, you can open a Blender Python console, and run the following code to enable the batoms::
 
     import addon_utils
-    addon_utils.enable('batoms_addon', default_set=True)
+    addon_utils.enable('batoms', default_set=True)
 
 .. note::
     On Windows, Blender is in folder like ``C:\\Program Files\\Blender Foundation\\Blender\\``.

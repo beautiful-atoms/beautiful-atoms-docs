@@ -163,13 +163,25 @@ Model type
 
 
 
-Isosurface
-============
+Volumetric data
+======================
 
-.. image:: _static/figs/volume_h2o.png
+Isosurface
+--------------
+
+.. image:: _static/figs/volume_h2o_isosurface.png
    :width: 10cm
 
 :download:`volume_h2o.py <_static/volume_h2o.py>`
+
+
+
+2D slicing
+---------------------
+
+.. image:: ../_static/figs/volume_h2o_slicing_bwr.png
+   :width: 8cm
+
 
 Animation
 ============
