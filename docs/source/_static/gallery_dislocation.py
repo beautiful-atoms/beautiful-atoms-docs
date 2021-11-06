@@ -9,10 +9,7 @@ fe = bulk('Fe', cubic = True)
 del fe[0]
 fe = fe*[7, 6, 6]
 fe = Batoms(label = 'Fe', atoms = fe)
-fe.bondsetting[('Fe', 'Fe')] = {'species1': 'Fe', 
-                           'species2': 'Fe', 
-                           'max': 3.5, 
-                           'color1': [0.2, 0.8, 0.4, 1.0]}
+fe.bondsetting[('Fe', 'Fe')] = {'max': 3.5, 'color1': [0.2, 0.8, 0.4, 1.0]}
 #-------------------------------------
 # click "Tab" key to "Eidt" mode:
 # select one column of Fe atoms and delete (click "X")

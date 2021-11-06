@@ -21,18 +21,18 @@ Here we set different color for different platinum atoms:
 
 >>> from ase.build import fcc111
 >>> from batoms import Batoms
+>>> import numpy as np
 >>> atoms = fcc111('Pt', (7, 7, 3), vacuum=3.0)
->>> kind_props = {
->>> 'Pt_0': {'color': [0.8, 0.8, 0.9]},
->>> 'Pt_1': {'color': [0.8, 0.5, 0.8]},
->>> 'Pt_2': {'color': [0, 0.7, 0.4]},
->>> }
->>> atoms.info['species'] = []
+>>> atoms.new_array('species', np.array(atoms.get_chemical_symbols(), dtype = 'U10'))
 >>> for i in range(len(atoms)):
 >>>     ind = int((atoms[i].x/5))
 >>>     kind = atoms[i].symbol + '_{0}'.format(ind)
->>>     atoms.info['species'].append(kind)
->>> pt = Batoms(label = 'pt111', atoms = atoms, kind_props = kind_props)
+>>>     atoms.arrays['species'][i] = kind
+
+>>> pt = Batoms(label = 'pt111', atoms = atoms)
+>>> pt['Pt_0'].color = [0.8, 0.8, 0.9]
+>>> pt['Pt_1'].color = [0.8, 0.5, 0.8]
+>>> pt['Pt_2'].color = [0, 0.7, 0.4]
 
 .. image:: ../_static/figs/pt111-species.png
    :width: 8cm

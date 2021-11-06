@@ -15,6 +15,7 @@ IDE
 Known bugs
 ===================
 
+- ``batoms.Rotate`` crash if not in 'VIEW_3D'
 - boundary search when some atoms are outside the unit cell.
 
 
