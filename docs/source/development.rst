@@ -101,7 +101,6 @@ Interface
 GUI
 ------------------
 
-
 - Add view from unit cell axis (a, b, c)
 - Add ``batoms`` commands in the menu (eg. right click menu)
 

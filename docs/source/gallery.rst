@@ -6,6 +6,7 @@ Molecule
 =============
 
 
+
 .. list-table::
    :widths: 25 25
 
@@ -13,12 +14,28 @@ Molecule
      -  |h2o1|
 
 .. |h2o0|  image:: _static/figs/gallery_h2o_ball.png
-   :width: 8cm
+   :width: 5cm
 .. |h2o1|  image:: _static/figs/gallery_h2o_bond.png
-   :width: 8cm
+   :width: 5cm
 
 
 :download:`gallery_molecule.py <_static/gallery_molecule.py>`
+
+High order bond
+--------------------
+.. list-table::
+   :widths: 25 25
+
+   * -  |c6h60|
+     -  |c6h61|
+
+.. |c6h60|  image:: _static/figs/gallery_c6h6_ball.png
+   :width: 5cm
+.. |c6h61|  image:: _static/figs/gallery_c6h6_bond.png
+   :width: 5cm
+
+
+:download:`gallery_high_order_bond.py <_static/gallery_high_order_bond.py>`
 
 
 
@@ -124,6 +141,44 @@ Crystal shape
 :download:`gallery_crystal_shape.py <_static/gallery_crystal_shape.py>`
 
 
+Volumetric data
+======================
+
+Isosurface
+--------------
+
+.. image:: _static/figs/volume_h2o_isosurface.png
+   :width: 10cm
+
+:download:`volume_h2o.py <_static/volume_h2o.py>`
+
+
+
+2D slicing
+---------------------
+
+.. image:: ../_static/figs/volume_h2o_slicing_bwr.png
+   :width: 8cm
+
+
+Animation
+============
+
+.. image:: _static/figs/animation_c2h6so.gif
+   :width: 10cm
+
+:download:`animation.py <_static/animation.py>`
+
+
+Motion blur
+-------------
+
+.. image:: _static/figs/motion_blur_h2o.png
+   :width: 10cm
+
+:download:`motion_blur_h2o.py <_static/motion_blur_h2o.py>`
+
+
 View
 ===========
 
@@ -162,43 +217,6 @@ Model type
 :download:`cyrstal.py <_static/batoms_model_type.py>`
 
 
-
-Volumetric data
-======================
-
-Isosurface
---------------
-
-.. image:: _static/figs/volume_h2o_isosurface.png
-   :width: 10cm
-
-:download:`volume_h2o.py <_static/volume_h2o.py>`
-
-
-
-2D slicing
----------------------
-
-.. image:: ../_static/figs/volume_h2o_slicing_bwr.png
-   :width: 8cm
-
-
-Animation
-============
-
-.. image:: _static/figs/animation_c2h6so.gif
-   :width: 10cm
-
-:download:`animation.py <_static/animation.py>`
-
-
-Motion blur
--------------
-
-.. image:: _static/figs/motion_blur_h2o.png
-   :width: 10cm
-
-:download:`motion_blur_h2o.py <_static/motion_blur_h2o.py>`
 
 
 Others

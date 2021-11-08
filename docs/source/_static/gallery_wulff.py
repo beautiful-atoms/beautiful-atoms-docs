@@ -11,9 +11,7 @@ nano = Batoms('wulff', atoms = atoms)
 nano.show_unit_cell = False
 draw_plane(size = 1000, location = (0, 0, min(nano.positions[:, 2]) - nano['Au'].size[0]),  
         color = [0.9, 0.9, 0.9, 1.0])
-nano.render.light_type = 'POINT'
-nano.render.lock_light_to_camera = False
-nano.render.light_energy = 500000
-nano.render.light_loc = [30, 4, 30]
-nano.render.run([1, -0.3, 0.4], canvas = np.array([[-20, -20, -10], [20, 20, 20]]), 
-        engine = 'cycles', output = 'gallery_wulff.png')
+nano.render.lights['Default'].energy = 40
+nano.render.lights['Default'].direction = [0.7, 0.2, 1]
+nano.render.run([1, -0.3, 0.4], engine = 'cycles', 
+         padding = 10, output = 'figs/gallery_wulff.png')

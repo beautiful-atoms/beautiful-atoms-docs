@@ -29,6 +29,12 @@ To build up coordination polyhedra, the value for ``polyhedra`` should be set to
 .. image:: ../_static/figs/bondsetting_tio2_1.png
    :width: 8cm
 
+One can ``remove`` or ``add`` a bond pair by:
+
+>>> tio2.bondsetting.remove(['Ti', 'O'])
+>>> tio2.bondsetting.add(['Ti', 'O'])
+
+
 
 Search bond mode
 ==================

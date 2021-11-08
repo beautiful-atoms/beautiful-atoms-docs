@@ -17,4 +17,5 @@ Quick links:
   * - :mod:`Isosurfacesetting <batoms.isosurfacesetting>`
   * - :mod:`Planesetting <batoms.Planesetting>`
   * - :mod:`Render <batoms.render>`
+  * - :mod:`Lights <batoms.light>`
 

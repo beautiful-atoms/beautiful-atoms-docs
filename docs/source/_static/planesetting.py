@@ -9,7 +9,6 @@ au.draw_cell()
 au.draw_lattice_plane()
 au.render.run(direction = [0.2, -1, 0.4], engine = 'eevee', output = 'figs/planesetting_au_plane.png')
 
-
 au.planesetting[(1, 1, 0)].crystal = True
 au.planesetting[(1, 1, 0)].symmetry = True
 au.planesetting[(1, 1, 0)].color = [0, 0, 1, 1]
