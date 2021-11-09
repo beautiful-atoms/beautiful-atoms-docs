@@ -9,5 +9,6 @@ The ``Cell`` panel is used to set propeties related with :mod:`Bcell <batoms>` o
 
 
 .. image:: ../_static/figs/gui_cell.png
-   :width: 7 cm
+   :width: 5 cm
+   :align: right
 

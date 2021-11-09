@@ -5,10 +5,15 @@
 Batom panel
 ==============
 
-The ``Batom`` panel is used to set propeties related with :mod:`Batom <batoms>` object.
+The ``Batom`` panel is used to set properties related with :mod:`Batom <batoms>` object.
 
-``shape``, ``scale`` and ``color``
 
 .. image:: ../_static/figs/gui_batom.png
-   :width: 7 cm
+   :width: 5 cm
+   :align: right
+
+To change properties of species:
+
+- choose a structure or several structures from the viewport.
+- select the new property in the panel.
 

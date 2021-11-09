@@ -13,6 +13,7 @@ mof.draw_cavity_sphere(9.0, boundary = [[0.2, 0.8], [0.2, 0.8], [0.2, 0.8]])
 mof.draw_cell()
 mof.render.set_world(color = [0.2, 0.2, 0.2, 1.0])
 draw_plane(location = [0, 0, 0], size = 200, color = (0.9, 0.9, 0.9, 1))
-mof.render.lights['Default'].energy = 25
-mof.render.run([1, -0.3, 0.3], light_direction = [0.1, 0.5, 1], engine = 'eevee', output = 'gallery_cavity.png')
+mof.render.lights['Default'].energy = 30
+mof.render.lights['Default'].direction = [0.1, 0.5, 1]
+mof.render.run([1, -0.3, 0.3],engine = 'cycles', output = 'figs/gallery_cavity.png')
 

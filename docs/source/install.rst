@@ -128,3 +128,10 @@ On Linux, go to the new python directory, e.g. ``blender-2.93-linux-x64/2.93/pyt
     $ ./pip3 install scikit-image
 
     $ ./pip3 install pymatgen
+
+
+Troubleshooting
+================================
+
+Windows
+-------------

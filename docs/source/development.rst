@@ -17,6 +17,7 @@ Known bugs
 
 - ``batoms.Rotate`` crash if not in 'VIEW_3D'
 - boundary search when some atoms are outside the unit cell.
+- batoms.fragmentate, bondsetting wrong for C6H6
 
 
 
@@ -94,7 +95,6 @@ Occupancy
 Interface
 ------------------
 
-- add support for MaterialProject
 - add support for NOMAD 
 - add support for open-babel. (PyBel)
 
