@@ -29,7 +29,7 @@ Save the aboved code as a python file (eg. yourfile.py), and run in the command 
    blender -b -P yourfile.py
 
 
-- Use ``render`` function from ``batoms-api`` to run Blender without run Blender explicitly.
+- Use ``render`` function from ``batoms_api`` to run Blender without run Blender explicitly.
 
 >>> from ase.build import molecule
 >>> from batoms_api import render

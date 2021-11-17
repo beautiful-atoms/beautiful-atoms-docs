@@ -27,3 +27,5 @@ cnt.render.lights['Default'].energy = 50
 cnt.render.lights['Default'].direction = [0.4, 0.5, 1]
 cnt.render.run([1, -0.3, 0.3], canvas = np.array([[-6, -6, -6], [6, 6, 6]]), 
         engine = 'cycles', output = 'gallery_cnt.png')
+
+# for graphene, use wave modifer

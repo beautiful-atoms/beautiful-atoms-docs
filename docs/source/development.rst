@@ -15,6 +15,7 @@ IDE
 Known bugs
 ===================
 
+- If we registered keyframes. Any change or the batoms has to be registered. How to handle this???
 - ``batoms.Rotate`` crash if not in 'VIEW_3D'
 - boundary search when some atoms are outside the unit cell.
 - batoms.fragmentate, bondsetting wrong for C6H6
@@ -34,7 +35,8 @@ bond
 -----
 
 - add() function, set different options. (1) use default (2) use cutoff to build (3) copy from other.
-
+- test add bond pair separately.
+- use skin to update bond list for animation.
 
 Polyhedra
 ----------------
@@ -52,7 +54,6 @@ Atom
 Cell
 -------------
 
-- In Gui, use transform matrix instead of supercell
 - draw reciprocal cell
 
 
@@ -65,7 +66,6 @@ Material
 --------------
 
 - add support for mix materials nodes
-
 
 
 Volumetric
@@ -84,7 +84,9 @@ Algorithm
 Animations
 -------------
 
+- update the shape keys for batoms.replace and so on
 - Vibrations
+
 
 Occupancy
 ---------------

@@ -99,8 +99,7 @@ PubChem database
 More complicated molecules may be obtained using the PubChem API integration. Here is a example of loading tetrabutylammonium bromide structure from PubChem website by search the name of the molecule. https://pubchem.ncbi.nlm.nih.gov/compound/Tetrabutylammonium-bromide.
 
 
->>> from ase.data.pubchem import pubchem_atoms_search
->>> import ssl
+>>> from batoms.plugins.pubchem import pubchem_search
 >>> ssl._create_default_https_context = ssl._create_unverified_context
 >>> tbab = pubchem_atoms_search(name = 'tetrabutylazanium')
 >>> batoms = Batoms(label = 'mol', atoms = tbab)
@@ -132,7 +131,6 @@ Surface
 
 Create (111) surface for FCC ``Au``.
 
->>> import numpy as np
 >>> from ase.build import fcc111
 >>> from batoms import Batoms
 >>> atoms = fcc111('Au', size = (5, 5, 4), vacuum=0)

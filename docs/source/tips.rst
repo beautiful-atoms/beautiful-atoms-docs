@@ -68,9 +68,9 @@ Find this line:
 
 After the above line, add:
 
->>> namespace["batoms"] = batoms
->>> from batoms.butils import read_batoms_collection_list
->>> items = read_batoms_collection_list()
+>>> namespace["Batoms"] = Batoms
+>>> from batoms.butils import read_batoms_list
+>>> items = read_batoms_list()
 >>> for item in items:
       namespace[item] = Batoms(item)
 
