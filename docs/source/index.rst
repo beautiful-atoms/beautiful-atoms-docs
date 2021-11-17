@@ -35,6 +35,7 @@ Features:
    advanced/index
    gallery
    tips
+   contact
    faqs
    development
 
