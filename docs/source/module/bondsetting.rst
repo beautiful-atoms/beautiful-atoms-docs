@@ -66,7 +66,7 @@ Search bond mode
  - ``1``  Search additional atoms if species1 is included in the boundary
  - ``2``  Search bonded atoms of species1 or species2 recursively. This mode is the used for searching molecules.
 
-To change setting for ``Search_bond`` by:
+To change setting for ``search`` by:
 
 >>> tio2.bondsetting[('Ti', 'O')].search = 0
 >>> tio2.update_boundary()

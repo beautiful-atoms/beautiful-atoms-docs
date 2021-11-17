@@ -39,7 +39,7 @@ One can ``remove`` or ``add`` a bond pair by:
 Search bond mode
 ==================
 
-* Do not search atoms beyond the boundary. The value for ``Search_bond`` should be set to 0.  
+* Do not search atoms beyond the boundary. The value for ``search`` should be set to 0.  
 
 >>> tio2.bondsetting[('Ti', 'O')].search = 0
 >>> tio2.update_boundary()
@@ -48,7 +48,7 @@ Search bond mode
 .. image:: ../_static/figs/bondsetting_tio2_2.png
    :width: 8cm
 
-* Search additional atoms if species1 is included in the boundary, the value for ``Search_bond`` should be set to `>0`. To change setting for a bond pair by.
+* Search additional atoms if species1 is included in the boundary, the value for ``search`` should be set to `>0`. To change setting for a bond pair by.
 
 >>> tio2.boundary = 0.01
 >>> tio2.bondsetting[('Ti', 'O')].search = 1
@@ -64,11 +64,11 @@ Search bond mode
 >>> mol.boundary = 0.01
 >>> mol.draw_cell()
 >>> mol.model_type = 1
->>> mol.render.run([1, -0.3, 0.1], engine = 'eevee', output = 'bondsetting_search_bond_molecule.png')
+>>> mol.render.run([1, -0.3, 0.1], engine = 'eevee', output = 'bondsetting_search_molecule.png')
 
 
 
-.. image:: ../_static/figs/bondsetting_search_bond_molecule.png
+.. image:: ../_static/figs/bondsetting_search_molecule.png
    :width: 8cm
 
 
