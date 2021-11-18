@@ -9,4 +9,6 @@ Advanced topics
    cavity
    motion_blur
    million
+   hpc
+   hpc-gpu
    combine
