@@ -7,5 +7,7 @@ au111.draw_cell()
 au111.replace('Au', 'X', [87])
 au111['X'].scale = 6
 au111['X'].color = [0.8, 0.0, 0.8, 0.2]
-au111.render.light_energy = 25
-au111.render.run([1, -0.4, 0.4], engine = 'cycles', num_samples = 64, output = 'au111-vacancy-cycles.png')
+au111.render.viewport = [1, -0.4, 0.4]
+au111.render.engine = 'cycles'
+au111.render.lights['Default'].energy = 25
+au111.get_image(output = 'au111-vacancy-cycles.png')

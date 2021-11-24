@@ -16,7 +16,7 @@ Start Blender, and open a Python console, and run
 
 Rendering the image
 
->>> h2o.render.run(direction = [1, 0 ,0], engine = 'eevee', output = 'h2o.png')
+>>> h2o.get_image(viewport = [1, 0 ,0], engine = 'eevee', output = 'h2o.png')
 
 .. image:: _static/figs/h2o.png
    :width: 5cm
@@ -34,7 +34,7 @@ Save the aboved code as a python file (eg. yourfile.py), and run in the command 
 >>> from ase.build import molecule
 >>> from batoms_api import render
 >>> atoms = molecule('H2O')
->>> render_input = {'direction': [1, 0, 0], 'output': 'h2o.png',}
+>>> render_input = {'viewport': [1, 1, 0], 'engine': 'cycles', 'output': 'h2o.png',}
 >>> render(atoms, render_input=render_input)
 
 - Use ``batoms`` from command line::

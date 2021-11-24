@@ -18,7 +18,7 @@ Save the following code as a python file (eg. h2o.py). In ``run`` fucntion, set 
     from batoms import Batoms
     atoms = molecule('H2O')
     h2o = Batoms(label = 'h2o', atoms = atoms)
-    h2o.render.run(direction = [1, 0 ,0], engine = 'cycles', gpu = True, output = 'h2o.png')
+    h2o.get_image([1, 0 ,0], engine = 'cycles', gpu = True, output = 'h2o.png')
 
 
 Set up a job script to use GPU on HPC, and save it (eg. job.slurm). Here is an example for SLURM system on the Ubelix cluster in the University of Bern.

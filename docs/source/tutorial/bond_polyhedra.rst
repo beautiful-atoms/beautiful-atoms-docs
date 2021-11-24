@@ -64,7 +64,7 @@ Search bond mode
 >>> mol.boundary = 0.01
 >>> mol.draw_cell()
 >>> mol.model_type = 1
->>> mol.render.run([1, -0.3, 0.1], engine = 'eevee', output = 'bondsetting_search_molecule.png')
+>>> mol.get_image([1, -0.3, 0.1], engine = 'eevee', output = 'bondsetting_search_molecule.png')
 
 
 
@@ -94,7 +94,7 @@ To build up hydrogen bond for ``X-H -- Y``. Set the minimum and maximum distance
 >>> h2o.bondsetting[('H', 'O')].bondlinewidth = 0.01
 >>> h2o.bondsetting[('H', 'O')].style = '1'
 >>> h2o.model_type = 1
->>> h2o.render.run([1, 0 ,0], engine = 'eevee', output = 'hydrogen-bond.png')
+>>> h2o.get_image([1, 0 ,0], output = 'hydrogen-bond.png')
 
 .. image:: ../_static/figs/hydrogen-bond.png
    :width: 5cm

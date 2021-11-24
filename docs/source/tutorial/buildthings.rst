@@ -55,7 +55,7 @@ ASE defines a number of molecular geometries in the ``g2`` database, which can b
 >>> from batoms import Batoms
 >>> atoms = molecule('NH3')
 >>> batoms = Batoms(label = 'mol', atoms = atoms)
->>> batoms.render.run(engine = 'eevee', resolution_x = 200, output = 'nh3.png')
+>>> batoms.get_image(output = 'nh3.png')
 
 .. image:: ../_static/figs/build_nh3.png
    :width: 4cm
@@ -104,7 +104,7 @@ More complicated molecules may be obtained using the PubChem API integration. He
 >>> tbab = pubchem_atoms_search(name = 'tetrabutylazanium')
 >>> batoms = Batoms(label = 'mol', atoms = tbab)
 >>> batoms.model_type = 1
->>> batoms.render.run(engine = 'eevee', resolution_x = 400, output = 'tbab.png')
+>>> batoms.get_image(output = 'tbab.png')
 
 
 .. image:: ../_static/figs/build_pubchem_tbab.png
@@ -120,7 +120,7 @@ Create a bulk structure for FCC ``Au``.
 >>> from batoms import Batoms
 >>> au = bulk('Au', 'fcc', cubic=True)
 >>> au = Batoms(label = 'au', atoms = au)
->>> au.render.run(direction = [1, -0.3, 0.1], resolution_x = 200, output = 'au.png')
+>>> au.get_image(viewport = [1, -0.3, 0.1], output = 'au.png')
 
 .. image:: ../_static/figs/build_bulk_au.png
    :width: 5cm

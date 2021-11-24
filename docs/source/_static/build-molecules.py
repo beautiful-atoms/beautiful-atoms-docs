@@ -14,7 +14,8 @@ for name in g2.names:
     n+=1
 
 batoms = Batoms(label = 'mol', atoms = atoms)
-batoms.render.run(engine = 'eevee', resolution_x = 1500, output = 'mols.png')
+batoms.render.resolution = [1500, 1500]
+batoms.get_image(output = 'mols.png')
 
 
 

@@ -9,7 +9,7 @@ The ``boundary`` key in :mod:`Batoms <batoms.batoms>` is used to search atoms ou
 >>> from batoms.batoms import Batoms
 >>> au = bulk('Au', 'fcc', cubic=True)
 >>> au = Batoms(label = 'au', atoms = au)
->>> au.render.run(direction = [1, -0.3, 0.1], resolution_x = 200, output = 'au.png')
+>>> au.get_image(viewport = [1, -0.3, 0.1], resolution_x = 200, output = 'au.png')
 
 .. image:: ../_static/figs/build_bulk_au.png
    :width: 5cm

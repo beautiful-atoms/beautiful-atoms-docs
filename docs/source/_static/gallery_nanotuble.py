@@ -1,7 +1,7 @@
 from ase.build import nanotube
 from batoms import Batoms
 from batoms.bdraw import draw_plane
-from batoms.butils import removeAll
+from batoms.butils import removeAll, set_world
 import numpy as np
 removeAll()
 cnt = nanotube(12, 0, length=8)
@@ -22,10 +22,11 @@ for kind, color in colors.items():
 
 cnt.model_type = 1
 # # draw polyhedral model manually and not show the edge
-cnt.render.set_world(color = [0.2, 0.2, 0.2, 1.0])
+set_world(color = [0.2, 0.2, 0.2, 1.0])
 cnt.render.lights['Default'].energy = 50
 cnt.render.lights['Default'].direction = [0.4, 0.5, 1]
-cnt.render.run([1, -0.3, 0.3], canvas = np.array([[-6, -6, -6], [6, 6, 6]]), 
-        engine = 'cycles', output = 'gallery_cnt.png')
+cnt.render.engine = 'cycles'
+cnt.get_image([1, -0.3, 0.3], canvas = [12, 12, 12], 
+        output = 'gallery_cnt.png')
 
 # for graphene, use wave modifer

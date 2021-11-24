@@ -33,7 +33,7 @@ Then increase the size and set a different color for ``X`` species, and make it 
 Save structure to file, and renering the image:
 
 >>> au111.write('POSCAR')
->>> au111.render.run([1, -0.4, 0.4], engine = 'eevee', output = 'au111-vacancy.png')
+>>> au111.get_image([1, -0.4, 0.4], output = 'au111-vacancy.png')
 
 
 .. image:: ../../_static/figs/vacancy-au111.png
@@ -56,8 +56,9 @@ Save structure to file, and renering the image:
 
     Use ``Cycles`` render engine to get a better image.
     
-    >>> au111.render.light_energy = 25
-    >>> au111.render.run([1, -0.4, 0.4], engine = 'cycles', num_samples = 64, output = 'au111-vacancy-cycles.png')
+    >>> au111.render.lights['Default'].energy = 25
+    >>> au111.render.engine = 'cycles'
+    >>> au111.get_image([1, -0.4, 0.4], output = 'au111-vacancy-cycles.png')
 
     .. image:: ../../_static/figs/vacancy-au111-cycles.png
         :width: 12cm

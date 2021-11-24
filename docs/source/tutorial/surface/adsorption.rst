@@ -23,7 +23,7 @@ Save structure to file, POSCAR, xyz and so on.
 
 Save image, as show bellow:
 
->>> au111.render([1, 0.1, 0.1], engine = 'eevee')
+>>> au111.get_image(viewport = [1, 0.1, 0.1])
 
 
 .. image:: ../../_static/figs/au111-co.png

@@ -24,11 +24,11 @@ nano1.translate([-15, 15, 0])
 draw_plane(size = 1000, location = (0, 0, min(slab111.positions[:, 2]) - slab111['O'].size[0]),  
         color = [0.9, 0.9, 0.9, 1.0])
 com = nano.get_center_of_mass()
-slab111.render.light_type = 'POINT'
-slab111.render.lock_light_to_camera = False
-slab111.render.light_energy = 500000
-slab111.render.light_loc = [com[0], com[1]-15, max(nano.positions[:, 2]) + 15]
-slab111.render.camera_loc = [com[0], com[1]-15, max(nano.positions[:, 2]) + 10]
-slab111.render.camera_target = com
-slab111.render.run(camera_type = 'PERSP', camera_lens = 15, ratio = 0.6,
-        engine = 'cycles', output = 'gallery_oxide_surface.png')
+slab111.render.lights['Default'].type = 'POINT'
+slab111.render.lights['Default'].lock_light_to_camera = False
+slab111.render.lights['Default'].energy = 500000
+slab111.render.lights['Default'].location = [com[0], com[1]-15, max(nano.positions[:, 2]) + 15]
+slab111.render.camera.location = [com[0], com[1]-15, max(nano.positions[:, 2]) + 10]
+slab111.render.engine = 'cycles'
+slab111.render.camera.type = 'PERSP'
+slab111.get_image(center = com, output = 'gallery_oxide_surface.png')

@@ -9,4 +9,4 @@ for i in range(20):
 
 c2h6so = Batoms(label = 'c2h6so', atoms = images)
 c2h6so.load_frames()
-c2h6so.render.run(animation = True)
+c2h6so.get_image(animation = True)

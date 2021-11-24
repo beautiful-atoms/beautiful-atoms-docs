@@ -64,7 +64,7 @@ To add 2D slices of volumetric data in the model, add a plane with ``slicing`` a
 >>> h2o.isosurfacesetting.delete(1)
 >>> h2o.draw_isosurface()
 >>> h2o.planesetting[(0, 0, 1)] = {'distance': 6, 'slicing': True}
->>> h2o.render.run([0, 0, 1], engine = 'cycles')
+>>> h2o.get_image(viewport = [0, 0, 1], engine = 'cycles')
 
 Change render engine to ``EEVEE`` or ``CYCLES``, and use ``viewport shading`` to see the colored plane.
 

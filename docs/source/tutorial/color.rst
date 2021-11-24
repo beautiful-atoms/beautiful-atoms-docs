@@ -14,7 +14,7 @@ Let's take CH\ :sub:`4`\  molecule as a example.
 >>> from batoms import Batoms
 >>> ch4 = molecule('CH4')
 >>> ch4 = Batoms(label = 'ch4', atoms = ch4)
->>> ch4.render.run([1, 1, 4], engine = 'eevee', resolution_x = 200, output = 'color_ch4_0.png')
+>>> ch4.get_image(viewport = [1, 1, 4], output = 'color_ch4_0.png')
 
 .. image:: ../_static/figs/color_ch4_0.png
    :width: 5cm

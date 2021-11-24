@@ -32,13 +32,14 @@ Load trajecty to ``Batoms``:
 
 Render the ``10th`` frame with ``eevee`` engine. Set ``use_motion_blur`` to ``True``.
 
+>>> from batoms.butils import set_world
+>>> h2o.render.use_motion_blur = True
 >>> h2o.render.camera.ortho_scale = 30
->>> h2o.render.set_world([0.1, 0.1, 0.1, 1.0])
->>> h2o.render.run(engine = 'eevee', 
+>>> h2o.render.transparent = False
+>>> set_world([0.1, 0.1, 0.1, 1.0])
+>>> h2o.get_image(engine = 'eevee', 
 >>>                frame = 10, 
->>>                use_motion_blur = True, 
->>>                ratio = 1, 
->>>                transparent = False)
+>>>                canvas = [30, 30, 10])
 
 
 

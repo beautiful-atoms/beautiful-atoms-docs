@@ -30,7 +30,7 @@ You can now play the animation using `Timeline` window in Blender.
 
 Or you can render all images by:
 
->>> c2h6so.render.run([0, 0, 1], engine = 'eevee', animation = True)
+>>> c2h6so.get_image([0, 0, 1], engine = 'eevee', animation = True)
 
 
 Then, on Linux, run following command to convert all png files to a gif file::
