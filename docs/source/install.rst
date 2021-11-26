@@ -50,16 +50,13 @@ On Windows, start Blender (need administrator), open a Python console and run th
     pip.main(['install', 'ase'])
     pip.main(['install', 'scikit-image'])
 
-    For ``spglib``, you may need to install Microsoft visual C++ Build Tools.
-
-
-
+For ``spglib``, you may need to install Microsoft visual C++ Build Tools.
 
 
 Install batoms inside Blender
 ===============================
 
-- Download the source files from https://github.com/superstar54/beautiful-atoms. 
+- Download the latest stable release (`beautiful-atoms.zip <https://github.com/superstar54/beautiful-atoms/archive/refs/tags/v1.0.0.zip>`__) or the latest development snapshot (`beautiful-atoms-main.zip <https://github.com/superstar54/beautiful-atoms/archive/refs/heads/main.zip>`__)
 
 - Extract the file, rename the folder to ``batoms``, and move it to ``blender-2.93.4-linux-x64/2.93/scripts/addons/``. 
 
