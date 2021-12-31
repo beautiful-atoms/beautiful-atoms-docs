@@ -74,7 +74,7 @@ After the above line, add:
 >>> for item in items:
       namespace[item] = Batoms(item)
 
-This will load ``Batoms`` module and all ``Batoms`` objects on the pytohn console.
+This will load ``Batoms`` module and all ``Batoms`` objects on the python console.
 
 Should be similar on Windows and macOS.
 
