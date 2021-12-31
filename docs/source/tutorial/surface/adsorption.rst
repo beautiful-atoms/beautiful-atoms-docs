@@ -21,7 +21,7 @@ Save structure to file, POSCAR, xyz and so on.
 
 >>> au111.write('POSCAR')
 
-Save image, as show bellow:
+Save image, as show below:
 
 >>> au111.get_image(viewport = [1, 0.1, 0.1])
 
