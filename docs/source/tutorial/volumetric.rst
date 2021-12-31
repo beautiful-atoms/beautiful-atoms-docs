@@ -44,7 +44,7 @@ The name of a isosurfacesetting can be any string, for example:
 
 
 .. note::
-   If the atoms and the isosurface are not in the same place, probably because the cube file has a origin not at (0, 0, 0). Please read the origin and shfit the atoms:
+   If the atoms and the isosurface are not in the same place, probably because the cube file has a origin not at (0, 0, 0). Please read the origin and shift the atoms:
 
    >>> cube = read('test.cube', format='cube', read_data=True, full_output=True)
    >>> volume = cube['data']
