@@ -6,7 +6,7 @@ If you are not familiar with building atomic structure using Pymatgen, please re
 * Building molecule, crystal, surface: https://pymatgen.org/usage.html#structures-and-molecules
 
 
-Keyword ``structure`` in :class:`Batoms` object is uesd to load a Pymatgen_ structure.
+Keyword ``structure`` in :class:`Batoms` object is used to load a Pymatgen_ structure.
 
 Molecule:
 
