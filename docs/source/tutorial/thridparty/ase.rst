@@ -13,7 +13,7 @@ If you are not familiar with building atomic structure using ASE, please read th
 * Using the spacegroup to set up crystal structures: https://wiki.fysik.dtu.dk/ase/ase/spacegroup/spacegroup.html?highlight=crystal#ase.spacegroup.crystal
 
 
-Keyword ``atoms`` in :class:`Batoms` object is uesd to load a ASE_ structure.
+Keyword ``atoms`` in :class:`Batoms` object is used to load a ASE_ structure.
 
 
 Molecule:
