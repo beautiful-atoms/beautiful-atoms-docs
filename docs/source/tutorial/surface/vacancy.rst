@@ -30,7 +30,7 @@ Then increase the size and set a different color for ``X`` species, and make it 
 >>> au111['X'].scale = 6
 >>> au111['X'].color = [0.8, 0.0, 0.8, 0.2]
 
-Save structure to file, and renering the image:
+Save structure to file, and render the image:
 
 >>> au111.write('POSCAR')
 >>> au111.get_image([1, -0.4, 0.4], output = 'au111-vacancy.png')
