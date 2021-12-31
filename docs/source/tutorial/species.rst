@@ -5,11 +5,11 @@ Species
 Why we use species instead of element? Because some atoms are special:
 
 * Different color for element.
-* Different properties for element, sunch as: spin up and down.
+* Different properties for element, such as: spin up and down.
 * ghost atoms: vacancy, highlight sphere, cavity
 * atoms with different bondsetting
 
-The function ``species`` in :class:`Batom` object is used to specify the symobl of species. We store the ``species`` infomation in ``atoms.arrays['species']`` for ASE atoms.
+The function ``species`` in :class:`Batom` object is used to specify the symbol of species. We store the ``species`` infomation in ``atoms.arrays['species']`` for ASE atoms.
 
 >>> from batoms import Batom
 >>> h1 = Batom(label = 'h2o', species = 'H_1', element = 'H', positions = [[0, 0, 0]])
