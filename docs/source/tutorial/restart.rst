@@ -2,7 +2,7 @@
 How to load Batoms from a collection?
 ======================================
 
-When we restart from a ``.blend`` file. We can rebuild the :class:`Batoms` objects from collections. Keyword ``label`` in :class:`Batoms` object is uesd to load a :class:`Batoms` collection by the name.
+When we restart from a ``.blend`` file. We can rebuild the :class:`Batoms` objects from collections. Keyword ``label`` in :class:`Batoms` object is used to load a :class:`Batoms` collection by the name.
 
 
 Molecule:
