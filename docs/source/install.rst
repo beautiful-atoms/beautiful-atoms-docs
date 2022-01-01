@@ -60,7 +60,7 @@ Install batoms inside Blender
 
 - Extract the file, rename the folder to ``batoms``, and move it to ``blender-2.93.4-linux-x64/2.93/scripts/addons/``. 
 
-- Enable the addon in the Preferences setting. Please vist here to learn how to enable an addon. https://docs.blender.org/manual/en/latest/editors/preferences/addons.html. Or, you can open a Blender Python console, and run the following code to enable the batoms::
+- Enable the addon in the Preferences setting. Please visit here to learn how to enable an addon. https://docs.blender.org/manual/en/latest/editors/preferences/addons.html. Or, you can open a Blender Python console, and run the following code to enable the batoms::
 
     import addon_utils
     addon_utils.enable('batoms', default_set=True)
@@ -73,7 +73,7 @@ Install batoms inside Blender
 Install batoms-api on your computer
 ====================================
 
-First install ASE on your computer. On Windows, open Anaconda_ Prompt (suggest to Anaconda_). On Linux, open a terminal, and run::
+First install ASE on your computer. On Windows, open Anaconda Prompt (suggest to Anaconda). On Linux, open a terminal, and run::
     
     $ pip3 install --upgrade ase
     $ pip3 install batoms-api
