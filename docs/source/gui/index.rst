@@ -23,4 +23,5 @@ The graphical user-interface allows users to creat, manipulate, and render atoms
    gui_ase
    gui_pymatgen
    gui_pubchem
+   gui_real
 

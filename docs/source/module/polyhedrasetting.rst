@@ -15,7 +15,7 @@ You can print the default polyhedrasetting by:
 One can change color for polyhedra ``C`` by. 
 
 >>> ch4.polyhedrasetting['C'].color = [0.8, 0.1, 0.3, 0.3]
->>> ch4.model_type = 2
+>>> ch4.model_style = 2
 
 
 List of all Methods

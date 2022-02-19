@@ -99,3 +99,4 @@ Python
    You could avoid install inside Blender by setting bl to use system python package::
 
     export BLENDER_COMMAND='blender --python-use-system-env'
+

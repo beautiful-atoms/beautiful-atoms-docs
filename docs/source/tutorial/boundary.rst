@@ -8,8 +8,8 @@ The ``boundary`` key in :mod:`Batoms <batoms.batoms>` is used to search atoms ou
 >>> from ase.build import bulk
 >>> from batoms.batoms import Batoms
 >>> au = bulk('Au', 'fcc', cubic=True)
->>> au = Batoms(label = 'au', atoms = au)
->>> au.get_image(viewport = [1, -0.3, 0.1], resolution_x = 200, output = 'au.png')
+>>> au = Batoms(label = 'au', from_ase = au)
+>>> au.get_image(viewport = [1, -0.3, 0.1], output = 'au.png')
 
 .. image:: ../_static/figs/build_bulk_au.png
    :width: 5cm
@@ -34,9 +34,9 @@ Search additional atoms if species1 is included in the boundary:
 
 >>> from batoms.batoms import Batoms
 >>> from batoms.bio import read
->>> tio2 = read('docs/source/_static/datas/tio2.cif')
+>>> tio2 = read('tio2.cif')
 >>> tio2.boundary = 0.01
->>> tio2.model_type = 2
+>>> tio2.model_style = 2
 
 .. image:: ../_static/figs/bondsetting_tio2_3.png
    :width: 8cm

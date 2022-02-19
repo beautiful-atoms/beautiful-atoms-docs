@@ -12,9 +12,15 @@ Tutorials
    volumetric
    plane
    boundary
+   pbc
+   object_mode
    animation
    color
    species
+   occupancy
+   ribbon
+   ms
+   metaball
    surface/index
    api
    restart

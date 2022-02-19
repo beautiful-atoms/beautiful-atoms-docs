@@ -12,13 +12,13 @@ The :class:`Batoms` object is a collection of :class:`Batom` object plus :class:
    :width: 3cm
 
 Here, the argument specifies the type of the atoms and their positions. Other
-possible keywords are: ``pbc``, ``cell``, ``atoms``, ``model_type``, ``boundary``, ``show_unit_cell``, ``isosurface``, ``kind_props``,
+possible keywords are: ``pbc``, ``cell``, ``atoms``, ``model_style``, ``boundary``, ``show_unit_cell``, ``isosurface``, ``kind_props``,
 ``color``, and ``draw``.
 
 
-One get and set ``model_type``, ``pbc``, ``show_unit_cell``, ``cell`` and ``boundary`` by:
+One get and set ``model_style``, ``pbc``, ``show_unit_cell``, ``cell`` and ``boundary`` by:
 
->>> h2o.model_type = 0
+>>> h2o.model_style = 0
 >>> h2o.pbc = True
 >>> h2o.cell = [[3, 0, 0], [0, 3, 0], [0, 0, 3]]
 >>> h2o.show_unit_cell = False
@@ -39,7 +39,7 @@ We can also use an ``Atoms`` object from ``ASE``.
 >>> from ase.build import molecule
 >>> from batoms import Batoms
 >>> atoms = molecule('H2O')
->>> h2o = Batoms(label = 'h2o', atoms = atoms)
+>>> h2o = Batoms(label = 'h2o', from_ase = atoms)
 
 .. image:: ../_static/figs/batoms-h2o.png
    :width: 3cm
@@ -52,12 +52,12 @@ We can also read an structure from a file:
 >>> tio2 = read('docs/source/_static/datas/tio2.cif')
 
 
-Model_type
+Model_style
 ===================
 
-One set the model_type by:
+One set the model_style by:
 
->>> h2o.model_type = 1
+>>> h2o.model_style = 1
 
 Here, four models are supported.
 
@@ -68,19 +68,19 @@ Here, four models are supported.
      - ``1``, Ball-and-stick
      - ``2``, Polyhedral
      - ``3``, Wireframe
-   * -  .. image:: ../_static/figs/batoms_model_type_0.png 
-     -  .. image:: ../_static/figs/batoms_model_type_1.png 
-     -  .. image:: ../_static/figs/batoms_model_type_2.png 
-     -  .. image:: ../_static/figs/batoms_model_type_3.png 
+   * -  .. image:: ../_static/figs/batoms_model_style_0.png 
+     -  .. image:: ../_static/figs/batoms_model_style_1.png 
+     -  .. image:: ../_static/figs/batoms_model_style_2.png 
+     -  .. image:: ../_static/figs/batoms_model_style_3.png 
 
 
 
-Polyhedra_type
+Polyhedra_style
 ===================
 
-One set the polyhedra_type by:
+One set the polyhedra_style by:
 
->>> h2o.polyhedra_type = 1
+>>> h2o.polyhedra_style = 1
 
 Here, four polyhedra model are supported.
 
@@ -91,17 +91,17 @@ Here, four polyhedra model are supported.
      - ``1``
      - ``2``
      - ``3``
-   * -  .. image:: ../_static/figs/batoms_polyhedra_type_0.png 
-     -  .. image:: ../_static/figs/batoms_polyhedra_type_1.png 
-     -  .. image:: ../_static/figs/batoms_polyhedra_type_2.png 
-     -  .. image:: ../_static/figs/batoms_polyhedra_type_3.png
+   * -  .. image:: ../_static/figs/batoms_polyhedra_style_0.png 
+     -  .. image:: ../_static/figs/batoms_polyhedra_style_1.png 
+     -  .. image:: ../_static/figs/batoms_polyhedra_style_2.png 
+     -  .. image:: ../_static/figs/batoms_polyhedra_style_3.png
   
 Materials_style
 ===================
 
 Set materials style for atoms. Select materials style from ['default', 'glass', 'ceramic', 'plastic', 'mirror'].
 
->>> h2o = Batoms(atoms = atoms, label = 'h2o', model_type = '1', material_style = 'mirror')
+>>> h2o = Batoms(from_ase = atoms, label = 'h2o', model_style = '1', material_style = 'mirror')
 
 .. image:: ../_static/figs/h2o-mirror.png
    :width: 3cm
@@ -110,7 +110,7 @@ Set materials style for atoms. Select materials style from ['default', 'glass', 
 Or set your own materials by setting the bsdf_inputs dict.
 
 >>> bsdf_inputs = {'Metallic': 1.0, 'Specular': 1.0, 'Roughness': 0.01, }
->>> h2o = Batoms(atoms = atoms, label = 'h2o', model_type = '1', bsdf_inputs = bsdf_inputs)
+>>> h2o = Batoms(from_ase = atoms, label = 'h2o', model_style = '1', bsdf_inputs = bsdf_inputs)
 
 
 Other methods
@@ -156,7 +156,7 @@ For example, replace the all H in h2o molecule by S.
 >>> from ase.build import bulk
 >>> from batoms import Batoms
 >>> au = bulk('Au', cubic = True)
->>> au = Batoms(atoms = au)
+>>> au = Batoms(from_ase = au)
 >>> au.draw()
 >>> au.repeat([2, 2, 2])
 
@@ -167,9 +167,9 @@ For example, replace the all H in h2o molecule by S.
 >>> from batoms import Batoms
 >>> import numpy as np
 >>> co = molecule('CO')
->>> co = Batoms(label = 'co', atoms = co)
+>>> co = Batoms(label = 'co', from_ase = co)
 >>> au = fcc111('Au', (5, 5, 4), vacuum=5.0)
->>> au = Batoms(label = 'au', atoms = au)
+>>> au = Batoms(label = 'au', from_ase = au)
 >>> co.translate(au.atoms[-1].position + np.array([0, 0, 2]))
 >>> au.extend(co)
 
@@ -185,7 +185,7 @@ Set boundary
 >>> from batoms import Batoms
 >>> from ase.io import read
 >>> atoms = read('docs/source/_static/datas/tio2.cif')
->>> tio2 = Batoms(label = 'tio2', atoms = atoms, model_type = '2', polyhedra_dict = {'Ti': ['O']}, color_style="VESTA")
+>>> tio2 = Batoms(label = 'tio2', from_ase = atoms, model_style = '2', polyhedra_dict = {'Ti': ['O']}, color_style="VESTA")
 >>> tio2.boundary = 0.5
 
 

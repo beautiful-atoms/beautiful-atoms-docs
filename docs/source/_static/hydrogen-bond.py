@@ -6,5 +6,5 @@ ch3choh.bondsetting[('H', 'O')].min = 2.0
 ch3choh.bondsetting[('H', 'O')].max = 3.0
 ch3choh.bondsetting[('H', 'O')].width = 0.01
 ch3choh.bondsetting[('H', 'O')].style = '1'
-ch3choh.model_type = 1
+ch3choh.model_style = 1
 

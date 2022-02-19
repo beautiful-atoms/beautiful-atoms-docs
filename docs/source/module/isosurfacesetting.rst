@@ -12,7 +12,7 @@ Here we show a example of draw isosurfaces from cube file.
 >>> from ase.io.cube import read_cube_data
 >>> from batoms import Batoms
 >>> volume, atoms = read_cube_data('docs/source/_static/datas/h2o-homo.cube')
->>> h2o = Batoms('h2o', atoms = atoms, volume = volume, draw = False)
+>>> h2o = Batoms('h2o', from_ase = atoms, volume = volume, draw = False)
 
 
 You can print the default isosurfacesetting by:

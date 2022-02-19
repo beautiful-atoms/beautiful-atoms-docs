@@ -6,12 +6,12 @@ Installation
 
 Requirements
 ============
-* Blender_ 2.80 or newer, please install Blender first.
+* Blender_ 3.0 or newer, please install Blender first.
 * ASE_
+* Scikit-image_
 
 Optional:
 
-* Scikit-image_
 * spglib_
 * Pymatgen_
 * matplotlib_
@@ -31,7 +31,7 @@ Optional:
 Install ASE_ inside Blender
 ===============================
 
-On Linux and MacOS, go to your Blender python directory, e.g. ``blender-2.93-linux-x64/2.93/python/bin``, install pip_::
+On Linux and MacOS, go to your Blender python directory, e.g. ``blender-3.0.0-linux-x64/3.0/python/bin``, install pip_::
     
     $ ./python3.9 -m ensurepip
     $ ./python3.9 -m pip install --upgrade pip
@@ -42,7 +42,6 @@ Install ASE_ and scikit-image_ inside Blender::
     
     $ ./pip3 install scikit-image
 
-    $ ./pip3 install spglib
 
 On Windows, start Blender (need administrator), open a Python console and run the following code::
 
@@ -50,15 +49,13 @@ On Windows, start Blender (need administrator), open a Python console and run th
     pip.main(['install', 'ase'])
     pip.main(['install', 'scikit-image'])
 
-For ``spglib``, you may need to install Microsoft visual C++ Build Tools.
-
 
 Install batoms inside Blender
 ===============================
 
-- Download the latest stable release (`beautiful-atoms.zip <https://github.com/superstar54/beautiful-atoms/archive/refs/tags/v1.0.0.zip>`__) or the latest development snapshot (`beautiful-atoms-main.zip <https://github.com/superstar54/beautiful-atoms/archive/refs/heads/main.zip>`__)
+- Download the latest stable release (`beautiful-atoms.zip <https://github.com/superstar54/beautiful-atoms/archive/refs/heads/release/2.0.0.zip>`__).
 
-- Extract the file, rename the folder to ``batoms``, and move it to ``blender-2.93.4-linux-x64/2.93/scripts/addons/``. 
+- Extract the file, rename the folder to ``batoms``, and move it to ``blender-3.0.0-linux-x64/3.0/scripts/addons/``. 
 
 - Enable the addon in the Preferences setting. Please vist here to learn how to enable an addon. https://docs.blender.org/manual/en/latest/editors/preferences/addons.html. Or, you can open a Blender Python console, and run the following code to enable the batoms::
 
@@ -93,8 +90,8 @@ Test your installation
 Start Blender, in the python console, run:
 
 >>> from batoms import Batoms
->>> h2o = Batoms('h2o', {'O': [[0, 0, 0.40]], 'H': [[0, -0.76, -0.2], [0, 0.76, -0.2]]})
-
+>>> h2o = Batoms('h2o', species = ['O', 'H', 'H'], 
+...     positions= [[0, 0, 0.40], [0, -0.76, -0.2], [0, 0.76, -0.2]])
 
 .. image:: _static/figs/batoms-h2o.png
    :width: 3cm
@@ -111,12 +108,12 @@ Others
 Pymatgen
 ----------
 
-If you want to use ``batoms`` with ``Pymatgen``. Rename you blender python folder (``blender-2.93-linux-x64/2.93/python``) to ``_python``. Create a virtual environment for your blender using conda::
+If you want to use ``batoms`` with ``Pymatgen``. Rename you blender python folder (``blender-3.0.0-linux-x64/3.0/python``) to ``_python``. Create a virtual environment for your blender using conda::
 
-    conda create --prefix $Path_to_blener/blender-2.93.4-linux-x64/2.93/python python=3.9.2
+    conda create --prefix $Path_to_blener/blender-3.0.0-linux-x64/3.0/python python=3.9.7
 
 
-On Linux, go to the new python directory, e.g. ``blender-2.93-linux-x64/2.93/python/bin``, and install ASE_,  scikit-image_ and Pymatgen_ inside Blender::
+On Linux, go to the new python directory, e.g. ``blender-3.0.0-linux-x64/3.0/python/bin``, and install ASE_,  scikit-image_ and Pymatgen_ inside Blender::
 
     $ ./pip3 install --upgrade ase
     

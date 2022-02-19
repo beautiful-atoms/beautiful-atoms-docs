@@ -1,3 +1,5 @@
+.. _animation:
+
 ===================
 Animation
 ===================
@@ -18,7 +20,7 @@ Here, we rotate a molecule and save it to a list:
 Then load it to :meth:`~Batoms.load_frames`:
 
 >>> from batoms import Batoms
->>> c2h6so = Batoms(label = 'c2h6so', atoms = images)
+>>> c2h6so = Batoms(label = 'c2h6so', from_ase = images)
 >>> c2h6so.set_frames()
 
 
@@ -53,5 +55,5 @@ For ``Espresso`` output file:
 >>> from batoms.bio import read
 >>> images = read('espresso.pwo', index = ':')
 
-Animation only support model_type ``Space-filling``.
+
 

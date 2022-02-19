@@ -153,13 +153,32 @@ Isosurface
 :download:`volume_h2o.py <_static/volume_h2o.py>`
 
 
-
 2D slicing
 ---------------------
 
 .. image:: ../_static/figs/volume_h2o_slicing_bwr.png
    :width: 8cm
 
+
+
+Molecular surface
+=======================
+
+Protein
+-----------------------------------------
+
+.. list-table::
+   :widths: 25 25
+
+   * -  |sas|
+     -  |ses|
+
+.. |sas|  image:: _static/figs/gallery_sas.png
+   :width: 10cm
+.. |ses|  image:: _static/figs/gallery_ses.png
+   :width: 10cm
+
+:download:`gallery_ms.py <_static/gallery_ms.py>`
 
 Animation
 ============
@@ -214,7 +233,7 @@ Model type
      -  |crystal4|
 
 
-:download:`cyrstal.py <_static/batoms_model_type.py>`
+:download:`cyrstal.py <_static/batoms_model_style.py>`
 
 
 
@@ -236,11 +255,11 @@ Others
 .. |surface3|  image:: _static/figs/gallery_persp_view.png 
    :width: 8cm
 
-.. |crystal1|  image:: _static/figs/batoms_model_type_0.png 
+.. |crystal1|  image:: _static/figs/batoms_model_style_0.png 
    :width: 8cm
-.. |crystal2|  image:: _static/figs/batoms_model_type_1.png 
+.. |crystal2|  image:: _static/figs/batoms_model_style_1.png 
    :width: 8cm
-.. |crystal3|  image:: _static/figs/batoms_model_type_2.png 
+.. |crystal3|  image:: _static/figs/batoms_model_style_2.png 
    :width: 8cm
-.. |crystal4|  image:: _static/figs/batoms_model_type_3.png 
+.. |crystal4|  image:: _static/figs/batoms_model_style_3.png 
    :width: 8cm

@@ -20,7 +20,7 @@ cnt = Batoms(label = 'cnt', atoms = cnt)
 for kind, color in colors.items():
     cnt[kind].color = color
 
-cnt.model_type = 1
+cnt.model_style = 1
 # # draw polyhedral model manually and not show the edge
 set_world(color = [0.2, 0.2, 0.2, 1.0])
 cnt.render.lights['Default'].energy = 50

@@ -9,8 +9,8 @@ The :class:`Bondsetting` object is used to store and set all parameters related 
 
 >>> from ase.build import molecule
 >>> from batoms import Batoms
->>> ch4 = Batoms('ch4', atoms = molecule('CH4'))
->>> ch4.model_type = 2
+>>> ch4 = Batoms('ch4', from_ase = molecule('CH4'))
+>>> ch4.model_style = 2
 
 .. image:: ../_static/figs/bondsetting_ch4_0.png
    :width: 5cm
@@ -52,7 +52,7 @@ Polyhedra
 One can change setting for a bond pair. For example, to build up coordination polyhedra, the value for ``polyhedra`` should be set to ``True``:
 
 >>> ch4.bondsetting[('C', 'H')].polyhedra = True
->>> ch4.model_type = 2
+>>> ch4.model_style = 2
 
 
 .. image:: ../_static/figs/bondsetting_ch4_2.png
@@ -70,7 +70,7 @@ To change setting for ``search`` by:
 
 >>> tio2.bondsetting[('Ti', 'O')].search = 0
 >>> tio2.update_boundary()
->>> tio2.model_type = 2
+>>> tio2.model_style = 2
 
 
 .. image:: ../_static/figs/bondsetting_tio2_2.png
@@ -88,7 +88,7 @@ One can change color for a bond pair.
 
 >>> ch4.bondsetting[('C', 'H')].color1 = [0.8, 0.1, 0.3, 0.5]
 >>> ch4.bondsetting[('C', 'H')].color2 = [0.1, 0.3, 0.2, 1.0]
->>> ch4.model_type = 1
+>>> ch4.model_style = 1
 
 
 .. image:: ../_static/figs/bondsetting_ch4_3.png
@@ -102,10 +102,10 @@ One can change bond order by:
 
 >>> from ase.build import molecule
 >>> from batoms import Batoms
->>> co2 = Batoms('co2', atoms = molecule('CO2'))
+>>> co2 = Batoms('co2', from_ase = molecule('CO2'))
 >>> co2.bondsetting[('C', 'O')].order = 2
 >>> co2.bondsetting[('C', 'O')].width = 0.05
->>> co2.model_type = 1
+>>> co2.model_style = 1
 
 .. image:: ../_static/figs/bondsetting_order.png
    :width: 5cm

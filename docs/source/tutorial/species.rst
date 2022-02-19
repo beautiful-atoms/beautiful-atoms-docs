@@ -9,7 +9,7 @@ Why we use species instead of element? Because some atoms are special:
 * ghost atoms: vacancy, highlight sphere, cavity
 * atoms with different bondsetting
 
-The function ``species`` in :class:`Batom` object is used to specify the symobl of species. We store the ``species`` infomation in ``atoms.arrays['species']`` for ASE atoms.
+The parameter ``species`` in :class:`Batom` object is used to specify the symobl of species. 
 
 >>> from batoms import Batom
 >>> h1 = Batom(label = 'h2o', species = 'H_1', element = 'H', positions = [[0, 0, 0]])
@@ -17,7 +17,7 @@ The function ``species`` in :class:`Batom` object is used to specify the symobl 
 >>> h1.scale = 1.0
 >>> h2.scale = 2.0
 
-Here we define different species in ASE atoms. Then set color for different platinum species:
+Here we define different species in ASE atoms. We store the ``species`` infomation in ``atoms.arrays['species']`` for ASE atoms. Then set color for different platinum species:
 
 >>> from ase.build import fcc111
 >>> from batoms import Batoms
@@ -29,7 +29,7 @@ Here we define different species in ASE atoms. Then set color for different plat
 >>>     kind = atoms[i].symbol + '_{0}'.format(ind)
 >>>     atoms.arrays['species'][i] = kind
 
->>> pt = Batoms(label = 'pt111', atoms = atoms)
+>>> pt = Batoms(label = 'pt111', from_ase = atoms)
 >>> pt['Pt_0'].color = [0.8, 0.8, 0.9]
 >>> pt['Pt_1'].color = [0.8, 0.5, 0.8]
 >>> pt['Pt_2'].color = [0, 0.7, 0.4]

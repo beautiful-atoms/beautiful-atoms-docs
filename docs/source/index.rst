@@ -1,12 +1,17 @@
 .. batoms documentation master file.
 
 ===============================================
-Welcome to Beautiful Atoms's documentation!
+Welcome to Beautiful Atoms 2.0's documentation!
 ===============================================
 Beautiful Atoms is a Python package for editing and rendering atoms and molecules objects using Blender. A Python interface that allows for automating workflows.
 
->>> from batoms import Batoms
->>> h2o = Batoms('h2o', {'O': [[0, 0, 0.40]], 'H': [[0, -0.76, -0.2], [0, 0.76, -0.2]]})
+
+.. code:: python
+
+   from batoms import Batoms
+   h2o = Batoms('h2o',
+               species = ['O', 'H', 'H'], 
+               positions= [[0, 0, 0], [0, -0.76, -0.6], [0, 0.76, -0.6]])
 
 |logo|
 
@@ -14,8 +19,12 @@ Features:
 
 * Model: space-filling, ball-stick, polyhedral, cavity and so on.
 * Support file: cif, xyz, cube, pdb, json, VASP-out and so on.
+* Volumetric data (Isosurface), molecular surface
+* Ribbon diagram for protein
+* Site occupancy
+* Support periodic boundary conditions
 * Support structure from ASE and Pymatgen
-* Volumetric data (Isosurface)
+* Support fetch structures from MaterialProject, Pubchem and RSCB
 * Animation
 * GUI
 * ``Flexible``: Python script, run interactively or in background.
@@ -29,6 +38,7 @@ Features:
    
    install
    getting-started
+   viewport
    tutorial/index
    module/index
    gui/index
@@ -37,7 +47,7 @@ Features:
    tips
    contact
    faqs
-   development
+   development/index
 
 
 

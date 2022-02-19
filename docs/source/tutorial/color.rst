@@ -13,7 +13,7 @@ Let's take CH\ :sub:`4`\  molecule as a example.
 >>> from ase.build import molecule
 >>> from batoms import Batoms
 >>> ch4 = molecule('CH4')
->>> ch4 = Batoms(label = 'ch4', atoms = ch4)
+>>> ch4 = Batoms(label = 'ch4', from_ase = ch4)
 >>> ch4.get_image(viewport = [1, 1, 4], output = 'color_ch4_0.png')
 
 .. image:: ../_static/figs/color_ch4_0.png
@@ -46,7 +46,7 @@ One can change color for bond pair ``C-H`` by:
 
 >>> ch4.bondsetting[('C', 'H')].color1 = [0.8, 0.1, 0.3, 0.5]
 >>> ch4.bondsetting[('C', 'H')].color2 = [0.1, 0.3, 0.2, 1.0]
->>> ch4.model_type = 1
+>>> ch4.model_style = 1
 
 ``color1`` is for the first species in the bond pair (``C``), and ``color2`` is for the second species (``H``).
 
@@ -71,7 +71,7 @@ One can change color for Polyhedra ``C`` by:
 
 >>> ch4.polyhedrasetting['C'].color = [0.8, 0.1, 0.3, 0.8]
 >>> ch4.bondsetting[('C', 'H')].polyhedra = True
->>> ch4.model_type = 2
+>>> ch4.model_style = 2
 
 .. list-table::
    :widths: 50 50

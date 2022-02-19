@@ -8,7 +8,7 @@ mof = Batoms(label = 'mof-5', atoms = atoms)
 mof['H'].color = [0.6, 0, 1.0, 1.0]
 mof['C'].color = [0.0, 0.6, 0.1, 1.0]
 mof.polyhedrasetting['Zn'].color = [0.1, 0.4, 0.7, 1.0]
-mof.model_type = 2
+mof.model_style = 2
 mof.draw_cavity_sphere(9.0, boundary = [[0.2, 0.8], [0.2, 0.8], [0.2, 0.8]])
 mof.draw_cell()
 set_world(color = [0.2, 0.2, 0.2, 1.0])

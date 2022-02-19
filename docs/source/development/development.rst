@@ -1,43 +1,25 @@
-.. _devel:
-
-============
-Development
-============
-
-
-Feel free to create Merge Requests on our Github page: https://github.com/superstar54/beautiful-atoms
-
-General suggestion
-=====================
-
-In Blender, when the undo/redo operation system (ctrl+z / ctrl+shift+z) is performed, all objects in the scene are fully recreated. Pointers to the old objects will fail. Therefore, please store list of object names instead of object itself, and then use them by ``bpy.data.objects[name]``. This is same for collection and others.
-
-
-IDE
-=======
-
-``VS Code`` with ``Blender Development`` extenstion is highly recommended to used . Please read : https://marketplace.visualstudio.com/items?itemName=JacquesLucke.blender-development
-
-Known bugs
-===================
-
-- If we registered keyframes. Any change or the batoms has to be registered. How to handle this???
-- ``batoms.Rotate`` crash if not in 'VIEW_3D'
-- boundary search when some atoms are outside the unit cell.
-- batoms.fragmentate, bondsetting wrong for C6H6
-
-
 
 Development topics
 =====================
 
 Default custom setting
---------------------
+------------------------
 
 - Add a custom configuration file (``~/.batomsrc``), which will be load by batoms to modify the default setting, such as atom color and bond style.
   
 
-bond
+Selection
+-----------
+
+- use vertex group
+- Based on symbols or topology or geometry. 
+
+Protein
+-------------
+
+- Display secondary structure
+
+Bond
 -----
 
 - add() function, set different options. (1) use default (2) use cutoff to build (3) copy from other.
@@ -71,17 +53,22 @@ Light
 Material
 --------------
 
+- add materials nodes
 - add support for mix materials nodes
-
 
 Volumetric
 -------------
 
 - Make 2D slices of volumetric data more beautiful
 
+Molecular surface
+---------------------
+
+- solvent accessible surface with respect to each atom
+
+
 Algorithm
 ------------------
-
 
 - Find high order bond for aromatics. (eg. using CSD Python API, https://downloads.ccdc.cam.ac.uk/documentation/API/descriptive_docs/substructure_searching.html#)
 - Faster bond-search algorithm.
@@ -92,13 +79,6 @@ Animations
 
 - update the shape keys for batoms.replace and so on
 - Vibrations
-
-
-Occupancy
----------------
-
-- How to handle fractional occupancy site? (eg. in ``Batom``, element is a list)
-
 
 Interface
 ------------------
@@ -123,7 +103,6 @@ Plugin (maybe)
 ----------------
 
 - Create a new github repository to shafe Plugin
-
 
 Language
 --------------------

@@ -8,10 +8,8 @@ Build a Au (111) surface.
 >>> from ase.build import fcc111
 >>> from batoms import Batoms
 >>> atoms = fcc111('Au', size = (5, 5, 4), vacuum=0)
->>> au111 = Batoms(label = 'au111', atoms = atoms)
+>>> au111 = Batoms(label = 'au111', from_ase = atoms)
 >>> au111.cell[2, 2] += 10
->>> au111.draw_cell()
-
 
 Select gold atoms, press ``Tab`` key to switch to ``Edit`` mode. Choose the index of atom for the vacancy.
 
@@ -19,16 +17,14 @@ Select gold atoms, press ``Tab`` key to switch to ``Edit`` mode. Choose the inde
    :width: 20cm
 
 
-
-
 Set the vacancy atom to a ghost species ``X``.
 
->>> au111.replace('Au', 'X', [87])
+>>> au111.replace([87], 'X')
 
 Then increase the size and set a different color for ``X`` species, and make it a little transparent.
 
->>> au111['X'].scale = 6
->>> au111['X'].color = [0.8, 0.0, 0.8, 0.2]
+>>> au111[87.scale = 1.2
+>>> # au111[87.color = [0.8, 0.0, 0.8, 0.2]
 
 Save structure to file, and renering the image:
 
@@ -48,7 +44,7 @@ Save structure to file, and renering the image:
 
     You can:
 
-    >>> del au111['Au'][87]
+    >>> del au111[[87]]
 
     Or in the ``Edit`` mode, selet the atom, press ``X`` key and delete ``vertices``.
 

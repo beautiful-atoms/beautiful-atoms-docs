@@ -21,3 +21,6 @@ You can also try:
 - ``g``, then ``x``, then ``2``, move along X-axis by 2.
 
 
+
+- move whole project (atoms, bonds, cell, ...)
+- move atoms, in Edit mode

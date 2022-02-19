@@ -16,6 +16,7 @@ Quick links:
   * - :mod:`Polyhedrasetting <batoms.polyhedrasetting>`
   * - :mod:`Isosurfacesetting <batoms.isosurfacesetting>`
   * - :mod:`Planesetting <batoms.Planesetting>`
+  * - :mod:`MSsetting <batoms.MSsetting>`
   * - :mod:`Render <batoms.render>`
   * - :mod:`Lights <batoms.light>`
 

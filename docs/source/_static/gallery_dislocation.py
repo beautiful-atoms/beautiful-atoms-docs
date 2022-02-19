@@ -18,7 +18,7 @@ fe.bondsetting[('Fe', 'Fe')] = {'max': 3.5, 'color1': [0.2, 0.8, 0.4, 1.0]}
 # ajust the color, materials of Fe atoms
 #----------------------------------------------
 # set rendering
-fe.model_type = 1
+fe.model_style = 1
 set_world(color = [0.2, 0.2, 0.2, 1.0])
 draw_plane(location = [0, 0, min(fe.positions[:, 2]) - fe['Fe'].size[0]], 
             size = 200, color = (0.9, 0.9, 0.9, 1))

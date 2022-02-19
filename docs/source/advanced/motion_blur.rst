@@ -28,7 +28,7 @@ In this tutorial we creat four water molecules and move it in different directio
 
 Load trajecty to ``Batoms``:
 
->>> h2o = Batoms(label = 'h2o', atoms = images, movie = True)
+>>> h2o = Batoms(label = 'h2o', from_ase = images, movie = True)
 
 Render the ``10th`` frame with ``eevee`` engine. Set ``use_motion_blur`` to ``True``.
 

@@ -21,6 +21,6 @@ for i in range(6):
 c6h6.bondsetting[('C_1', 'C_0')] = {'order': 2, 'style': '0'}
 c6h6.bondsetting[('C_3', 'C_2')] = {'order': 2, 'style': '0'}
 c6h6.bondsetting[('C_5', 'C_4')] = {'order': 2, 'style': '0'}
-c6h6.model_type = 1
+c6h6.model_style = 1
 plane.location = [0, 0, c6h6.get_all_vertices()[:, 2].min() - c6h6['C_0'].size[0]]
 c6h6.get_image(output = 'figs/gallery_c6h6_bond.png')

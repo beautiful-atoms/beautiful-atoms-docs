@@ -14,11 +14,11 @@ The :meth:`~Batoms.draw_cavity_sphere` function is to draw a sphere to represent
 >>> from batoms import Batoms
 >>> from batoms.bdraw import draw_plane
 >>> atoms = read('docs/source/_static/datas/mof-5.cif')
->>> mof = Batoms(label = 'mof-5', atoms = atoms)
+>>> mof = Batoms(label = 'mof-5', from_ase = atoms)
 >>> mof['H'].color = [0.6, 0, 1.0, 1.0]
 >>> mof['C'].color = [0.0, 0.6, 0.1, 1.0]
 >>> mof.polyhedrasetting['Zn'].color = [0.1, 0.4, 0.7, 1.0]
->>> mof.model_type = 2
+>>> mof.model_style = 2
 >>> mof.draw_cavity_sphere(9.0, boundary = [[0.2, 0.8], [0.2, 0.8], [0.2, 0.8]])
 
 
@@ -36,7 +36,7 @@ In order to represent the cavity by a polyhedral model, we add a ghost site (spe
 >>> from batoms.bdraw import draw_plane
 >>> c60 = molecule('C60')
 >>> pos = c60.get_center_of_mass()
->>> c60 = Batoms(label = 'c60', atoms = c60)
+>>> c60 = Batoms(label = 'c60', from_ase = c60)
 >>> c60['C'].color = [0.1, 0.1, 0.1, 1.0]
 >>> c60.bondsetting[('C', 'C')].color1 = [0.2, 0.8, 0.1, 1.0]
 >>> c60.bondsetting[('C', 'C')].type = '0'
@@ -46,7 +46,7 @@ In order to represent the cavity by a polyhedral model, we add a ghost site (spe
 >>> # add bond ()`X', 'C`), and set polyhedra to True
 >>> c60.bondsetting[('X', 'C')] = {'species1': 'X', 'species2': 'C', 'min': 0, 'max': 10, 'search': 2, 'polyhedra': True}
 >>> c60.polyhedrasetting['X'].color = [0.4, 0.4, 0, 1.0]
->>> c60.model_type = 1
+>>> c60.model_style = 1
 >>> # draw polyhedral model manually and not show the edge
 >>> c60.draw_polyhedras(show_edge = False)
 

@@ -17,7 +17,7 @@ c60 = c60 + x
 c60.bondsetting[('X', 'C')] = {'min': 0, 'max': 10, 'search': 2, 'polyhedra': True}
 c60.polyhedrasetting['X'].color = [0.4, 0.4, 0, 1.0]
 c60.polyhedrasetting['X'].show_edge = False
-c60.model_type = 1
+c60.model_style = 1
 # # draw polyhedral model manually and not show the edge
 c60.draw_polyhedras()
 set_world(color = [0.2, 0.2, 0.2, 1.0])
