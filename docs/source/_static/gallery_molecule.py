@@ -20,8 +20,8 @@ h2o.get_image(output = 'gallery_h2o_ball.png')
 h2o['O'].scale = 0.6
 h2o['H'].scale = 0.6
 h2o['H'].color = [0.8, 1.0, 0.0, 1.0]
-h2o.bondsetting[('O', 'H')].width = 0.1
-h2o.bondsetting[('O', 'H')].style = '0'
-h2o.bondsetting[('O', 'H')].color1 = [0.1, 0.8, 0.8, 1.0]
+h2o.bonds.setting[('O', 'H')].width = 0.1
+h2o.bonds.setting[('O', 'H')].style = '0'
+h2o.bonds.setting[('O', 'H')].color1 = [0.1, 0.8, 0.8, 1.0]
 h2o.draw_bonds()
 h2o.get_image(output = 'gallery_h2o_bond.png')

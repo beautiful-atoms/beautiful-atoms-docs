@@ -3,7 +3,7 @@
 Bond and Polyhedra
 ========================
 
-The :mod:`Bondsetting <batoms.bondsetting>` object controls various settings such as the bondlength and the polyhedra.
+The :mod:`Bondsetting <batoms.bonds.setting>` object controls various settings such as the bondlength and the polyhedra.
 One can set ``model_style`` to draw the bond and polyhedra.
 
 >>> from batoms.bio import read
@@ -84,8 +84,8 @@ Hydrogen bond
 
 To build up hydrogen bond for ``X-H -- Y``. Set the minimum and maximum distances of ``H-Y``, and set the ``bondlinewdith`` to a small value. Such as ``H-O`` and ``H-N`` bond.
 
->>> h2o.bondsetting[('H', 'O')].min = 2.0
->>> h2o.bondsetting[('H', 'O')].max = 3.0
+>>> h2o.bonds.setting[('H', 'O')].min = 2.0
+>>> h2o.bonds.setting[('H', 'O')].max = 3.0
 
 .. image:: ../_static/figs/hydrogen-bond.png
    :width: 5cm

@@ -25,7 +25,7 @@ Here we show a example of draw SAS for the protein kras.
    :width: 8cm
 
 
-You can print the default bondsetting by:
+You can print the default mssetting by:
 
 >>> kras.mssetting
 name  select  probe   resolution    color  

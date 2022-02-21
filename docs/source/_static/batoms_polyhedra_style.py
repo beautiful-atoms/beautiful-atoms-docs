@@ -7,7 +7,7 @@ ch4 = Batoms(label = 'ch4', atoms = molecule('CH4'))
 ch4.bondsetting[('C', 'H')].polyhedra = True
 ch4['H'].color = [0, 0, 0.8, 1.0]
 ch4['C'].color = [0.8, 0, 0, 1.0]
-ch4.polyhedrasetting['C'].color = [0.8, 0.1, 0.3, 0.3]
+ch4.polyhedras.setting['C'].color = [0.8, 0.1, 0.3, 0.3]
 ch4.model_style = 2
 ch4.render.resolution = [500, 500]
 for polyhedra_style in [0, 1, 2, 3]:

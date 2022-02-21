@@ -8,15 +8,15 @@ c60 = molecule('C60')
 pos = c60.get_center_of_mass()
 c60 = Batoms(label = 'c60', atoms = c60)
 c60['C'].color = [0.1, 0.1, 0.1, 1.0]
-c60.bondsetting[('C', 'C')].style = '0'
-c60.bondsetting[('C', 'C')].color1 = [0.2, 0.8, 0.1, 1.0]
+c60.bonds.setting[('C', 'C')].style = '0'
+c60.bonds.setting[('C', 'C')].color1 = [0.2, 0.8, 0.1, 1.0]
 # we add a ghost site (species ``X``) at the center of a cavity
 x = Batoms('x', {'X':[pos]})
 c60 = c60 + x
 # add bond `X-C`, and set polyhedra to True
-c60.bondsetting[('X', 'C')] = {'min': 0, 'max': 10, 'search': 2, 'polyhedra': True}
-c60.polyhedrasetting['X'].color = [0.4, 0.4, 0, 1.0]
-c60.polyhedrasetting['X'].show_edge = False
+c60.bonds.setting[('X', 'C')] = {'min': 0, 'max': 10, 'search': 2, 'polyhedra': True}
+c60.polyhedras.setting['X'].color = [0.4, 0.4, 0, 1.0]
+c60.polyhedras.setting['X'].show_edge = False
 c60.model_style = 1
 # # draw polyhedral model manually and not show the edge
 c60.draw_polyhedras()
