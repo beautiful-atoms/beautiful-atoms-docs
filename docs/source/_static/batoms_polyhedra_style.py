@@ -3,7 +3,7 @@ from batoms.butils import removeAll
 from batoms import Batoms
 
 removeAll()
-ch4 = Batoms(label = 'ch4', atoms = molecule('CH4'))
+ch4 = Batoms(label = 'ch4', from_ase = molecule('CH4'))
 ch4.bondsetting[('C', 'H')].polyhedra = True
 ch4['H'].color = [0, 0, 0.8, 1.0]
 ch4['C'].color = [0.8, 0, 0, 1.0]

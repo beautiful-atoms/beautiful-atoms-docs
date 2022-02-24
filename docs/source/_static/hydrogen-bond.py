@@ -1,7 +1,7 @@
 from ase.build import molecule
 from batoms import Batoms
 ch3choh = molecule('CH3CH2OH')
-ch3choh = Batoms('ch3ch2oh', atoms = ch3choh)
+ch3choh = Batoms('ch3ch2oh', from_ase = ch3choh)
 ch3choh.bonds.setting[('H', 'O')].min = 2.0
 ch3choh.bonds.setting[('H', 'O')].max = 3.0
 ch3choh.bonds.setting[('H', 'O')].width = 0.01

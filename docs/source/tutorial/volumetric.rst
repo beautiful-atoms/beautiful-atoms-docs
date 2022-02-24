@@ -51,7 +51,7 @@ The name of a isosurfacesetting can be any string, for example:
    >>> atoms = cube['atoms']
    >>> origin = cube['origin']
    >>> atoms.translate(-origin[0:3])
-   >>> h2o = Batoms('h2o', atoms = atoms, volume = volume, draw = False)
+   >>> h2o = Batoms('h2o', from_ase = atoms, volume = volume, draw = False)
 
 
 2D slicing

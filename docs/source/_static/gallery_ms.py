@@ -5,7 +5,7 @@ from batoms.butils import removeAll, set_world
 removeAll()
 kras = read('datas/kras.pdb')
 kras.center(1.0)
-kras = Batoms('kras', atoms = kras)
+kras = Batoms('kras', from_ase = kras)
 kras.draw_SAS()
 set_world(color = [0.2, 0.2, 0.2, 1.0])
 draw_plane(location = [0, 0, min(kras.positions[:, 2]) - 3], 

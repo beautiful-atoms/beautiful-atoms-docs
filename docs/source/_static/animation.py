@@ -7,6 +7,6 @@ for i in range(20):
     temp.rotate(18*i, 'z')
     images.append(temp)
 
-c2h6so = Batoms(label = 'c2h6so', atoms = images)
+c2h6so = Batoms(label = 'c2h6so', from_ase = images)
 c2h6so.load_frames()
 c2h6so.get_image(animation = True)

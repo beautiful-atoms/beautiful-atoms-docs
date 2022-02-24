@@ -7,7 +7,7 @@ surfaces = [(1, 1, 1), (1, 0, 0)]
 energies = [1.28, 1.69]
 atoms = wulff_construction('Au', surfaces, energies, 500, 'fcc')
 del atoms[atoms.positions[:, 2] < 0]
-nano = Batoms('wulff', atoms = atoms)
+nano = Batoms('wulff', from_ase = atoms)
 nano.show_unit_cell = False
 draw_plane(size = 1000, location = (0, 0, min(nano.positions[:, 2]) - nano['Au'].size[0]),  
         color = [0.9, 0.9, 0.9, 1.0])

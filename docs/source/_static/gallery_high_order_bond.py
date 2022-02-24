@@ -4,7 +4,7 @@ from batoms.bdraw import draw_plane
 from batoms.butils import removeAll
 removeAll()
 c6h6 = molecule('C6H6')
-c6h6 = Batoms('c6h6', atoms = c6h6)
+c6h6 = Batoms('c6h6', from_ase = c6h6)
 c6h6['H'].color = [0.8, 1.0, 0.0, 1.0]
 c6h6['C'].color = [0.1, 0.4, 0.9, 1.0]
 plane = draw_plane(location = [0, 0, c6h6.get_all_vertices()[:, 2].min() - c6h6['C'].size[0]], 

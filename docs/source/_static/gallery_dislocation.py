@@ -8,7 +8,7 @@ removeAll()
 fe = bulk('Fe', cubic = True)
 del fe[0]
 fe = fe*[7, 6, 6]
-fe = Batoms(label = 'Fe', atoms = fe)
+fe = Batoms(label = 'Fe', from_ase = fe)
 fe.bondsetting[('Fe', 'Fe')] = {'max': 3.5, 'color1': [0.2, 0.8, 0.4, 1.0]}
 #-------------------------------------
 # click "Tab" key to "Eidt" mode:

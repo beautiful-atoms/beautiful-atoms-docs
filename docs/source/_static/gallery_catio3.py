@@ -4,7 +4,7 @@ from batoms.bdraw import draw_plane
 from batoms.butils import removeAll, set_world
 removeAll()
 cto = read('datas/catio3.cif')
-cto = Batoms('cto', atoms = cto)
+cto = Batoms('cto', from_ase = cto)
 # ball
 cto['Ca'].node = {'Base Color': [0, 1, 0, 1.0], 'Metallic': 0.9, 'Specular': 1.0, 'Roughness': 0.01 }
 cto['Ti'].node = {'Base Color': [0.7, 0.8, 0, 1.0], 'Metallic': 0.2, 'Specular': 0.2, 'Roughness': 0.6 }

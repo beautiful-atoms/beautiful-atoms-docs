@@ -4,7 +4,7 @@ from batoms.bdraw import draw_plane
 from batoms.butils import removeAll, set_world
 removeAll()
 atoms = read('datas/mof-5.cif')
-mof = Batoms(label = 'mof-5', atoms = atoms)
+mof = Batoms(label = 'mof-5', from_ase = atoms)
 mof['H'].color = [0.6, 0, 1.0, 1.0]
 mof['C'].color = [0.0, 0.6, 0.1, 1.0]
 mof.polyhedras.setting['Zn'].color = [0.1, 0.4, 0.7, 1.0]

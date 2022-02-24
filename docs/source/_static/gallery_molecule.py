@@ -6,9 +6,9 @@ from batoms.render import Render
 from batoms.butils import removeAll
 removeAll()
 h2o = molecule('H2O')
-h2o = Batoms('h2o', atoms = h2o)
+h2o = Batoms('h2o', from_ase = h2o)
 h2o['H'].color = [0.8, 1.0, 0.0, 1.0]
-plane = draw_plane(location = [0, 0, h2o['H'][0][2] - h2o['H'].size[0]], 
+plane = draw_plane(location = [0, 0, min(h2o.positions[:, 2]) - h2o.size[1]], 
             size = 200, color = (0.1, 0.1, 0.1, 1))
 h2o.render.viewport=[1, 0, 0.1]
 h2o.render.engine = 'cycles'

@@ -11,7 +11,7 @@ surfaces = [(1, 1, 1), (1, 0, 0)]
 energies = [1.28, 1.69]
 nano = wulff_construction('Au', surfaces, energies, 30, 'fcc')
 del nano[nano.positions[:, 2] < 0]
-nano = Batoms('nano', atoms = nano)
+nano = Batoms('nano', from_ase = nano)
 bulk = read('docs/source/_static/datas/ceo2.cif')
 slab111 = surface(bulk, (1, 1, 1), 4, vacuum = 0, periodic=True)
 slab111 = slab111*[20, 10, 1]

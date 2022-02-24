@@ -17,7 +17,7 @@ for i in range(20):
             atoms = atoms + temp
     images.append(atoms)
 
-h2o = Batoms(label = 'h2o', atoms = images, movie = True)
+h2o = Batoms(label = 'h2o', from_ase = images, movie = True)
 
 h2o.render.use_motion_blur = True
 h2o.render.camera.ortho_scale = 30

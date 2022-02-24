@@ -3,7 +3,7 @@ from batoms import Batoms
 import numpy as np
 
 atoms = fcc111('Au', size = (8, 8, 4), vacuum=0)
-au111 = Batoms(label = 'au111', atoms = atoms)
+au111 = Batoms(label = 'au111', from_ase = atoms)
 au111.cell[2, 2] += 10
 au111.draw_cell()
 au111.get_image(viewport = [0, 0, 1], output = 'figs/gallery_top_view.png')

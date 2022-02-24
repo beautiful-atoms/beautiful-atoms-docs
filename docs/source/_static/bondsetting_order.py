@@ -4,7 +4,7 @@ from batoms.butils import removeAll
 from math import pi
 removeAll()
 
-co2 = Batoms('co2', atoms = molecule('CO2'))
+co2 = Batoms('co2', from_ase = molecule('CO2'))
 co2.bonds.setting[('C', 'O')].width = 0.05
 co2.bonds.setting[('C', 'O')].order = 2
 co2.rotate(pi/2, 'Y')

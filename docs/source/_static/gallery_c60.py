@@ -6,7 +6,7 @@ import numpy as np
 removeAll()
 c60 = molecule('C60')
 pos = c60.get_center_of_mass()
-c60 = Batoms(label = 'c60', atoms = c60)
+c60 = Batoms(label = 'c60', from_ase = c60)
 c60['C'].color = [0.1, 0.1, 0.1, 1.0]
 c60.bonds.setting[('C', 'C')].style = '0'
 c60.bonds.setting[('C', 'C')].color1 = [0.2, 0.8, 0.1, 1.0]

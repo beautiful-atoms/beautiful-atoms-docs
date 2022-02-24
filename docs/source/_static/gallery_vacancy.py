@@ -1,7 +1,7 @@
 from ase.build import fcc111
 from batoms import Batoms
 atoms = fcc111('Au', size = (5, 5, 4), vacuum=0)
-au111 = Batoms(label = 'au111', atoms = atoms)
+au111 = Batoms(label = 'au111', from_ase = atoms)
 au111.cell[2, 2] += 10
 au111.draw_cell()
 au111.replace('Au', 'X', [87])

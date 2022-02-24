@@ -36,7 +36,7 @@ Features:
 .. toctree::
    :maxdepth: 2
    
-   install
+   install/index
    getting-started
    viewport
    tutorial/index

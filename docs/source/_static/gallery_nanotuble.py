@@ -16,7 +16,7 @@ for i in range(n):
     c = cnt[i].z/l
     colors[kind] = [c, 1-c, 0]
 
-cnt = Batoms(label = 'cnt', atoms = cnt)
+cnt = Batoms(label = 'cnt', from_ase = cnt)
 for kind, color in colors.items():
     cnt[kind].color = color
 

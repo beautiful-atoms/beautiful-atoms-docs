@@ -29,8 +29,3 @@ For example, in solid shading, there are four sections:
 
 
 For more example, please watch the following video tutorial: https://youtu.be/lc1v4jmS5b4.
-
-
-
-
-

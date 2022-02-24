@@ -3,7 +3,7 @@ from batoms.butils import removeAll
 from batoms import Batoms
 
 removeAll()
-co = Batoms(label = 'co', atoms = molecule('CO'))
+co = Batoms(label = 'co', from_ase = molecule('CO'))
 co.bonds.setting[('C', 'O')].style = '0'
 co.model_style = 1
 co.render.viewport = [1, 0, 0]
