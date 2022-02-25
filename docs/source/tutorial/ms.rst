@@ -16,10 +16,10 @@ Here we show a example of draw SAS for the protein kras.
 
 >>> from ase.io import read
 >>> from batoms import Batoms
->>> kras = read('kras.pdb')
->>> kras = Batoms('kras', from_ase = kras)
+>>> kras = read("kras.pdb")
+>>> kras = Batoms("kras", from_ase = kras)
 >>> kras.mssetting.draw_SAS()
->>> kras.get_image(padding = 3, output = 'ms_sas_kras.png')
+>>> kras.get_image(padding = 3, output = "ms_sas_kras.png")
 
 .. image:: ../_static/figs/ms_sas_kras.png
    :width: 8cm
@@ -33,11 +33,11 @@ name  select  probe   resolution    color
 
 The default probe radius is set to be 1.4. One can change it by:
 
->>> kras.mssetting['1'].probe = 1.2
+>>> kras.mssetting["1"].probe = 1.2
 
 You can get the solvent accessible surface area (SASA) by:
 
->>> area = kras.mssetting.get_sasa('1')
+>>> area = kras.mssetting.get_sasa("1")
 Area: 7977.796,    Volume: 33748.846
 
 Analytical SAS area calculated by MSMS_ is 8119 Å².
@@ -54,17 +54,17 @@ Here we show a example of draw SES for the protein kras.
 
 >>> from ase.io import read
 >>> from batoms import Batoms
->>> kras = read('kras.pdb')
->>> kras = Batoms('kras', from_ase = kras)
+>>> kras = read("kras.pdb")
+>>> kras = Batoms("kras", from_ase = kras)
 >>> kras.mssetting.draw_SES()
->>> kras.get_image(padding = 3, output = 'ms_ses_kras.png')
+>>> kras.get_image(padding = 3, output = "ms_ses_kras.png")
 
 .. image:: ../_static/figs/ms_ses_kras.png
    :width: 8cm
 
 You can get the solvent-excluded surface area (SESA) by:
 
->>> area = kras.mssetting.get_sesa('1')
+>>> area = kras.mssetting.get_sesa("1")
 SES: area: 7071.490, volume: 23277.100
 
 Analytical SES area calculated by MSMS_ is 7080 Å².

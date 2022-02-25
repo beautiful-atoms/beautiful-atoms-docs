@@ -13,8 +13,8 @@ Build a H\ :sub:`2`\ O molecule.
 .. code:: python
 
    from batoms import Batoms
-   h2o = Batoms(label = 'h2o',
-               species = ['O', 'H', 'H'], 
+   h2o = Batoms(label = "h2o",
+               species = ["O", "H", "H"], 
                positions = [[0, 0, 0.40], [0, -0.76, -0.2], [0, 0.76, -0.2]])
 
 .. image:: ../_static/figs/batoms-h2o.png
@@ -28,8 +28,8 @@ Here is how you could define an gold crystal structure with a lattice constant o
    from batoms import Batoms
    a = 4.08
    positions = [[0, 0, 0], [a/2, a/2, 0], [a/2, 0, a/2], [0, a/2, a/2]]
-   au = Batoms(label = 'au', 
-               species = ['Au']*len(positions), 
+   au = Batoms(label = "au", 
+               species = ["Au"]*len(positions), 
                positions = positions,
                pbc = True, 
                cell = (a, a, a))
@@ -45,7 +45,7 @@ Import from file
 .. code:: python
 
     from batoms.bio import read
-    tio2 = read('docs/source/_static/datas/tio2.cif')
+    tio2 = read("docs/source/_static/datas/tio2.cif")
 
 .. image:: ../_static/figs/bond_tio2.png
    :width: 5cm
@@ -67,9 +67,9 @@ ASE defines a number of molecular geometries in the ``g2`` database, which can b
 
     from ase.build import molecule
     from batoms import Batoms
-    atoms = molecule('NH3')
-    batoms = Batoms(label = 'mol', from_ase = atoms)
-    batoms.get_image(output = 'nh3.png')
+    atoms = molecule("NH3")
+    batoms = Batoms(label = "mol", from_ase = atoms)
+    batoms.get_image(output = "nh3.png")
 
 .. image:: ../_static/figs/build_nh3.png
    :width: 4cm
@@ -118,10 +118,10 @@ More complicated molecules may be obtained using the PubChem API integration. He
 
     from batoms.plugins.pubchem import pubchem_search
     ssl._create_default_https_context = ssl._create_unverified_context
-    tbab = pubchem_search(name = 'tetrabutylazanium')
-    batoms = Batoms(label = 'mol', from_ase = tbab)
+    tbab = pubchem_search(name = "tetrabutylazanium")
+    batoms = Batoms(label = "mol", from_ase = tbab)
     batoms.model_style = 1
-    batoms.get_image(output = 'tbab.png')
+    batoms.get_image(output = "tbab.png")
 
 
 .. image:: ../_static/figs/build_pubchem_tbab.png
@@ -137,9 +137,9 @@ Create a bulk structure for FCC ``Au``.
 
     from ase.build import bulk
     from batoms import Batoms
-    au = bulk('Au', 'fcc', cubic=True)
-    au = Batoms(label = 'au', from_ase = au)
-    au.get_image(viewport = [1, -0.3, 0.1], output = 'au.png')
+    au = bulk("Au", "fcc", cubic=True)
+    au = Batoms(label = "au", from_ase = au)
+    au.get_image(viewport = [1, -0.3, 0.1], output = "au.png")
 
 .. image:: ../_static/figs/build_bulk_au.png
    :width: 5cm
@@ -154,8 +154,8 @@ Create (111) surface for FCC ``Au``.
 
     from ase.build import fcc111
     from batoms import Batoms
-    atoms = fcc111('Au', size = (5, 5, 4), vacuum=0)
-    au111 = Batoms(label = 'au111', from_ase = atoms)
+    atoms = fcc111("Au", size = (5, 5, 4), vacuum=0)
+    au111 = Batoms(label = "au111", from_ase = atoms)
     au111.cell[2, 2] += 10
 
 .. image:: ../_static/figs/gallery_side_view.png 
@@ -171,9 +171,9 @@ Create a nanoparticle using ``Wulff`` method:
     from batoms import Batoms
     surfaces = [(1, 1, 1), (1, 0, 0)]
     energies = [1.28, 1.69]
-    atoms = wulff_construction('Au', surfaces, energies, 500, 'fcc')
+    atoms = wulff_construction("Au", surfaces, energies, 500, "fcc")
     del atoms[atoms.positions[:, 2] < 0]
-    nano = Batoms('wulff', from_ase = atoms)
+    nano = Batoms("wulff", from_ase = atoms)
 
 .. image:: ../_static/figs/gallery_wulff.png 
    :width: 5cm

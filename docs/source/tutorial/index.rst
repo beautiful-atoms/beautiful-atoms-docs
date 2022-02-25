@@ -9,6 +9,7 @@ Tutorials
    buildthings
    render/index
    bond_polyhedra
+   select
    volumetric
    plane
    boundary

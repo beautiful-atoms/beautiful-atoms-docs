@@ -7,8 +7,8 @@ Build a Au (111) surface.
 
 >>> from ase.build import fcc111
 >>> from batoms import Batoms
->>> atoms = fcc111('Au', size = (5, 5, 4), vacuum=0)
->>> au111 = Batoms(label = 'au111', from_ase = atoms)
+>>> atoms = fcc111("Au", size = (5, 5, 4), vacuum=0)
+>>> au111 = Batoms(label = "au111", from_ase = atoms)
 >>> au111.cell[2, 2] += 10
 
 Select gold atoms, press ``Tab`` key to switch to ``Edit`` mode. Choose the index of atom for the vacancy.
@@ -19,7 +19,7 @@ Select gold atoms, press ``Tab`` key to switch to ``Edit`` mode. Choose the inde
 
 Set the vacancy atom to a ghost species ``X``.
 
->>> au111.replace([87], 'X')
+>>> au111.replace([87], "X")
 
 Then increase the size and set a different color for ``X`` species, and make it a little transparent.
 
@@ -28,8 +28,8 @@ Then increase the size and set a different color for ``X`` species, and make it 
 
 Save structure to file, and renering the image:
 
->>> au111.write('POSCAR')
->>> au111.get_image([1, -0.4, 0.4], output = 'au111-vacancy.png')
+>>> au111.write("POSCAR")
+>>> au111.get_image([1, -0.4, 0.4], output = "au111-vacancy.png")
 
 
 .. image:: ../../_static/figs/vacancy-au111.png
@@ -52,9 +52,9 @@ Save structure to file, and renering the image:
 
     Use ``Cycles`` render engine to get a better image.
     
-    >>> au111.render.lights['Default'].energy = 25
-    >>> au111.render.engine = 'cycles'
-    >>> au111.get_image([1, -0.4, 0.4], output = 'au111-vacancy-cycles.png')
+    >>> au111.render.lights["Default"].energy = 25
+    >>> au111.render.engine = "cycles"
+    >>> au111.get_image([1, -0.4, 0.4], output = "au111-vacancy-cycles.png")
 
     .. image:: ../../_static/figs/vacancy-au111-cycles.png
         :width: 12cm

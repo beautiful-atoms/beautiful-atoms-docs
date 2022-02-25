@@ -9,8 +9,8 @@ Beautiful Atoms is a Python package for editing and rendering atoms and molecule
 .. code:: python
 
    from batoms import Batoms
-   h2o = Batoms('h2o',
-               species = ['O', 'H', 'H'], 
+   h2o = Batoms("h2o",
+               species = ["O", "H", "H"], 
                positions= [[0, 0, 0], [0, -0.76, -0.6], [0, 0.76, -0.6]])
 
 |logo|

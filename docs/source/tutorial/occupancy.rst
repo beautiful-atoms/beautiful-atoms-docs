@@ -14,11 +14,11 @@ One can change the occupancies by setting the ``species`` directly. Here is a ex
 
 >>> from ase.build import bulk
 >>> from batoms import Batoms
->>> fe = bulk('Fe', 'bcc', cubic=True)
->>> fe = Batoms(label = 'fe', from_ase = fe)
+>>> fe = bulk("Fe", "bcc", cubic=True)
+>>> fe = Batoms(label = "fe", from_ase = fe)
 >>> fe = fe*[4, 4, 4]
->>> fe.species['Fe'] = {'elements': {'Co': 0.2, 'Cr': 0.2, 'Fe': 0.2, 'Mn': 0.2, 'Ni': 0.2}}
->>> fe.get_image(viewport = [0, 0, 1], output = 'occupancy-hea.png')
+>>> fe.species["Fe"] = {"elements": {"Co": 0.2, "Cr": 0.2, "Fe": 0.2, "Mn": 0.2, "Ni": 0.2}}
+>>> fe.get_image(viewport = [0, 0, 1], output = "occupancy-hea.png")
 
 .. image:: ../_static/figs/occupancy-hea.png
    :width: 8cm

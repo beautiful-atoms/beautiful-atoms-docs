@@ -18,15 +18,15 @@ You can import a PDB data direct from the website `Protein Data Bank (RSCB) <htt
 .. code:: python
 
     from batoms.plugins.rscb import rscb_import
-    protein = rscb_import('1ema')
+    protein = rscb_import("1ema")
 
 Or you can read a local pdf file downloaded by yourself:
 
 .. code:: python
 
     from batoms.pdbparser import read_pdb
-    atoms = read_pdb('test/datas/1tim.pdb')
-    protein = Batoms('1tim', from_ase = atoms)
+    atoms = read_pdb("test/datas/1tim.pdb")
+    protein = Batoms("1tim", from_ase = atoms)
 
 
 Draw ribbon diagram
@@ -46,7 +46,7 @@ You can select the secondary structures, and make change to them. For exmaple, s
 
 .. code:: python
     
-    sel1 = protein.selects.add('sel1', 'sheet A-160-A-170')
+    sel1 = protein.selects.add("sel1", "sheet A-160-A-170")
     sel1.show = True
     sel1.model_style = 1
 
