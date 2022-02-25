@@ -1,6 +1,6 @@
 from batoms.build import bulk
-from batoms.butils import removeAll
-from batoms.bdraw import draw_plane
+from batoms.utils.butils import removeAll
+from batoms.draw import draw_plane
 from batoms import Batoms
 import numpy as np
 removeAll()

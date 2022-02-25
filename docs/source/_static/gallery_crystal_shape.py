@@ -1,6 +1,6 @@
 from batoms.build import bulk
-from batoms.butils import removeAll, set_world
-from batoms.bdraw import draw_plane
+from batoms.utils.butils import removeAll, set_world
+from batoms.draw import draw_plane
 removeAll()
 au = bulk('au', 'Au', cubic = True)
 au.planesetting[(1, 1, 1)] = {'distance': 8, 'crystal': True,

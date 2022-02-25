@@ -7,7 +7,7 @@ Camera
 
 One can change parameters for the default camera by. 
 
->>> ch4.render.camera.type = 'PERSP'
+>>> ch4.render.camera.type = "PERSP"
 >>> ch4.render.camera.lens = 100
 
 Viewpoint

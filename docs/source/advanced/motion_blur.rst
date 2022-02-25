@@ -15,7 +15,7 @@ In this tutorial we creat four water molecules and move it in different directio
 >>> from batoms import Batoms
 >>> from ase import Atoms
 >>> from ase.build import molecule
->>> h2o = molecule('H2O')
+>>> h2o = molecule("H2O")
 >>> images = []
 >>> for i in range(20):
 >>>     atoms = Atoms()
@@ -28,16 +28,16 @@ In this tutorial we creat four water molecules and move it in different directio
 
 Load trajecty to ``Batoms``:
 
->>> h2o = Batoms(label = 'h2o', from_ase = images, movie = True)
+>>> h2o = Batoms(label = "h2o", from_ase = images, movie = True)
 
 Render the ``10th`` frame with ``eevee`` engine. Set ``use_motion_blur`` to ``True``.
 
->>> from batoms.butils import set_world
+>>> from batoms.utils.butils import set_world
 >>> h2o.render.use_motion_blur = True
 >>> h2o.render.camera.ortho_scale = 30
 >>> h2o.render.transparent = False
 >>> set_world([0.1, 0.1, 0.1, 1.0])
->>> h2o.get_image(engine = 'eevee', 
+>>> h2o.get_image(engine = "eevee", 
 >>>                frame = 10, 
 >>>                canvas = [30, 30, 10])
 

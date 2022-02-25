@@ -1,10 +1,8 @@
 from batoms import Batoms
 from ase import Atoms
 from ase.build import molecule
-from batoms.butils import set_world
-from batoms.butils import removeAll, set_world
+from batoms.utils.butils import removeAll, set_world
 removeAll()
-
 
 h2o = molecule('H2O')
 images = []

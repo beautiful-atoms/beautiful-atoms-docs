@@ -1,6 +1,6 @@
 from ase.build import molecule
 from batoms import Batoms
-from batoms.butils import removeAll
+from batoms.utils.butils import removeAll
 removeAll()
 ch4 = molecule('CH4')
 ch4 = Batoms(label = 'ch4', from_ase = ch4)

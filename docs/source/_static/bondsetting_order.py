@@ -1,6 +1,6 @@
 from ase.build import molecule
 from batoms import Batoms
-from batoms.butils import removeAll
+from batoms.utils.butils import removeAll
 from math import pi
 removeAll()
 

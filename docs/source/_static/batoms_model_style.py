@@ -1,5 +1,5 @@
 from ase.io import read
-from batoms.butils import removeAll
+from batoms.utils.butils import removeAll
 from batoms import Batoms
 
 removeAll()

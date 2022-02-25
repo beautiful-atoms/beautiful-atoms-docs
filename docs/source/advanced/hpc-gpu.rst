@@ -16,9 +16,9 @@ Save the following code as a python file (eg. h2o.py). In ``run`` fucntion, set 
 
     from ase.build import molecule
     from batoms import Batoms
-    atoms = molecule('H2O')
-    h2o = Batoms(label = 'h2o', from_ase = atoms)
-    h2o.get_image([1, 0 ,0], engine = 'cycles', gpu = True, output = 'h2o.png')
+    atoms = molecule("H2O")
+    h2o = Batoms(label = "h2o", from_ase = atoms)
+    h2o.get_image([1, 0 ,0], engine = "cycles", gpu = True, output = "h2o.png")
 
 
 Set up a job script to use GPU on HPC, and save it (eg. job.slurm). Here is an example for SLURM system on the Ubelix cluster in the University of Bern.

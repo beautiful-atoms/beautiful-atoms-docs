@@ -1,9 +1,9 @@
 # Ball
 from ase.build import molecule
 from batoms import Batoms
-from batoms.bdraw import draw_plane
+from batoms.draw import draw_plane
 from batoms.render import Render
-from batoms.butils import removeAll
+from batoms.utils.butils import removeAll
 removeAll()
 h2o = molecule('H2O')
 h2o = Batoms('h2o', from_ase = h2o)

@@ -1,7 +1,7 @@
 from ase.cluster import wulff_construction
 from batoms import Batoms
-from batoms.bdraw import draw_plane
-from batoms.butils import removeAll
+from batoms.draw import draw_plane
+from batoms.utils.butils import removeAll
 removeAll()
 surfaces = [(1, 1, 1), (1, 0, 0)]
 energies = [1.28, 1.69]

@@ -2,9 +2,9 @@ from ase import atoms
 from ase.build import surface
 from ase.io import read
 from batoms import Batoms
-from batoms.bdraw import draw_plane
+from batoms.draw import draw_plane
 import numpy as np
-from batoms.butils import removeAll
+from batoms.utils.butils import removeAll
 from ase.cluster import wulff_construction
 removeAll()
 surfaces = [(1, 1, 1), (1, 0, 0)]

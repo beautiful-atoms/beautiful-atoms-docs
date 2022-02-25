@@ -1,7 +1,7 @@
 from ase.io import read
 from batoms import Batoms
-from batoms.bdraw import draw_plane
-from batoms.butils import removeAll, set_world
+from batoms.draw import draw_plane
+from batoms.utils.butils import removeAll, set_world
 removeAll()
 cto = read('datas/catio3.cif')
 cto = Batoms('cto', from_ase = cto)

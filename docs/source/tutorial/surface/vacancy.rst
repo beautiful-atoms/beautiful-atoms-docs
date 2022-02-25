@@ -23,8 +23,8 @@ Set the vacancy atom to a ghost species ``X``.
 
 Then increase the size and set a different color for ``X`` species, and make it a little transparent.
 
->>> au111[87.scale = 1.2
->>> # au111[87.color = [0.8, 0.0, 0.8, 0.2]
+>>> au111['X'].scale = 1.2
+>>> au111['X'].color = [0.8, 0.0, 0.8, 0.2]
 
 Save structure to file, and renering the image:
 

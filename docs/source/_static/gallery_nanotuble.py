@@ -1,7 +1,7 @@
 from ase.build import nanotube
 from batoms import Batoms
-from batoms.bdraw import draw_plane
-from batoms.butils import removeAll, set_world
+from batoms.draw import draw_plane
+from batoms.utils.butils import removeAll, set_world
 import numpy as np
 removeAll()
 cnt = nanotube(12, 0, length=8)

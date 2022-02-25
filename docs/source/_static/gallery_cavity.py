@@ -1,7 +1,7 @@
 from ase.io import read
 from batoms import Batoms
-from batoms.bdraw import draw_plane
-from batoms.butils import removeAll, set_world
+from batoms.draw import draw_plane
+from batoms.utils.butils import removeAll, set_world
 removeAll()
 atoms = read('datas/mof-5.cif')
 mof = Batoms(label = 'mof-5', from_ase = atoms)

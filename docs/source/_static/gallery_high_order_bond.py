@@ -1,7 +1,7 @@
 from ase.build import molecule
 from batoms import Batoms
-from batoms.bdraw import draw_plane
-from batoms.butils import removeAll
+from batoms.draw import draw_plane
+from batoms.utils.butils import removeAll
 removeAll()
 c6h6 = molecule('C6H6')
 c6h6 = Batoms('c6h6', from_ase = c6h6)

@@ -1,5 +1,5 @@
 from ase.build import molecule
-from batoms.butils import removeAll
+from batoms.utils.butils import removeAll
 from batoms import Batoms
 
 removeAll()

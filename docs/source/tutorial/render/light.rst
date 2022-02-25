@@ -12,13 +12,13 @@ You can print the default light by:
 
 One can change parameters for a light by. 
 
->>> ch4.render.lights['Default'].type = 'POINT'
->>> ch4.render.lights['Default'].energy = 1000
+>>> ch4.render.lights["Default"].type = "POINT"
+>>> ch4.render.lights["Default"].energy = 1000
 
 One can ``remove`` or ``add`` a light by:
 
->>> ch4.render.lights.add('front', direction = [1, 0, 0])
->>> ch4.render.lights.remove('front')
+>>> ch4.render.lights.add("front", direction = [1, 0, 0])
+>>> ch4.render.lights.remove("front")
 
 
 light_type
