@@ -22,7 +22,7 @@ Install batoms inside Blender
 
 - Download the latest stable release (`beautiful-atoms.zip <https://github.com/superstar54/beautiful-atoms/archive/refs/heads/release/2.0.0.zip>`__).
 
-- Extract the file, rename the folder to ``batoms``, and move it to ``blender-3.0.0-linux-x64/3.0/scripts/addons/``. 
+- Extract the file, move the folder ``batoms`` to Blender addons folder ``$HOME/.config/blender/3.0/scripts/addons/``. 
 
 - Enable the addon in the Preferences setting. Please vist here to learn how to enable an addon. https://docs.blender.org/manual/en/latest/editors/preferences/addons.html. Or, you can open a Blender Python console, and run the following code to enable the batoms::
 
@@ -32,8 +32,24 @@ Install batoms inside Blender
     bpy.ops.wm.save_userpref()
 
 
-Install batoms-api on your computer
-====================================
+Test your installation 
+=====================================
+
+Start Blender, in the python console, run:
+
+>>> from batoms import Batoms
+>>> h2o = Batoms('h2o', species = ['O', 'H', 'H'], 
+...     positions= [[0, 0, 0.40], [0, -0.76, -0.2], [0, 0.76, -0.2]])
+
+
+.. image:: ../_static/figs/getting_started_h2o.png
+   :width: 15cm
+   
+If you saw a water molecule, you have run a successful installation, congratulations!
+
+
+Install batoms-api on your computer (Optional)
+==================================================
 
 First install ASE on your computer. On Windows, open Anaconda_ Prompt (suggest to Anaconda_). On Linux, open a terminal, and run::
     

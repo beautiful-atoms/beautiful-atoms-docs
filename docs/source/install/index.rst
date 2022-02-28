@@ -43,19 +43,6 @@ Choose your system
 
 
 
-Test your installation
-======================
-
-Start Blender, in the python console, run:
-
->>> from batoms import Batoms
->>> h2o = Batoms('h2o', species = ['O', 'H', 'H'], 
-...     positions= [[0, 0, 0.40], [0, -0.76, -0.2], [0, 0.76, -0.2]])
-
-.. image:: _static/figs/batoms-h2o.png
-   :width: 3cm
-   
-If you saw a water molecule, congratulations!
 
 
 Please read :ref:`tips` page for more setup.

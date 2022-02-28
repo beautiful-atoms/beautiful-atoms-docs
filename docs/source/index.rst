@@ -42,6 +42,7 @@ Features:
    tutorial/index
    module/index
    gui/index
+   ops/index
    advanced/index
    gallery
    tips
