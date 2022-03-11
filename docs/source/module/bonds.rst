@@ -1,4 +1,4 @@
-.. module:: batoms.bonds.bondsetting
+.. module:: batoms.bond.bondsetting
 
 ========================
 The Bondsetting object

@@ -1,4 +1,4 @@
-.. module:: batoms.polyhedrasetting
+.. module:: batoms.polyhedra.polyhedrasetting
 
 ===========================
 The Polyhedrasetting object

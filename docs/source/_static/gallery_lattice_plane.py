@@ -5,9 +5,9 @@ from batoms import Batoms
 import numpy as np
 removeAll()
 au = bulk('au', 'Au', cubic = True)
-au.planesetting[(1, 1, 0)] = {'distance': au.cell[0, 0]/np.sqrt(2)}
+au.lattice_plane.setting[(1, 1, 0)] = {'distance': au.cell[0, 0]/np.sqrt(2)}
 au.draw_cell()
-au.draw_lattice_plane()
+au.draw()
 au.render.set_world(color = [0.2, 0.2, 0.2, 1.0])
 draw_plane(location = [0, 0, -au['Au'].size[0]], size = 200, color = (0.9, 0.9, 0.9, 1))
 au.render.viewport = [1, -0.3, 0.3]

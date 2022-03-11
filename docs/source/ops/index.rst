@@ -1,8 +1,8 @@
 .. _operator:
 
-=========
-Operator
-=========
+============
+Operators
+============
 
 The Operator allows users to creat, manipulate, and render atoms objects.
 
@@ -11,4 +11,5 @@ The Operator allows users to creat, manipulate, and render atoms objects.
 .. toctree::
    :maxdepth: 1
 
-   add
+   build_structure
+   draw_molecule

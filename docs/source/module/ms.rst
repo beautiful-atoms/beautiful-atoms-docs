@@ -1,4 +1,4 @@
-.. module:: batoms.mssetting
+.. module:: batoms.ms.mssetting
 
 =============================
 The MSsetting object
@@ -68,7 +68,7 @@ Here we show a example of draw SAS for the protein kras.
 
 You can get the solvent accessible surface area (SASA) by:
 
->>> area = kras.mssetting.get_sasa()[0]
+>>> area = kras.ms.get_sasa()[0]
 
 
 Solvent-excluded surface
@@ -87,11 +87,11 @@ Here we show a example of draw SES for the protein kras.
 
 You can get the solvent-excluded surface area (SESA) by:
 
->>> area = kras.mssetting.get_sesa()
+>>> area = kras.ms.get_sesa()
 
 
 List of all Methods
 ====================
 
-.. autoclass:: MSsetting
+.. autoclass:: MSsettings
    :members:

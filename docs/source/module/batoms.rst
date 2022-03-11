@@ -1,4 +1,4 @@
-.. module:: batoms
+.. module:: batoms.batoms
 
 ===================
 The Batoms object
