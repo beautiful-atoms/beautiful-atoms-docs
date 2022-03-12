@@ -18,7 +18,7 @@ Here we show a example of draw SAS for the protein kras.
 >>> from batoms import Batoms
 >>> kras = read("kras.pdb")
 >>> kras = Batoms("kras", from_ase = kras)
->>> kras.ms.draw_SAS()
+>>> kras.ms.draw()
 >>> kras.get_image(padding = 3, output = "ms_sas_kras.png")
 
 .. image:: ../_static/figs/ms_sas_kras.png
@@ -56,7 +56,8 @@ Here we show a example of draw SES for the protein kras.
 >>> from batoms import Batoms
 >>> kras = read("kras.pdb")
 >>> kras = Batoms("kras", from_ase = kras)
->>> kras.ms.draw_SES()
+>>> kras.ms.setting["1"].type = "SES"
+>>> kras.ms.draw()
 >>> kras.get_image(padding = 3, output = "ms_ses_kras.png")
 
 .. image:: ../_static/figs/ms_ses_kras.png

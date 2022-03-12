@@ -1,10 +1,10 @@
 .. module:: batoms.bond.bondsetting
 
 ========================
-The Bondsetting object
+The Bondsettings object
 ========================
 
-The :class:`Bondsetting` object is used to store and set all parameters related with bonds. It is a collection of :class:`BatomsBond` object. It should always bind with a :class:`Batoms` object. Possible keywords are: ``symbol1``, ``symbol2``, ``min``, ``max``, ``search``, ``polyhedra``, ``color1``, ``color2``, ``bondlinewidth``, ``style``. 
+The :class:`Bondsettings` object is used to store and set all parameters related with bonds. It is a collection of :class:`BatomsBond` object. It should always bind with a :class:`Batoms` object. Possible keywords are: ``symbol1``, ``symbol2``, ``min``, ``max``, ``search``, ``polyhedra``, ``color1``, ``color2``, ``bondlinewidth``, ``style``. 
 
 
 >>> from ase.build import molecule
@@ -27,11 +27,22 @@ By defaut, we use default radius (``ase.data.covalent_radii``) for every atoms, 
 
 Style
 ===========
-One set the bond style by:
+One set the bond style for a bond pair by:
 
->>> ch4.bonds.setting[('C', 'H')].style = '0'
+>>> ch4.bonds.setting[('C', 'H')].style = '3'
 
-Here, four polyhedra model are supported.
+.. image:: ../_static/figs/bond_style_setting_0.png
+   :width: 3cm
+
+
+One set the bond style for a bond by (Here is the first bond):
+
+>>> ch4.bonds[0] = '3'
+
+.. image:: ../_static/figs/bond_style_setting_1.png
+   :width: 3cm
+
+Here, four bond models are supported.
 
 .. list-table::
    :widths: 25 25 25 25

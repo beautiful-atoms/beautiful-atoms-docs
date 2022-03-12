@@ -3,7 +3,7 @@
 Bond and Polyhedra
 ========================
 
-The :mod:`Bondsetting <batoms.bonds.setting>` object controls various settings such as the bondlength and the polyhedra. 
+The :mod:`Bondsettings <batoms.bonds.setting>` object controls various settings such as the bondlength and the polyhedra. 
 
 One can set ``model_style`` to draw the bond and polyhedra.
 

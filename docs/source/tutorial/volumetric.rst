@@ -30,7 +30,7 @@ Delete a setting by:
 Add a new setting by:
 
 >>> h2o.isosurface.setting[2] = {"level": -0.002, "color": [0, 0, 0.8, 0.5]}
->>> h2o.draw()
+>>> h2o.isosurface.draw()
 
 The first value ``-0.002`` is the level for the isosurface, the second value ``[0, 0, 0.8, 0.5]`` is the color. The last value of the color ``0.5`` is used to set the ``transparency``.
 
@@ -62,7 +62,7 @@ To add 2D slices of volumetric data in the model, add a plane with ``slicing`` a
 >>> from batoms.bio import read
 >>> h2o = read("h2o-homo.cube")
 >>> h2o.isosurface.setting.delete(1)
->>> h2o.draw_isosurface()
+>>> h2o.isosurface.draw()
 >>> h2o.lattice_plane.setting[(0, 0, 1)] = {"distance": 6, "slicing": True}
 >>> h2o.get_image(viewport = [0, 0, 1], engine = "cycles")
 
