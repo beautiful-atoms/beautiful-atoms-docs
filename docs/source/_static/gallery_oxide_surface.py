@@ -15,7 +15,7 @@ nano = Batoms('nano', from_ase = nano)
 bulk = read('docs/source/_static/datas/ceo2.cif')
 slab111 = surface(bulk, (1, 1, 1), 4, vacuum = 0, periodic=True)
 slab111 = slab111*[20, 10, 1]
-slab111 = Batoms('CeO2-111', atoms = slab111)
+slab111 = Batoms('CeO2-111', from_ase = slab111)
 slab111['Ce'].color = [0.1, 0.6, 0.3, 1.0]
 com = slab111.get_center_of_mass()
 nano.translate([com[0], com[1]-25, max(slab111.positions[:, 2]) + 2.0])

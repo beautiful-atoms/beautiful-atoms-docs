@@ -15,7 +15,7 @@ In order to render a :class:`Batoms` object, you need to attach a :class:`Render
    from ase.build import molecule
    from batoms import Batoms
    atoms = molecule('CH4')
-   ch4 = Batoms(label = 'ch4', atoms = atoms)
+   ch4 = Batoms(label = 'ch4', from_ase = atoms)
    ch4.render.viewport = [1, 0, 0]
    ch4.render.engine = 'eevee'
    ch4.render.resolution = [1000, 1000]

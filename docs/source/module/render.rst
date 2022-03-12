@@ -12,7 +12,7 @@ The :class:`Render` object is to render atomic structure.
     from batoms import Batoms
     from batoms.render import Render
     atoms = molecule('C2H6SO')
-    c2h6so = Batoms(label = 'c2h6so', atoms = atoms)
+    c2h6so = Batoms(label = 'c2h6so', from_ase = atoms)
     c2h6so.render = Render(viewport = [1, 0, 0], engine = 'eevee')
     c2h6so.get_image(output = 'images/c2h6so.png')
 
