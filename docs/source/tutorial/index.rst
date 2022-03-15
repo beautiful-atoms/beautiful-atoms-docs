@@ -14,7 +14,6 @@ Tutorials
    plane
    boundary
    pbc
-   object_mode
    animation
    color
    species

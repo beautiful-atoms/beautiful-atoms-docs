@@ -39,6 +39,7 @@ Features:
    install/index
    getting-started
    viewport
+   modeling/index
    tutorial/index
    module/index
    gui/index

@@ -12,4 +12,4 @@ The Operator allows users to creat, manipulate, and render atoms objects.
    :maxdepth: 1
 
    build_structure
-   draw_molecule
+   ops-screen-redo-last
