@@ -34,8 +34,8 @@ To build up coordination polyhedra, set ``model_style`` to 2.
 
 One can ``remove`` or ``add`` a bond pair by:
 
->>> tio2.bonds.setting.remove(["Ti", "O"])
->>> tio2.bonds.setting.add(["Ti", "O"])
+>>> tio2.bonds.setting.remove(("Ti", "O"))
+>>> tio2.bonds.setting.add(("Ti", "O"))
 
 
 Search bond mode
@@ -99,6 +99,7 @@ One can change bond order by:
 >>> from ase.build import molecule
 >>> from batoms import Batoms
 >>> co2 = Batoms("co2", from_ase = molecule("CO2"))
+>>> co2.model_style = 1
 >>> co2.bonds[0].order = 2
 >>> co2.bonds[1].order = 2
 
