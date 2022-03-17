@@ -8,7 +8,7 @@ Color in ``Batoms`` is float array of 4 items in [0, 1]. The four values are rep
 Batom and Batoms
 =====================
 
-Let"s take CH\ :sub:`4`\  molecule as a example.
+Take CH\ :sub:`4`\  molecule as a example.
 
 >>> from ase.build import molecule
 >>> from batoms import Batoms

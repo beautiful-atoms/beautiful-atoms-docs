@@ -16,6 +16,7 @@ Tutorials
    pbc
    animation
    color
+   label
    species
    occupancy
    ribbon
