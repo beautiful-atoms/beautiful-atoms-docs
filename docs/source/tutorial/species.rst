@@ -2,38 +2,57 @@
 Species
 ===================
 
-Why we use species instead of element? Because some atoms are special:
+Why do we use species instead of elements? Because some atoms are special:
 
-* Different color for element.
-* Different properties for element, sunch as: spin up and down.
+* Different colors for one element.
+* Different properties for one element, such as: spin up and down.
 * ghost atoms: vacancy, highlight sphere, cavity
 * atoms with different bondsetting
 
-The parameter ``species`` in :class:`Batom` object is used to specify the symobl of species. 
+For example, we want to change the color of one hydrogen atom in CH4 molecule.
 
->>> from batoms import Batom
->>> h1 = Batom(label = "h2o", species = "H_1", element = "H", positions = [[0, 0, 0]])
->>> h2 = Batom(label = "h2o", species = "H_2", element = "H", positions = [[2, 0, 0]])
->>> h1.scale = 1.0
->>> h2.scale = 2.0
-
-Here we define different species in ASE atoms. We store the ``species`` infomation in ``atoms.arrays["species"]`` for ASE atoms. Then set color for different platinum species:
-
->>> from ase.build import fcc111
+>>> from ase.build import molecule
 >>> from batoms import Batoms
 >>> import numpy as np
->>> atoms = fcc111("Pt", (7, 7, 3), vacuum=3.0)
->>> atoms.new_array("species", np.array(atoms.get_chemical_symbols(), dtype = "U10"))
->>> for i in range(len(atoms)):
->>>     ind = int((atoms[i].x/5))
->>>     kind = atoms[i].symbol + "_{0}".format(ind)
->>>     atoms.arrays["species"][i] = kind
+>>> ch4 = Batoms("ch4", from_ase = molecule('CH4'))
 
->>> pt = Batoms(label = "pt111", from_ase = atoms)
->>> pt["Pt_0"].color = [0.8, 0.8, 0.9]
->>> pt["Pt_1"].color = [0.8, 0.5, 0.8]
->>> pt["Pt_2"].color = [0, 0.7, 0.4]
+Here, we replace the first H atom with a new species ("H_1").
 
-.. image:: ../_static/figs/pt111-species.png
-   :width: 8cm
+>>> ch4.replace([1], "H_1")
+>>> ch4["H_1"].color = (1.0, 1.0, 0.0, 1.0)
 
+.. image:: ../_static/figs/species_ch4.png
+   :width: 4cm
+
+Another example:
+
+>>> from ase.build import bulk
+>>> from batoms import Batoms
+>>> import numpy as np
+>>> au = Batoms(label = "au", from_ase = bulk('Au', cubic = True))
+
+>>> for i in range(len(au)):
+>>>     au.replace([i], "Au_%i"%i)
+
+>>> au["Au_0"].color = [0.8, 0.8, 0.9, 1.0]
+>>> au["Au_1"].color = [0.8, 0.5, 0.8, 1.0]
+>>> au["Au_2"].color = [0, 0.7, 0.4, 1.0]
+>>> au["Au_2"].color = [0.5, 0.1, 0.4, 1.0]
+
+.. image:: ../_static/figs/species_au4.png
+   :width: 6cm
+
+.. note::
+
+   Be careful, if the name of the new species does not start with "Au\_" (Au is the element to be replaced). Then, use this format:   
+   
+   >>> au.replace([0, 1], ["a100", {"elements":{"Au":{"occupancy":1.0}}}])
+
+   The name should not be longer than four characters.
+
+If you only need to change the scale of individule atoms. You can use:
+
+>>> Au[0].scale = 2
+
+.. image:: ../_static/figs/species_au4_2.png
+   :width: 6cm
