@@ -24,12 +24,17 @@ Install batoms inside Blender
 
 - Extract the file, move the folder ``batoms`` to Blender addons folder ``$HOME/.config/blender/3.0/scripts/addons/``. 
 
-- Enable the addon in the Preferences setting. Please vist here to learn how to enable an addon. https://docs.blender.org/manual/en/latest/editors/preferences/addons.html. Or, you can open a Blender Python console, and run the following code to enable the batoms::
+- Enable the addon in the Preferences setting. Please open a Blender Python console, and run the following code to enable the batoms::
 
     import addon_utils
     import bpy
     addon_utils.enable('batoms', default_set=True)
+    bpy.context.preferences.view.use_translate_new_dataname = False
     bpy.ops.wm.save_userpref()
+
+.. note::
+    Or, you can vist here to learn how to enable an addon by hand. https://docs.blender.org/manual/en/latest/editors/preferences/addons.html.
+
 
 
 Test your installation 
