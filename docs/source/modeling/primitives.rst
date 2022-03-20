@@ -39,8 +39,9 @@ The molecule is the simplest Batoms object, which is composed of atoms only. It 
    Batoms's molecule_add.
    
 
+.. note::
 
-More complicated molecules may be obtained using the PubChem API integration in the pubchem_atoms_search() and pubchem_atoms_conformer_search() functions. You may search based on common name, chemical identification number (cid), smiles string, or conformer identification number.
+   More complicated molecules may be obtained using the PubChem API integration.
 
 .. _bpy.ops.batoms.cube_add:
 
@@ -54,6 +55,9 @@ A standard bulk object is composed of atoms, unit cell and periodic boundary con
 
    Batoms's bulk_add.
 
+.. note::
+
+   More complicated crystals may be obtained using the MaterialsProject API integration.
 
 Surface
 =========
@@ -72,6 +76,11 @@ A standard surface object is composed of atoms, unit cell,  periodic boundary co
 
 Nanotube
 ===========
+
+.. figure:: ../_static/figs/ops_batoms_nanotube_add.png
+   :width: 500 px
+
+   Batoms's nanotube_add.
 
 
 
