@@ -39,8 +39,11 @@ Features:
    install/index
    getting-started
    viewport
+   interface/index
    modeling/index
    tutorial/index
+   animation/index
+   rendering/index
    module/index
    gui/index
    ops/index
