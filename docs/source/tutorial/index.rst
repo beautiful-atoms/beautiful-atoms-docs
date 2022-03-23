@@ -7,14 +7,13 @@ Tutorials
    :maxdepth: 2
 
    buildthings
-   render/index
    bond_polyhedra
    select
    volumetric
    plane
    boundary
    pbc
-   animation
+   optimize
    color
    label
    species

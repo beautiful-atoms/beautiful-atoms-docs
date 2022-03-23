@@ -86,7 +86,20 @@ Nanotube
 
 Nanoribbon
 =============
+Graphene ribbon.
+
+.. figure:: ../_static/figs/ops_nano_nanoribbon_add.png
+   :width: 500 px
+
+   Batoms's nanoribbon_add.
 
 
 Nanoparticle
 ===================
+Nanoparticle: Decahedron, Icosahedron and Octahedron.
+
+.. figure:: ../_static/figs/ops_nano_octahedron_add.png
+   :width: 500 px
+
+   Batoms's ops_nano_octahedron_add.
+

@@ -24,12 +24,6 @@ Then load it to :meth:`~Batoms.load_frames`:
 >>> c2h6so.set_frames()
 
 
-You can now play the animation using `Timeline` window in Blender. 
-
-.. image:: ../_static/figs/timeline.png
-   :width: 15cm
-
-
 Or you can render all images by:
 
 >>> c2h6so.get_image([0, 0, 1], engine = "eevee", animation = True)

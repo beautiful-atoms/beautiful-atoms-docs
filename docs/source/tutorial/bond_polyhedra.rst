@@ -94,23 +94,21 @@ To build up hydrogen bond for ``X-H -- Y``. Set the minimum and maximum distance
 High order bond
 =====================
 
-One can change bond order by:
+One can set bond order for each bond:
 
 >>> from ase.build import molecule
 >>> from batoms import Batoms
->>> co2 = Batoms("co2", from_ase = molecule("CO2"))
->>> co2.model_style = 1
->>> co2.bonds[0].order = 2
->>> co2.bonds[1].order = 2
+>>> c6h6 = Batoms("c6h6", from_ase = molecule("C6H6"))
+>>> c6h6.model_style = 1
+>>> c6h6.bonds[0].order = 2
+>>> c6h6.bonds[5].order = 2
+>>> c6h6.bonds[9].order = 2
 
 .. image:: ../_static/figs/bondsetting_order.png
    :width: 5cm
 
 
-Or set bond order for all ``("C", "O")`` pair:
+Or one can set the bond order automaticaly based on `pybel <http://openbabel.org/wiki/Bond_Orders>`_:
 
->>> co2.bonds.setting[("C", "O")].order = 2
->>> co2.model_style = 1
-
-
+>>> c6h6.bonds.bond_order_auto_set()
 

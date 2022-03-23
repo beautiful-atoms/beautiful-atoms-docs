@@ -41,11 +41,11 @@ Features:
    viewport
    interface/index
    modeling/index
-   tutorial/index
    animation/index
    rendering/index
-   module/index
    gui/index
+   tutorial/index
+   module/index
    ops/index
    advanced/index
    gallery
