@@ -10,7 +10,7 @@ The :class:`Batom` object is an object for one species. Here is how to define a 
 >>> h = Batom(label = 'h2o', species = 'H', positions = [[0, -0.76, -0.2], [0, 0.76, -0.2]])
 >>> o = Batom(label = 'h2o', species = 'O', positions = [[0, 0, 0.40]])
 
-.. image:: ../_static/figs/batom-h2o.png
+.. image:: /images/batom-h2o.png
    :width: 3cm
 
 Here, the ``label`` keyword to specify the name, and ``species`` keyword 

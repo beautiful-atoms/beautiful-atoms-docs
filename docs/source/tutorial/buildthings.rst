@@ -17,7 +17,7 @@ Build a H\ :sub:`2`\ O molecule.
                species = ["O", "H", "H"], 
                positions = [[0, 0, 0.40], [0, -0.76, -0.2], [0, 0.76, -0.2]])
 
-.. image:: ../_static/figs/batoms-h2o.png
+.. image:: /images/batoms-h2o.png
    :width: 3cm
 
 
@@ -34,7 +34,7 @@ Here is how you could define an gold crystal structure with a lattice constant o
                pbc = True, 
                cell = (a, a, a))
 
-.. image:: ../_static/figs/build_bulk_au.png
+.. image:: /images/build_bulk_au.png
    :width: 5cm
 
 
@@ -47,7 +47,7 @@ Import from file
     from batoms.bio import read
     tio2 = read("docs/source/_static/datas/tio2.cif")
 
-.. image:: ../_static/figs/bond_tio2.png
+.. image:: /images/bond_tio2.png
    :width: 5cm
 
 
@@ -71,7 +71,7 @@ ASE defines a number of molecular geometries in the ``g2`` database, which can b
     batoms = Batoms(label = "mol", from_ase = atoms)
     batoms.get_image(output = "nh3.png")
 
-.. image:: ../_static/figs/build_nh3.png
+.. image:: /images/build_nh3.png
    :width: 4cm
 
 The list of available molecules is those from the ase.collections.g2 database:
@@ -104,7 +104,7 @@ The list of available molecules is those from the ase.collections.g2 database:
  'N2', 'Cl2', 'H2O2', 'Na2', 'BeH', 'C3H4_C2v', 'NO2']
 
 
-.. image:: ../_static/figs/build_mols.png
+.. image:: /images/build_mols.png
    :width: 20cm
 
 
@@ -124,7 +124,7 @@ More complicated molecules may be obtained using the PubChem API integration. He
     batoms.get_image(output = "tbab.png")
 
 
-.. image:: ../_static/figs/build_pubchem_tbab.png
+.. image:: /images/build_pubchem_tbab.png
    :width: 5cm
 
 
@@ -141,7 +141,7 @@ Create a bulk structure for FCC ``Au``.
     au = Batoms(label = "au", from_ase = au)
     au.get_image(viewport = [1, -0.3, 0.1], output = "au.png")
 
-.. image:: ../_static/figs/build_bulk_au.png
+.. image:: /images/build_bulk_au.png
    :width: 5cm
 
 
@@ -158,7 +158,7 @@ Create (111) surface for FCC ``Au``.
     au111 = Batoms(label = "au111", from_ase = atoms)
     au111.cell[2, 2] += 10
 
-.. image:: ../_static/figs/gallery_side_view.png 
+.. image:: /images/gallery_side_view.png 
    :width: 5cm
 
 Nanoparticle
@@ -175,5 +175,5 @@ Create a nanoparticle using ``Wulff`` method:
     del atoms[atoms.positions[:, 2] < 0]
     nano = Batoms("wulff", from_ase = atoms)
 
-.. image:: ../_static/figs/gallery_wulff.png 
+.. image:: /images/gallery_wulff.png 
    :width: 5cm

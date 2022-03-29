@@ -6,6 +6,14 @@ Rendering
 
 After you have created a structure, you can export nice images for publications or presentations by rendering.
 
+GUI panel
+============
+
+Please read :ref:`gui_render` page for the GUI setup.
+
+Python
+===========
+
 The :mod:`Render <batoms.render>` object controls various settings such as the viewport and the resolution of the generated image.
 
 In order to render a :class:`Batoms` object, you need to attach a :class:`Render`  object to your :class:`Batoms` object. Then we asked for the image.
@@ -23,8 +31,7 @@ In order to render a :class:`Batoms` object, you need to attach a :class:`Render
 
 
 Parameters
-
-
+---------------
 
 Please refer to the following modules to see the details.
 

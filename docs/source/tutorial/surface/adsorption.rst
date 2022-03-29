@@ -26,7 +26,7 @@ Save image, as show bellow:
 >>> au111.get_image(viewport = [1, 0.1, 0.1])
 
 
-.. image:: ../../_static/figs/au111-co.png
+.. image:: /images/au111-co.png
    :width: 8cm
 
 

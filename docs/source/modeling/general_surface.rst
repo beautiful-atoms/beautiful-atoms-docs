@@ -5,7 +5,7 @@ General Surface
 
 Create surface from a given lattice and Miller indices.
 
-.. figure:: ../_static/figs/ops_batoms_surface_create.png
+.. figure:: /images/ops_batoms_surface_create.png
    :width: 500 px
 
    Batoms's surface_create.

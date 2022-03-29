@@ -11,7 +11,7 @@ One can find the settings for the viewport shading in the top right corner of th
 - Material preview
 - Rendered
 
-.. image:: ../_static/figs/viewport_shading.png
+.. image:: ../images/viewport_shading.png
    :width: 15cm
 
 We suggests to use ``Material preview`` shading for structure viewing and material setting. Use ``Solid`` shading for structure editing, especially for large system (> 10000 atoms). Use ``Rendered`` for lighting setup and rendering.
@@ -19,7 +19,7 @@ We suggests to use ``Material preview`` shading for structure viewing and materi
 
 For each viewport shading, one can find its setting by expand the viewport shading menu.
 
-.. image:: ../_static/figs/viewport_shading_menu.png
+.. image:: ../images/viewport_shading_menu.png
    :width: 15cm
 
 For example, in solid shading, there are four sections:

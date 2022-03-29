@@ -23,7 +23,7 @@ Molecule:
 >>> co = molecule('CO')
 >>> co = Batoms(label = 'co', atoms=co)
 
-.. image:: ../../_static/figs/ase-co.png
+.. image:: ..//images/ase-co.png
    :width: 3cm
 
 Crystal:
@@ -33,5 +33,5 @@ Crystal:
 >>> fe = bulk('Fe')
 >>> fe = Batoms(label = 'fe', atoms=fe)
 
-.. image:: ../../_static/figs/ase-fe.png
+.. image:: ..//images/ase-fe.png
    :width: 3cm

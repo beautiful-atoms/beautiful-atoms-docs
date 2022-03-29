@@ -31,7 +31,7 @@ For exmaple, we have a molecule adsorbed on Au (111) surface. We can select the 
     sel1 = au111.selects.add("mol", np.where(au111.arrays["species"] != "Au")[0])
     au111.selects["mol"].model_style = 1
 
-.. image:: ../_static/figs/select_au111.png
+.. image:: /images/select_au111.png
    :width: 8cm
 
 You can select the secondary structures of a protein, and make change to them. For exmaple, show the atoms for a secondary structure by:
@@ -43,7 +43,7 @@ You can select the secondary structures of a protein, and make change to them. F
     sel1.model_style = 1
 
 
-.. image:: ../_static/figs/ribbon-1ema-2.png
+.. image:: /images/ribbon-1ema-2.png
    :width: 8cm
 
 
@@ -53,5 +53,5 @@ Select Panel Controls
 All selects are shown in the `Vertex Groups Panel`. One can use the panel directly. See the ``Vertex group`` docs. https://docs.blender.org/manual/en/latest/modeling/meshes/properties/vertex_groups/assigning_vertex_group.html
 
 
-.. image:: ../_static/figs/vertex_group_panel.png
+.. image:: /images/vertex_group_panel.png
    :width: 20cm

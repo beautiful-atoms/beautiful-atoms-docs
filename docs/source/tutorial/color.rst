@@ -16,7 +16,7 @@ Take CH\ :sub:`4`\  molecule as a example.
 >>> ch4 = Batoms(label = "ch4", from_ase = ch4)
 >>> ch4.get_image(viewport = [1, 1, 4], output = "color_ch4_0.png")
 
-.. image:: ../_static/figs/color_ch4_0.png
+.. image:: /images/color_ch4_0.png
    :width: 5cm
 
 The :class:`Batom` object has a ``color`` attribute. One set the ``color`` by:
@@ -24,14 +24,14 @@ The :class:`Batom` object has a ``color`` attribute. One set the ``color`` by:
 >>> ch4["H"].color = [0, 0, 0.8, 1.0]
 >>> ch4["C"].color = [0.8, 0, 0, 1.0]
 
-.. image:: ../_static/figs/color_ch4_1.png
+.. image:: /images/color_ch4_1.png
    :width: 5cm
 
 Make transparency for ``H`` atoms by setting ``Alpha`` value ``< 1``:
 
 >>> ch4["H"].color = [0, 0, 0.8, 0.2]
 
-.. image:: ../_static/figs/color_ch4_2.png
+.. image:: /images/color_ch4_2.png
    :width: 5cm
 
 
@@ -83,17 +83,17 @@ One can change color for Polyhedra ``C`` by:
 .. image:: 
    :width: 5cm
 
-.. |color0|  image:: ../_static/figs/color_ch4_0.png
+.. |color0|  image:: /images/color_ch4_0.png
    :width: 5cm
-.. |color1|  image:: ../_static/figs/color_ch4_1.png
+.. |color1|  image:: /images/color_ch4_1.png
    :width: 5cm
-.. |color2|  image:: ../_static/figs/color_ch4_2.png
+.. |color2|  image:: /images/color_ch4_2.png
    :width: 5cm
-.. |color3|  image:: ../_static/figs/color_ch4_3.png
+.. |color3|  image:: /images/color_ch4_3.png
    :width: 5cm
-.. |color4|  image:: ../_static/figs/color_ch4_4.png
+.. |color4|  image:: /images/color_ch4_4.png
    :width: 5cm
-.. |color5|  image:: ../_static/figs/color_ch4_5.png
+.. |color5|  image:: /images/color_ch4_5.png
    :width: 5cm
-.. |color6|  image:: ../_static/figs/color_ch4_6.png
+.. |color6|  image:: /images/color_ch4_6.png
    :width: 5cm

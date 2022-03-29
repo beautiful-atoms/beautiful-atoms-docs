@@ -8,6 +8,8 @@ User interface
 
    introduction
    viewport
+   gui/index
+   toolbar
 
 
    

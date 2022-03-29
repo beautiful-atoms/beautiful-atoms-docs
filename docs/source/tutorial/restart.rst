@@ -10,7 +10,7 @@ Molecule:
 >>> from batoms import Batoms
 >>> co = Batoms(label = 'co')
 
-.. image:: ../_static/figs/ase-co.png
+.. image:: /images/ase-co.png
    :width: 3cm
 
 Crystal:
@@ -18,6 +18,6 @@ Crystal:
 >>> from batoms import Batoms
 >>> fe = Batoms(label = 'fe')
 
-.. image:: ../_static/figs/ase-fe.png
+.. image:: /images/ase-fe.png
    :width: 3cm
 

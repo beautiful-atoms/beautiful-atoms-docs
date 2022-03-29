@@ -39,7 +39,7 @@ The name of a setting can be any string, for example:
 >>> h2o.isosurface.setting["negative"] = {"level": -0.002, "color": [0, 0, 0.8, 0.5]}
 
 
-.. image:: ../_static/figs/volume_h2o_isosurface.png
+.. image:: /images/volume_h2o_isosurface.png
    :width: 10cm
 
 
@@ -68,7 +68,7 @@ To add 2D slices of volumetric data in the model, add a plane with ``slicing`` a
 
 Change render engine to ``EEVEE`` or ``CYCLES``, and use ``viewport shading`` to see the colored plane.
 
-.. image:: ../_static/figs/volume_h2o_slicing_bwr.png
+.. image:: /images/volume_h2o_slicing_bwr.png
    :width: 8cm
 
 
@@ -77,6 +77,6 @@ Change render engine to ``EEVEE`` or ``CYCLES``, and use ``viewport shading`` to
 
    >>> h2o.lattice_plane.draw(cmap = "hot")
 
-   .. image:: ../_static/figs/volume_h2o_slicing_hot.png
+   .. image:: /images/volume_h2o_slicing_hot.png
       :width: 8cm
 

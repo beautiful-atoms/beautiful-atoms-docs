@@ -63,7 +63,7 @@ Here we show a example of draw SAS for the protein kras.
 >>> kras = read('test/datas/kras.pdb')
 >>> kras = Batoms('kras', from_ase = kras)
 >>> kras.draw(probe = 1.4, resolution = 0.4, threshold = 1e-6)
-.. image:: ../_static/figs/ms_sas_kras.png
+.. image:: /images/ms_sas_kras.png
    :width: 8cm
 
 You can get the solvent accessible surface area (SASA) by:
@@ -83,7 +83,7 @@ Here we show a example of draw SES for the protein kras.
 >>> kras.ms.setting["1"].type = "SES"
 >>> kras.draw(probe = 1.4, resolution = 0.4, threshold = 1e-6)
 
-.. image:: ../_static/figs/ms_ses_kras.png
+.. image:: /images/ms_ses_kras.png
    :width: 8cm
 
 You can get the solvent-excluded surface area (SESA) by:

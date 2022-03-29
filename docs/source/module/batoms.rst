@@ -8,7 +8,7 @@ The :class:`Batoms` object is a collection of :class:`Batom` object plus :class:
 >>> from batoms import Batoms
 >>> h2o = Batoms({'O': [[0, 0, 0.40]], 'H': [[0, -0.76, -0.2], [0, 0.76, -0.2]]})
 
-.. image:: ../_static/figs/batoms-h2o.png
+.. image:: /images/batoms-h2o.png
    :width: 3cm
 
 Here, the argument specifies the type of the atoms and their positions. Other
@@ -31,7 +31,7 @@ Here is how you could define an gold crystal structure with a lattice constant o
 >>> positions = [[0, 0, 0], [a/2, a/2, 0], [a/2, 0, a/2], [0, a/2, a/2]]
 >>> au = Batoms(label = 'au', species = {'Au': positions}, pbc = True, cell = (a, a, a))
 
-.. image:: ../_static/figs/build_bulk_au.png
+.. image:: /images/build_bulk_au.png
    :width: 5cm
 
 We can also use an ``Atoms`` object from ``ASE``. 
@@ -41,7 +41,7 @@ We can also use an ``Atoms`` object from ``ASE``.
 >>> atoms = molecule('H2O')
 >>> h2o = Batoms(label = 'h2o', from_ase = atoms)
 
-.. image:: ../_static/figs/batoms-h2o.png
+.. image:: /images/batoms-h2o.png
    :width: 3cm
 
 Here, the keyword ``atoms`` specifies the ase ``Atoms`` object.
@@ -68,10 +68,10 @@ Here, four models are supported.
      - ``1``, Ball-and-stick
      - ``2``, Polyhedral
      - ``3``, Wireframe
-   * -  .. image:: ../_static/figs/batoms_model_style_0.png 
-     -  .. image:: ../_static/figs/batoms_model_style_1.png 
-     -  .. image:: ../_static/figs/batoms_model_style_2.png 
-     -  .. image:: ../_static/figs/batoms_model_style_3.png 
+   * -  .. image:: /images/batoms_model_style_0.png 
+     -  .. image:: /images/batoms_model_style_1.png 
+     -  .. image:: /images/batoms_model_style_2.png 
+     -  .. image:: /images/batoms_model_style_3.png 
 
 
 
@@ -91,10 +91,10 @@ Here, four polyhedra model are supported.
      - ``1``
      - ``2``
      - ``3``
-   * -  .. image:: ../_static/figs/batoms_polyhedra_style_0.png 
-     -  .. image:: ../_static/figs/batoms_polyhedra_style_1.png 
-     -  .. image:: ../_static/figs/batoms_polyhedra_style_2.png 
-     -  .. image:: ../_static/figs/batoms_polyhedra_style_3.png
+   * -  .. image:: /images/batoms_polyhedra_style_0.png 
+     -  .. image:: /images/batoms_polyhedra_style_1.png 
+     -  .. image:: /images/batoms_polyhedra_style_2.png 
+     -  .. image:: /images/batoms_polyhedra_style_3.png
   
 Materials_style
 ===================
@@ -103,7 +103,7 @@ Set materials style for atoms. Select materials style from ['default', 'glass', 
 
 >>> h2o = Batoms(from_ase = atoms, label = 'h2o', model_style = '1', material_style = 'mirror')
 
-.. image:: ../_static/figs/h2o-mirror.png
+.. image:: /images/h2o-mirror.png
    :width: 3cm
 
 
@@ -235,7 +235,7 @@ The :class:`Batoms` object is a interface to a ``batoms`` collection in Blender.
 | ├── label_instancer          
 | └── label...
 
-.. image:: ../_static/figs/batoms_collection.png
+.. image:: /images/batoms_collection.png
    :width: 8cm
 
 List of all Methods

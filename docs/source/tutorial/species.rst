@@ -21,7 +21,7 @@ Here, we replace the first H atom with a new species ("H_1").
 >>> ch4.replace([1], "H_1")
 >>> ch4["H_1"].color = (1.0, 1.0, 0.0, 1.0)
 
-.. image:: ../_static/figs/species_ch4.png
+.. image:: /images/species_ch4.png
    :width: 4cm
 
 Another example:
@@ -39,7 +39,7 @@ Another example:
 >>> au["Au_2"].color = [0, 0.7, 0.4, 1.0]
 >>> au["Au_2"].color = [0.5, 0.1, 0.4, 1.0]
 
-.. image:: ../_static/figs/species_au4.png
+.. image:: /images/species_au4.png
    :width: 6cm
 
 .. note::
@@ -54,5 +54,5 @@ If you only need to change the scale of individule atoms. You can use:
 
 >>> Au[0].scale = 2
 
-.. image:: ../_static/figs/species_au4_2.png
+.. image:: /images/species_au4_2.png
    :width: 6cm

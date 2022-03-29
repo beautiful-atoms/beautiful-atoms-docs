@@ -36,7 +36,7 @@ Draw ribbon diagram
 
     protein.ribbon.draw()
 
-.. image:: ../_static/figs/ribbon-1ema.png
+.. image:: /images/ribbon-1ema.png
    :width: 8cm
 
 Selections
@@ -51,6 +51,6 @@ You can select the secondary structures, and make change to them. For exmaple, s
     sel1.model_style = 1
 
 
-.. image:: ../_static/figs/ribbon-1ema-2.png
+.. image:: /images/ribbon-1ema-2.png
    :width: 8cm
 

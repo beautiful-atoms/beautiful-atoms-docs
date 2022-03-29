@@ -51,9 +51,9 @@ Three engines can be used:
    * - Fast
      - Standard
      - Most powerfull, slow
-   * -  .. image:: ../_static/figs/render_workbench.png 
-     -  .. image:: ../_static/figs/render_eevee.png 
-     -  .. image:: ../_static/figs/render_cycles.png 
+   * -  .. image:: /images/render_workbench.png 
+     -  .. image:: /images/render_eevee.png 
+     -  .. image:: /images/render_cycles.png 
 
 
 Viewport
@@ -72,10 +72,10 @@ The ``viewport`` keyword is used to set the direction of camera.
      - [1, 0, 0]
      - [0, 1, 0]
      - [1, -0.3, 0.1]
-   * -  .. image:: ../_static/figs/render_direction_top.png 
-     -  .. image:: ../_static/figs/render_direction_front.png 
-     -  .. image:: ../_static/figs/render_direction_right.png 
-     -  .. image:: ../_static/figs/render_direction_any.png 
+   * -  .. image:: /images/render_direction_top.png 
+     -  .. image:: /images/render_direction_front.png 
+     -  .. image:: /images/render_direction_right.png 
+     -  .. image:: /images/render_direction_any.png 
 
 
 
@@ -95,12 +95,12 @@ The Workbench engine use the studio light instead of the lights in the scene. Yo
      - ``paint.sl``
      - ``rim.sl``
      - ``studio.sl``
-   * -  .. image:: ../_static/figs/studiolight_Default.png 
-     -  .. image:: ../_static/figs/studiolight_basic.sl.png 
-     -  .. image:: ../_static/figs/studiolight_outdoor.sl.png 
-     -  .. image:: ../_static/figs/studiolight_paint.sl.png 
-     -  .. image:: ../_static/figs/studiolight_rim.sl.png 
-     -  .. image:: ../_static/figs/studiolight_studio.sl.png 
+   * -  .. image:: /images/studiolight_Default.png 
+     -  .. image:: /images/studiolight_basic.sl.png 
+     -  .. image:: /images/studiolight_outdoor.sl.png 
+     -  .. image:: /images/studiolight_paint.sl.png 
+     -  .. image:: /images/studiolight_rim.sl.png 
+     -  .. image:: /images/studiolight_studio.sl.png 
 
 
 >>> h2o.render.studiolight = 'paint.sl'

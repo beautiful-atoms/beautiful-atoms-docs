@@ -19,7 +19,7 @@ One change the setting by.
 >>> au.crystal_shape.setting[(1, 1, 1)].distance = 3.0
 >>> au.draw_crystal_shape()
 
-.. image:: ../_static/figs/volume_h2o.png
+.. image:: /images/volume_h2o.png
    :width: 5cm
 
 

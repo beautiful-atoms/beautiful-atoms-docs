@@ -22,7 +22,7 @@ The :meth:`~Batoms.draw_cavity_sphere` function is to draw a sphere to represent
 >>> mof.draw_cavity_sphere(9.0, boundary = [[0.2, 0.8], [0.2, 0.8], [0.2, 0.8]])
 
 
-.. image:: ../_static/figs/gallery_cavity.png
+.. image:: /images/gallery_cavity.png
    :width: 15cm
 
 
@@ -50,5 +50,5 @@ In order to represent the cavity by a polyhedral model, we add a ghost site (spe
 >>> # draw polyhedral model manually and not show the edge
 >>> c60.draw_polyhedras(show_edge = False)
 
-.. image:: ../_static/figs/gallery_c60.png
+.. image:: /images/gallery_c60.png
    :width: 15cm

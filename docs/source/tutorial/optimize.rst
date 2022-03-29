@@ -18,6 +18,6 @@ Here is a example:
 >>> c2h6so.optimize(forcefield='mmff94', steps=500)
 
 
-.. .. image:: ../_static/figs/optmize_c2h6so.png
+.. .. image:: /images/optmize_c2h6so.png
 ..    :width: 8cm
 

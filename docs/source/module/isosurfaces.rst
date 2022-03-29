@@ -25,7 +25,7 @@ One add a setting by.
 >>> h2o.isosurface.setting[2] = {'level': -0.002, 'color': [0, 0, 0.8, 0.5]}
 >>> h2o.isosurface.draw()
 
-.. image:: ../_static/figs/volume_h2o.png
+.. image:: /images/volume_h2o.png
    :width: 5cm
 
 

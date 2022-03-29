@@ -12,7 +12,10 @@ One can change parameters for the default camera by.
 
 Viewpoint
 =============
-The ``direction`` keyword is used to set the direction of camera.
+
+The ``viewport`` keyword is used to set the direction of camera. By default, the camera will look at the center of a Batoms object from the viewport direction.
+
+>>> h2o.render.viewport = [0, 0, 1] 
 
 
 .. list-table::
@@ -21,15 +24,15 @@ The ``direction`` keyword is used to set the direction of camera.
    * - Top view (``z``)
      - Front view (``x``)
      - Right view (``y``)
-     - Other direction (``x, y, z``)
+     - Other viewport (``x, y, z``)
    * - [0, 0, 1]
      - [1, 0, 0]
      - [0, 1, 0]
      - [1, -0.3, 0.1]
-   * -  .. image:: ../../_static/figs/render_direction_top.png 
-     -  .. image:: ../../_static/figs/render_direction_front.png 
-     -  .. image:: ../../_static/figs/render_direction_right.png 
-     -  .. image:: ../../_static/figs/render_direction_any.png 
+   * -  .. image:: ..//images/render_direction_top.png 
+     -  .. image:: ..//images/render_direction_front.png 
+     -  .. image:: ..//images/render_direction_right.png 
+     -  .. image:: ..//images/render_direction_any.png 
 
 
 

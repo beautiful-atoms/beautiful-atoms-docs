@@ -15,7 +15,7 @@ Molecule:
 >>> co = Molecule(["C","O"], [[0.0, 0.0, 0.0], [0.0, 0.0, 1.2]])
 >>> co = Batoms(label = 'co', from_pymatgen = co)
 
-.. image:: ../../_static/figs/ase-co.png
+.. image:: ..//images/ase-co.png
    :width: 3cm
 
 Crystal:
@@ -25,5 +25,5 @@ Crystal:
 >>> fe = Structure(Lattice.cubic(2.8), ["Fe", "Fe"], [[0, 0, 0], [0.5, 0.5, 0.5]])
 >>> fe = Batoms(label = 'fe', from_pymatgen = fe)
 
-.. image:: ../../_static/figs/ase-fe.png
+.. image:: ..//images/ase-fe.png
    :width: 3cm

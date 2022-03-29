@@ -44,7 +44,7 @@ Render the ``10th`` frame with ``eevee`` engine. Set ``use_motion_blur`` to ``Tr
 
 
 
-.. image:: ../_static/figs/motion_blur_h2o.png
+.. image:: /images/motion_blur_h2o.png
    :width: 8cm
 
 

@@ -13,13 +13,13 @@ Molecule
    * -  |h2o0|
      -  |h2o1|
 
-.. |h2o0|  image:: _static/figs/gallery_h2o_ball.png
+.. |h2o0|  image:: /images/gallery_h2o_ball.png
    :width: 5cm
-.. |h2o1|  image:: _static/figs/gallery_h2o_bond.png
+.. |h2o1|  image:: /images/gallery_h2o_bond.png
    :width: 5cm
 
 
-:download:`gallery_molecule.py <_static/gallery_molecule.py>`
+:download:`gallery_molecule.py <_static/scripts/gallery_molecule.py>`
 
 High order bond
 --------------------
@@ -29,13 +29,13 @@ High order bond
    * -  |c6h60|
      -  |c6h61|
 
-.. |c6h60|  image:: _static/figs/gallery_c6h6_ball.png
+.. |c6h60|  image:: /images/gallery_c6h6_ball.png
    :width: 5cm
-.. |c6h61|  image:: _static/figs/gallery_c6h6_bond.png
+.. |c6h61|  image:: /images/gallery_c6h6_bond.png
    :width: 5cm
 
 
-:download:`gallery_high_order_bond.py <_static/gallery_high_order_bond.py>`
+:download:`gallery_high_order_bond.py <_static/scripts/gallery_high_order_bond.py>`
 
 
 
@@ -54,27 +54,27 @@ Perovskite
    * -  |catio32|
      -  |catio33|
 
-.. |catio30|  image:: _static/figs/gallery_catio3_ball.png
+.. |catio30|  image:: /images/gallery_catio3_ball.png
    :width: 8cm
-.. |catio31|  image:: _static/figs/gallery_catio3_bond.png
+.. |catio31|  image:: /images/gallery_catio3_bond.png
    :width: 8cm
-.. |catio32|  image:: _static/figs/gallery_catio3_polyhedra.png
+.. |catio32|  image:: /images/gallery_catio3_polyhedra.png
    :width: 8cm
-.. |catio33|  image:: _static/figs/gallery_catio3_polyhedra_2.png
+.. |catio33|  image:: /images/gallery_catio3_polyhedra_2.png
    :width: 8cm
 
 
-:download:`gallery_crystal.py <_static/gallery_catio3.py>`
+:download:`gallery_crystal.py <_static/scripts/gallery_catio3.py>`
 
 
 
 MOF
 -------------------
 
-.. image:: _static/figs/gallery_cavity.png
+.. image:: /images/gallery_cavity.png
    :width: 10cm
 
-:download:`gallery_cavity.py <_static/gallery_cavity.py>`
+:download:`gallery_cavity.py <_static/scripts/gallery_cavity.py>`
 
 
 Nano
@@ -83,10 +83,10 @@ Nano
 C60
 -------------------
 
-.. image:: _static/figs/gallery_c60.png
+.. image:: /images/gallery_c60.png
    :width: 10cm
 
-:download:`gallery_c60.py <_static/gallery_c60.py>`
+:download:`gallery_c60.py <_static/scripts/gallery_c60.py>`
 
 
 
@@ -94,10 +94,10 @@ Nanoparticle
 ---------------------
 
 
-.. image:: _static/figs/gallery_wulff.png
+.. image:: /images/gallery_wulff.png
    :width: 10cm
 
-:download:`gallery_wulff.py <_static/gallery_wulff.py>`
+:download:`gallery_wulff.py <_static/scripts/gallery_wulff.py>`
 
 
 
@@ -108,37 +108,37 @@ Defect
 Dislocation
 -----------------------
 
-.. image:: _static/figs/gallery_dislocation.png
+.. image:: /images/gallery_dislocation.png
    :width: 10cm
 
-:download:`gallery_dislocation.py <_static/gallery_dislocation.py>`
+:download:`gallery_dislocation.py <_static/scripts/gallery_dislocation.py>`
 
 
 Vacancy
 ------------------------
 
-.. image:: _static/figs/vacancy-au111-cycles.png
+.. image:: /images/vacancy-au111-cycles.png
    :width: 10cm
 
-:download:`gallery_vacancy.py <_static/gallery_vacancy.py>`
+:download:`gallery_vacancy.py <_static/scripts/gallery_vacancy.py>`
 
 
 
 Lattice plane
 ==============
 
-.. image:: _static/figs/gallery_planesetting_plane.png
+.. image:: /images/gallery_planesetting_plane.png
    :width: 10cm
 
-:download:`gallery_lattice_plane.py <_static/gallery_lattice_plane.py>`
+:download:`gallery_lattice_plane.py <_static/scripts/gallery_lattice_plane.py>`
 
 Crystal shape
 ==============
 
-.. image:: _static/figs/gallery_planesetting_crystal.png
+.. image:: /images/gallery_planesetting_crystal.png
    :width: 10cm
 
-:download:`gallery_crystal_shape.py <_static/gallery_crystal_shape.py>`
+:download:`gallery_crystal_shape.py <_static/scripts/gallery_crystal_shape.py>`
 
 
 Volumetric data
@@ -147,16 +147,16 @@ Volumetric data
 Isosurface
 --------------
 
-.. image:: _static/figs/volume_h2o_isosurface.png
+.. image:: /images/volume_h2o_isosurface.png
    :width: 10cm
 
-:download:`volume_h2o.py <_static/volume_h2o.py>`
+:download:`isosurface_h2o.py <_static/scripts/isosurface_h2o.py>`
 
 
 2D slicing
 ---------------------
 
-.. image:: ../_static/figs/volume_h2o_slicing_bwr.png
+.. image:: /images/volume_h2o_slicing_bwr.png
    :width: 8cm
 
 
@@ -173,29 +173,29 @@ Protein
    * -  |sas|
      -  |ses|
 
-.. |sas|  image:: _static/figs/gallery_sas.png
+.. |sas|  image:: /images/gallery_sas.png
    :width: 10cm
-.. |ses|  image:: _static/figs/gallery_ses.png
+.. |ses|  image:: /images/gallery_ses.png
    :width: 10cm
 
-:download:`gallery_ms.py <_static/gallery_ms.py>`
+:download:`gallery_ms.py <_static/scripts/gallery_ms.py>`
 
 Animation
 ============
 
-.. image:: _static/figs/animation_c2h6so.gif
+.. image:: /images/animation_c2h6so.gif
    :width: 10cm
 
-:download:`animation.py <_static/animation.py>`
+:download:`animation.py <_static/scripts/animation.py>`
 
 
 Motion blur
 -------------
 
-.. image:: _static/figs/motion_blur_h2o.png
+.. image:: /images/motion_blur_h2o.png
    :width: 10cm
 
-:download:`motion_blur_h2o.py <_static/motion_blur_h2o.py>`
+:download:`motion_blur_h2o.py <_static/scripts/motion_blur_h2o.py>`
 
 
 View
@@ -207,13 +207,13 @@ View
    * - Top View
      - Side View
      - Perspective View
-   * -  |surface1|
-     -  |surface2|
-     -  |surface3|
+   * -  |render_view1|
+     -  |render_view2|
+     -  |render_view3|
 
 
 
-:download:`surface.py <_static/surface.py>`
+:download:`render_view.py <_static/scripts/render_view.py>`
 
 
 
@@ -233,7 +233,7 @@ Model type
      -  |crystal4|
 
 
-:download:`cyrstal.py <_static/batoms_model_style.py>`
+:download:`batoms_model_style.py <_static/scripts/batoms_model_style.py>`
 
 
 
@@ -241,25 +241,25 @@ Model type
 Others
 ============
 
-.. image:: _static/figs/monolayer.png
+.. image:: /images/monolayer.png
    :width: 10cm
 
 
 
 
 
-.. |surface1|  image:: _static/figs/gallery_top_view.png 
+.. |render_view1|  image:: /images/gallery_top_view.png 
    :width: 8cm
-.. |surface2|  image:: _static/figs/gallery_side_view.png 
+.. |render_view2|  image:: /images/gallery_side_view.png 
    :width: 8cm
-.. |surface3|  image:: _static/figs/gallery_persp_view.png 
+.. |render_view3|  image:: /images/gallery_persp_view.png 
    :width: 8cm
 
-.. |crystal1|  image:: _static/figs/batoms_model_style_0.png 
+.. |crystal1|  image:: /images/batoms_model_style_0.png 
    :width: 8cm
-.. |crystal2|  image:: _static/figs/batoms_model_style_1.png 
+.. |crystal2|  image:: /images/batoms_model_style_1.png 
    :width: 8cm
-.. |crystal3|  image:: _static/figs/batoms_model_style_2.png 
+.. |crystal3|  image:: /images/batoms_model_style_2.png 
    :width: 8cm
-.. |crystal4|  image:: _static/figs/batoms_model_style_3.png 
+.. |crystal4|  image:: /images/batoms_model_style_3.png 
    :width: 8cm

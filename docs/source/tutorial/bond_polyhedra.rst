@@ -11,7 +11,7 @@ One can set ``model_style`` to draw the bond and polyhedra.
 >>> tio2 = read("tio2.cif")
 >>> tio2.model_style = 1
 
-.. image:: ../_static/figs/bond_tio2.png
+.. image:: /images/bond_tio2.png
    :width: 8cm
 
 You can print the default bondsetting by:
@@ -29,7 +29,7 @@ To build up coordination polyhedra, set ``model_style`` to 2.
 >>> tio2.bonds.show_search = True
 
 
-.. image:: ../_static/figs/bondsetting_tio2_1.png
+.. image:: /images/bondsetting_tio2_1.png
    :width: 8cm
 
 One can ``remove`` or ``add`` a bond pair by:
@@ -47,7 +47,7 @@ Search bond mode
 >>> tio2.boundary.update()
 >>> tio2.model_style = 2
 
-.. image:: ../_static/figs/bondsetting_tio2_2.png
+.. image:: /images/bondsetting_tio2_2.png
    :width: 8cm
 
 * Search additional atoms if species1 is included in the boundary, the value for ``search`` should be set to `>0`. To change setting for a bond pair by.
@@ -58,7 +58,7 @@ Search bond mode
 >>> # show atoms
 >>> tio2.bonds.show_search = True
 
-.. image:: ../_static/figs/bondsetting_tio2_3.png
+.. image:: /images/bondsetting_tio2_3.png
    :width: 8cm
 
 
@@ -74,7 +74,7 @@ Search bond mode
 
 
 
-.. image:: ../_static/figs/bondsetting_search_molecule.png
+.. image:: /images/bondsetting_search_molecule.png
    :width: 8cm
 
 
@@ -88,7 +88,7 @@ To build up hydrogen bond for ``X-H -- Y``. Set the minimum and maximum distance
 >>> h2o.bonds.setting[("H", "O")].min = 2.0
 >>> h2o.bonds.setting[("H", "O")].max = 3.0
 
-.. image:: ../_static/figs/hydrogen-bond.png
+.. image:: /images/hydrogen-bond.png
    :width: 5cm
 
 High order bond
@@ -104,7 +104,7 @@ One can set bond order for each bond:
 >>> c6h6.bonds[5].order = 2
 >>> c6h6.bonds[9].order = 2
 
-.. image:: ../_static/figs/bondsetting_order.png
+.. image:: /images/bondsetting_order.png
    :width: 5cm
 
 

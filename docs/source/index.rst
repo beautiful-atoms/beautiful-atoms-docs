@@ -1,67 +1,155 @@
 .. batoms documentation master file.
 
-===============================================
+=================================================
 Welcome to Beautiful Atoms 2.0's documentation!
-===============================================
-Beautiful Atoms is a Python package for editing and rendering atoms and molecules objects using Blender. A Python interface that allows for automating workflows.
+=================================================
+
+.. figure:: images/batoms-h2o.png
+   :align: right
+   :width: 3cm
+
+Beautiful Atoms is a Python package for creating, editing and rendering atoms and molecules structures using Blender. A Python interface that allows for automating workflows.
 
 
-.. code:: python
+Getting Started
+==================
 
-   from batoms import Batoms
-   h2o = Batoms("h2o",
-               species = ["O", "H", "H"], 
-               positions= [[0, 0, 0], [0, -0.76, -0.6], [0, 0.76, -0.6]])
+.. only:: builder_html and (not singlehtml)
 
-|logo|
+   .. container:: tocdescr
 
-Features:
+      .. container:: descr
 
-* Model: space-filling, ball-stick, polyhedral, cavity and so on.
-* Support file: cif, xyz, cube, pdb, json, VASP-out and so on.
-* Volumetric data (Isosurface), molecular surface
-* Ribbon diagram for protein
-* Site occupancy
-* Support periodic boundary conditions
-* Support structure from ASE and Pymatgen
-* Support fetch structures from MaterialProject, Pubchem and RSCB
-* Animation
-* GUI
-* ``Flexible``: Python script, run interactively or in background.
-* ``High quality rendering``:  3D models
-* ``Free, Open Source``: Easy to download and install.
-* ``Cross-platform``: (Linux, Windows, macOS)
+         :doc:`/getting_started/about/index`
 
+      .. container:: descr
+
+         :doc:`/getting_started/installing/index`
+
+      .. container:: descr
+
+         :doc:`/getting_started/gui`
+
+      .. container:: descr
+
+         :doc:`/getting_started/python`
+
+Sections
+========
+
+.. only:: builder_html and (not singlehtml)
+
+   .. container:: tocdescr
+
+      .. container:: descr
+
+         .. figure:: images/interface_window-system_introduction_default-startup.png
+            :target: /interface/index.html
+
+         :doc:`/interface/index`
+            An introduction to Blender's window system, Batoms's panels and tools.
+
+
+      .. container:: descr
+
+         .. figure:: /images/modeling_primitives_partiion.png
+            :target: /modeling/index.html
+
+         :doc:`/modeling/index`
+            Modeling tools: molecules, crystals, surfaces and nanoparticles.
+      
+      .. container:: descr
+
+         .. figure:: /images/animation_c2h6so.gif
+            :target: /animation/index.html
+
+         :doc:`/animation/index`
+            Overview of the animation.
+      
+      .. container:: descr
+
+         .. figure:: /images/gallery_c60.png
+            :target: /rendering/index.html
+
+         :doc:`/rendering/index`
+            Rendering
+
+      .. container:: descr
+
+         .. figure:: /images/section_python.png
+            :target: /python/index.html
+
+         :doc:`/python/index`
+            Python interface and API.
+
+
+      .. container:: descr
+
+         .. figure:: /images/boundary_au_cubic_1.png
+            :target: /tutorial/index.html
+
+         :doc:`/tutorial/index`
+            Tutorials
+
+      .. container:: descr
+
+         .. figure:: /images/section_animation.png
+            :target: /advanced/index.html
+
+         :doc:`/advanced/index`
+            Advanced topics
+
+      .. container:: descr
+
+         .. figure:: /images/gallery_cavity.png
+            :target: /gallery.html
+
+         :doc:`/gallery`
+            Gallery images.
+
+      
+      
+
+
+.. just so this is included in the toc (not user visible).
 
 .. toctree::
+   :caption: Getting Started
+   :maxdepth: 1
+   :hidden:
+
+   getting_started/about/index.rst
+   getting_started/installing/index.rst
+   getting_started/gui.rst
+   getting_started/python.rst
+
+.. toctree::
+   :caption: Sections
    :maxdepth: 2
-   
-   install/index
-   getting-started
-   viewport
+   :hidden:
+
    interface/index
    modeling/index
    animation/index
    rendering/index
-   gui/index
+   python/index
    tutorial/index
    module/index
    ops/index
    advanced/index
    gallery
+
+.. toctree::
+   .. :caption: Sections
+   :maxdepth: 1
+
    tips
    contact
    faqs
    development/index
 
 
-
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
 
-.. _feedback: 
-.. _affiliated packages: 
-
-.. |logo|  image:: _static/figs/batoms-h2o.png
-   :width: 3cm

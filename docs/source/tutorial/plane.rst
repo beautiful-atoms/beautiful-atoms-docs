@@ -15,7 +15,7 @@ Here we show a example of inserting a lattice plane in the unit cell.
 >>> au.lattice_plane.setting[(1, 1, 0)] = {"distance": au.cell[0, 0]/np.sqrt(2)}
 >>> au.draw()
 
-.. image:: ../_static/figs/planesetting_au_plane.png
+.. image:: /images/planesetting_au_plane.png
    :width: 8cm
 
 
@@ -45,5 +45,5 @@ To build up crystal morphologies, the parameter ``crystal`` should be set to ``T
 When parameter ``symmetry`` is ``True``, all the symmetrically equivalent indices are automatically generated.
 
 
-.. image:: ../_static/figs/gallery_planesetting_crystal.png
+.. image:: /images/gallery_planesetting_crystal.png
    :width: 10cm

@@ -1,10 +1,8 @@
-.. _animation:
+.. _animation_python:
 
 ===================
-Animation
+Python script
 ===================
-
-The function :meth:`~Batoms.load_frames` in :mod:`Batoms <batoms>` object is used to load positions of atoms for animation.
 
 Here, we rotate a molecule and save it to a list:
 
@@ -16,12 +14,10 @@ Here, we rotate a molecule and save it to a list:
 >>>     temp.rotate(18*i, "z", center = atoms[0].position)
 >>>     images.append(temp)
 
-
-Then load it to :meth:`~Batoms.load_frames`:
+Then load it to Batoms:
 
 >>> from batoms import Batoms
 >>> c2h6so = Batoms(label = "c2h6so", from_ase = images)
->>> c2h6so.set_frames()
 
 
 Or you can render all images by:
@@ -34,11 +30,10 @@ Then, on Linux, run following command to convert all png files to a gif file::
     convert -dispose Background *.png animation.gif
 
 
-.. image:: ../_static/figs/animation_c2h6so.gif
+.. image:: /images/animation_c2h6so.gif
    :width: 8cm
 
 
-You can also read the images from a trajectory file, such as an xyz file:
 
 >>> from batoms.bio import read
 >>> images = read("c2h6so-animation.xyz", index = ":")

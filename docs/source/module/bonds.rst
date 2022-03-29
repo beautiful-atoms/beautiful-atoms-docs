@@ -12,14 +12,14 @@ The :class:`Bondsettings` object is used to store and set all parameters related
 >>> ch4 = Batoms('ch4', from_ase = molecule('CH4'))
 >>> ch4.model_style = 2
 
-.. image:: ../_static/figs/bondsetting_ch4_0.png
+.. image:: /images/bondsetting_ch4_0.png
    :width: 5cm
 
 You can print the default bonds.setting by:
 
 >>> ch4.bonds.setting
 
-.. image:: ../_static/figs/bondsetting_ch4_1.png
+.. image:: /images/bondsetting_ch4_1.png
    :width: 15cm
 
 By defaut, we use default radius (``ase.data.covalent_radii``) for every atoms, and the maximum bondlength is the sum of two radius and then scaled by a default cutoff (1.3). The minimum bondlength is 0.5.
@@ -31,7 +31,7 @@ One set the bond style for a bond pair by:
 
 >>> ch4.bonds.setting[('C', 'H')].style = '3'
 
-.. image:: ../_static/figs/bond_style_setting_0.png
+.. image:: /images/bond_style_setting_0.png
    :width: 3cm
 
 
@@ -39,7 +39,7 @@ One set the bond style for a bond by (Here is the first bond):
 
 >>> ch4.bonds[0] = '3'
 
-.. image:: ../_static/figs/bond_style_setting_1.png
+.. image:: /images/bond_style_setting_1.png
    :width: 3cm
 
 Here, four bond models are supported.
@@ -51,10 +51,10 @@ Here, four bond models are supported.
      - ``1``
      - ``2``
      - ``3``
-   * -  .. image:: ../_static/figs/bondsetting_style_0.png 
-     -  .. image:: ../_static/figs/bondsetting_style_1.png 
-     -  .. image:: ../_static/figs/bondsetting_style_2.png 
-     -  .. image:: ../_static/figs/bondsetting_style_3.png 
+   * -  .. image:: /images/bondsetting_style_0.png 
+     -  .. image:: /images/bondsetting_style_1.png 
+     -  .. image:: /images/bondsetting_style_2.png 
+     -  .. image:: /images/bondsetting_style_3.png 
   
 
 Polyhedra
@@ -66,7 +66,7 @@ One can change setting for a bond pair. For example, to build up coordination po
 >>> ch4.model_style = 2
 
 
-.. image:: ../_static/figs/bondsetting_ch4_2.png
+.. image:: /images/bondsetting_ch4_2.png
    :width: 5cm
 
 
@@ -84,7 +84,7 @@ To change setting for ``search`` by:
 >>> tio2.model_style = 2
 
 
-.. image:: ../_static/figs/bondsetting_tio2_2.png
+.. image:: /images/bondsetting_tio2_2.png
    :width: 8cm
 
 
@@ -102,7 +102,7 @@ One can change color for a bond pair.
 >>> ch4.model_style = 1
 
 
-.. image:: ../_static/figs/bondsetting_ch4_3.png
+.. image:: /images/bondsetting_ch4_3.png
    :width: 5cm
 
 
@@ -118,7 +118,7 @@ One can change bond order by:
 >>> co2.bonds.setting[('C', 'O')].width = 0.05
 >>> co2.model_style = 1
 
-.. image:: ../_static/figs/bondsetting_order.png
+.. image:: /images/bondsetting_order.png
    :width: 5cm
 
 

@@ -9,7 +9,7 @@ The :class:`Bcell` object is an object for unit cell. Here is how to creat a cub
 >>> from batoms.cell import Bcell
 >>> cell = Bcell(label = 'pt', array = [3.98, 3.98, 3.98])
 
-.. image:: ../_static/figs/bcell-pt.png
+.. image:: /images/bcell-pt.png
    :width: 3cm
 
 Here, the ``label`` keyword to specify the name, and ``array`` keyword to specify the size. Other possible keyword are: ``location``.
@@ -31,7 +31,7 @@ Set the cell component:
 
 >>> cell[2, 2] += 5
 
-.. image:: ../_static/figs/bcell-pt-2.png
+.. image:: /images/bcell-pt-2.png
    :width: 3cm
 
 
@@ -40,7 +40,7 @@ More details
 =======================
 A cell contains eight vertices, and is a three-dimensional object. However, only the first four vertices are independent. Therefore, editing these four vertices will change the positoins of other four vertices as well.
 
-.. image:: ../_static/figs/bcell_vertices.png
+.. image:: /images/bcell_vertices.png
    :width: 6cm
 
 The cell vectors are caculated by:
@@ -66,7 +66,7 @@ For example, copy cell:
 >>> cell = Bcell(label = 'pt', array = [2, 2, 2])
 >>> cell.repeat([3, 1, 1])
 
-.. image:: ../_static/figs/bcell-pt-3.png
+.. image:: /images/bcell-pt-3.png
    :width: 6cm
 
 

@@ -21,7 +21,7 @@ Here we show a example of draw SAS for the protein kras.
 >>> kras.ms.draw()
 >>> kras.get_image(padding = 3, output = "ms_sas_kras.png")
 
-.. image:: ../_static/figs/ms_sas_kras.png
+.. image:: /images/ms_sas_kras.png
    :width: 8cm
 
 
@@ -60,7 +60,7 @@ Here we show a example of draw SES for the protein kras.
 >>> kras.ms.draw()
 >>> kras.get_image(padding = 3, output = "ms_ses_kras.png")
 
-.. image:: ../_static/figs/ms_ses_kras.png
+.. image:: /images/ms_ses_kras.png
    :width: 8cm
 
 You can get the solvent-excluded surface area (SESA) by:

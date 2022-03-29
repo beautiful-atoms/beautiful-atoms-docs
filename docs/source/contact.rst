@@ -4,7 +4,9 @@ Contact
 
 Github
 ==========
-Feel free to create Issues on our Github page: https://github.com/superstar54/beautiful-atoms/issues
+Feel free to create an Issues on our Github page: https://github.com/superstar54/beautiful-atoms/issues
+
+Or create a Discussion on our Github page: https://github.com/superstar54/beautiful-atoms/discussions
 
 
 Mail

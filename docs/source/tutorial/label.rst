@@ -34,11 +34,11 @@ Take CH\ :sub:`4`\  molecule as a example.
 
 
 
-.. |label0|  image:: ../_static/figs/label_ch4_none.png
+.. |label0|  image:: /images/label_ch4_none.png
    :width: 5cm
-.. |label1|  image:: ../_static/figs/label_ch4_index.png
+.. |label1|  image:: /images/label_ch4_index.png
    :width: 5cm
-.. |label2|  image:: ../_static/figs/label_ch4_species.png
+.. |label2|  image:: /images/label_ch4_species.png
    :width: 5cm
-.. |label3|  image:: ../_static/figs/label_ch4_charge.png
+.. |label3|  image:: /images/label_ch4_charge.png
    :width: 5cm

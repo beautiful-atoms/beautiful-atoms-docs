@@ -1,12 +1,14 @@
-.. _tutorials:
+.. _animation:
 
 Animation
 =========
+One can read a trajectory file, such as an xyz file, for animation. You can play the animation using `Timeline` window in Blender. 
 
-You can play the animation using `Timeline` window in Blender. 
-
-.. image:: ../_static/figs/timeline.png
+.. image:: /images/timeline.png
    :width: 15cm
+
+One can render images for all frames by `Ctrl` + `F12`.
+
 
 
 .. toctree::

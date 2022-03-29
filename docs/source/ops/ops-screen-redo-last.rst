@@ -63,14 +63,14 @@ In the second example (on the right), the last operation was moving a atom in z 
 
    * - .. _fig-interface-redo-last-object-mode:
 
-       .. figure:: ../_static/figs/interface_undo-redo_redo-last-object-mode.png
+       .. figure:: /images/interface_undo-redo_redo-last-object-mode.png
           :width: 310px
 
           Add a molecule (Object Mode).
 
      - .. _fig-interface-redo-last-edit-mode:
 
-       .. figure:: ../_static/figs/interface_undo-redo_redo-last-edit-mode.png
+       .. figure:: /images/interface_undo-redo_redo-last-edit-mode.png
           :width: 310px
 
           Move a atom (Edit Mode).

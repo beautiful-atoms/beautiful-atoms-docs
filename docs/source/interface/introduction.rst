@@ -10,7 +10,7 @@ Introduction
 After starting Blender and closing the :ref:`Splash Screen <splash>`
 the Blender window should look something similar to the image below:
 
-.. figure:: ../_static/figs/interface_window-system_introduction_default-startup.png
+.. figure:: ../images/interface_window-system_introduction_default-startup.png
    :align: center
 
    The default startup Blender window.
@@ -26,7 +26,7 @@ There are four Editors in the image: 3D Viewport, Outliner, Timeline and Propert
 
 Blender provides a number of different editors for displaying and modifying different aspects of data. The Editors used for Beautiful Atoms are labeled by red arrows.
 
-.. figure:: ../_static/figs/editors_index_menu.png
+.. figure:: ../images/editors_index_menu.png
    :align: center
 
    The Editor Type selector.
@@ -42,7 +42,7 @@ The *Editor Type* selector, the first button at the left side of a header, allow
 Resizing
 ========
 
-.. figure:: ../_static/figs/interface_window-system_areas_resize.png
+.. figure:: ../images/interface_window-system_areas_resize.png
    :align: right
    :width: 250px
    :figwidth: 250px
@@ -54,7 +54,7 @@ so that the cursor changes to a double-headed arrow, and then click and drag.
 Splitting
 =========
 
-.. figure:: ../_static/figs/interface_window-system_areas_split.png
+.. figure:: ../images/interface_window-system_areas_split.png
    :align: right
    :width: 250px
    :figwidth: 250px
@@ -69,7 +69,7 @@ You define the split direction by dragging either horizontally or vertically.
 Joining
 =======
 
-.. figure:: ../_static/figs/interface_window-system_areas_join.png
+.. figure:: ../images/interface_window-system_areas_join.png
    :align: right
    :width: 250px
    :figwidth: 250px

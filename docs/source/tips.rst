@@ -13,7 +13,7 @@ In Blender, click on the ``File`` dropdown, ``Defaults`` and click ``Save Startu
 
 This is the startup scene of mine:
 
-.. image:: _static/figs/startup.png
+.. image:: /images/startup.png
    :width: 20cm
 
 
@@ -31,7 +31,7 @@ After that, you can:
 - To pan the view, press Shift + Alt + Left Mouse button and drag.
 
 
-.. image:: _static/figs/tips_keyboard.png
+.. image:: /images/tips_keyboard.png
    :width: 15cm
 
 
@@ -44,39 +44,9 @@ Open preference panel and select:
 - Orbit Around Selection
 - Zoom to Mouse Position
 
-.. image:: _static/figs/tips_navigation.png
+.. image:: /images/tips_navigation.png
    :width: 15cm
 
-
-
-Load ``Batoms`` module on startup
-=====================================
-
-On linux, in ``/blender-2.93.4-linux-x64/2.93/scripts\modules\console_python.py``, there is some code regarding the imports / convenience variables. 
-
-Find this line:
-
->>> import bpy
-
-After the above line, add:
-
->>> from batoms import Batoms
-
-Find this line:
-
->>> namespace["bpy"] = bpy
-
-After the above line, add:
-
->>> namespace["Batoms"] = Batoms
->>> from batoms.utils.butils import read_batoms_list
->>> items = read_batoms_list()
->>> for item in items:
-      namespace[item] = Batoms(item)
-
-This will load ``Batoms`` module and all ``Batoms`` objects on the pytohn console.
-
-Should be similar on Windows and macOS.
 
 
 The following tips are optional.
