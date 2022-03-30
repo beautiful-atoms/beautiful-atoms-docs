@@ -14,8 +14,6 @@ Beautiful Atoms is a Python package for creating, editing and rendering atoms an
 Getting Started
 ==================
 
-.. only:: builder_html and (not singlehtml)
-
    .. container:: tocdescr
 
       .. container:: descr
@@ -36,8 +34,6 @@ Getting Started
 
 Sections
 ========
-
-.. only:: builder_html and (not singlehtml)
 
    .. container:: tocdescr
 
@@ -135,7 +131,6 @@ Sections
    python/index
    tutorial/index
    module/index
-   ops/index
    advanced/index
    gallery
 
@@ -143,6 +138,7 @@ Sections
    .. :caption: Sections
    :maxdepth: 1
 
+   ops/index
    tips
    contact
    faqs

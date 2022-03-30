@@ -4,7 +4,7 @@
 The Polyhedrasetting object
 ===========================
 
-The :class:`Polyhedrasetting` object is used to store and set all parameters related with polyhedra. It is a collection of :class:`BPolyhedra` object. It should always bind with a :class:`Batoms` object. Possible keywords are: ``symbol``, ``color`` and ``linewidth``. 
+The :class:`Polyhedrasetting` object is used to store and set all parameters related with polyhedra. Possible keywords are: ``symbol``, ``color`` and ``linewidth``. 
 
 
 

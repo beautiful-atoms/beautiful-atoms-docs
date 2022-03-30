@@ -4,7 +4,7 @@
 The Bondsettings object
 ========================
 
-The :class:`Bondsettings` object is used to store and set all parameters related with bonds. It is a collection of :class:`BatomsBond` object. It should always bind with a :class:`Batoms` object. Possible keywords are: ``symbol1``, ``symbol2``, ``min``, ``max``, ``search``, ``polyhedra``, ``color1``, ``color2``, ``bondlinewidth``, ``style``. 
+The :class:`Bondsettings` object is used to store and set all parameters related with bonds. Possible keywords are: ``symbol1``, ``symbol2``, ``min``, ``max``, ``search``, ``polyhedra``, ``color1``, ``color2``, ``bondlinewidth``, ``style``, ``material_style``.
 
 
 >>> from ase.build import molecule
@@ -37,7 +37,7 @@ One set the bond style for a bond pair by:
 
 One set the bond style for a bond by (Here is the first bond):
 
->>> ch4.bonds[0] = '3'
+>>> ch4.bonds[0].style = '3'
 
 .. image:: /images/bond_style_setting_1.png
    :width: 3cm
@@ -84,7 +84,7 @@ To change setting for ``search`` by:
 >>> tio2.model_style = 2
 
 
-.. image:: /images/bondsetting_tio2_2.png
+.. image:: images/bondsetting_tio2_2.png
    :width: 8cm
 
 
@@ -106,20 +106,27 @@ One can change color for a bond pair.
    :width: 5cm
 
 
+
 High order bond
 =====================
 
-One can change bond order by:
+One can set bond order for each bond:
 
 >>> from ase.build import molecule
 >>> from batoms import Batoms
->>> co2 = Batoms('co2', from_ase = molecule('CO2'))
->>> co2.bonds.setting[('C', 'O')].order = 2
->>> co2.bonds.setting[('C', 'O')].width = 0.05
->>> co2.model_style = 1
+>>> c6h6 = Batoms("c6h6", from_ase = molecule("C6H6"))
+>>> c6h6.model_style = 1
+>>> c6h6.bonds[0].order = 2
+>>> c6h6.bonds[5].order = 2
+>>> c6h6.bonds[9].order = 2
 
 .. image:: /images/bondsetting_order.png
    :width: 5cm
+
+
+Or one can set the bond order automaticaly based on `pybel <http://openbabel.org/wiki/Bond_Orders>`_:
+
+>>> c6h6.bonds.bond_order_auto_set()
 
 
 List of all Methods

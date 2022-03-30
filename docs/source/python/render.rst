@@ -1,4 +1,4 @@
-.. module:: batoms.render
+.. module:: batoms.render.render
 
 ===================
 The Render object

@@ -60,11 +60,14 @@ Here we show a example of draw SAS for the protein kras.
 
 >>> from ase.io import read
 >>> from batoms import Batoms
->>> kras = read('test/datas/kras.pdb')
->>> kras = Batoms('kras', from_ase = kras)
->>> kras.draw(probe = 1.4, resolution = 0.4, threshold = 1e-6)
+>>> kras = read("kras.pdb")
+>>> kras = Batoms("kras", from_ase = kras)
+>>> kras.ms.draw()
+>>> kras.get_image(padding = 3, output = "ms_sas_kras.png")
+
 .. image:: /images/ms_sas_kras.png
    :width: 8cm
+
 
 You can get the solvent accessible surface area (SASA) by:
 
@@ -78,10 +81,11 @@ Here we show a example of draw SES for the protein kras.
 
 >>> from ase.io import read
 >>> from batoms import Batoms
->>> kras = read('test/datas/kras.pdb')
->>> kras = Batoms('kras', from_ase = kras)
+>>> kras = read("kras.pdb")
+>>> kras = Batoms("kras", from_ase = kras)
 >>> kras.ms.setting["1"].type = "SES"
->>> kras.draw(probe = 1.4, resolution = 0.4, threshold = 1e-6)
+>>> kras.ms.draw()
+>>> kras.get_image(padding = 3, output = "ms_ses_kras.png")
 
 .. image:: /images/ms_ses_kras.png
    :width: 8cm

@@ -3,33 +3,42 @@
 ===================
 The Batoms object
 ===================
-The :class:`Batoms` object is a collection of :class:`Batom` object plus :class:`Bcell` object and other derivative properties (bonds and so on). Here is how to define a H\ :sub:`2`\ O molecule:
+The :class:`Batoms` object is a collection of atoms plus :class:`Bcell` object and other derivative properties (bonds and so on). Here is how to define a H\ :sub:`2`\ O molecule:
 
->>> from batoms import Batoms
->>> h2o = Batoms({'O': [[0, 0, 0.40]], 'H': [[0, -0.76, -0.2], [0, 0.76, -0.2]]})
+.. code:: python
+   
+   from batoms import Batoms
+   h2o = Batoms("h2o",
+               species = ["O", "H", "H"], 
+               positions= [[0, 0, 0], [0, -0.76, -0.6], [0, 0.76, -0.6]])
 
 .. image:: /images/batoms-h2o.png
    :width: 3cm
 
 Here, the argument specifies the type of the atoms and their positions. Other
-possible keywords are: ``pbc``, ``cell``, ``atoms``, ``model_style``, ``boundary``, ``show_unit_cell``, ``isosurface``, ``kind_props``,
-``color``, and ``draw``.
+possible keywords are: ``pbc``, ``cell``, ``atoms``, ``model_style``, ``color_style``, ``radius_style``, ``polyhedra_style``, ``boundary``, ``wrap``, and ``draw``.
 
 
-One get and set ``model_style``, ``pbc``, ``show_unit_cell``, ``cell`` and ``boundary`` by:
+One get and set ``model_style``, ``pbc``, ``wrap``, ``cell`` and ``boundary`` by:
 
 >>> h2o.model_style = 0
 >>> h2o.pbc = True
 >>> h2o.cell = [[3, 0, 0], [0, 3, 0], [0, 0, 3]]
->>> h2o.show_unit_cell = False
+>>> h2o.wrap = False
 
 
 Here is how you could define an gold crystal structure with a lattice constant of 4.08 Å:
 
->>> from batoms import Batoms
->>> a = 4.08
->>> positions = [[0, 0, 0], [a/2, a/2, 0], [a/2, 0, a/2], [0, a/2, a/2]]
->>> au = Batoms(label = 'au', species = {'Au': positions}, pbc = True, cell = (a, a, a))
+.. code:: python
+
+   from batoms import Batoms
+   a = 4.08
+   positions = [[0, 0, 0], [a/2, a/2, 0], [a/2, 0, a/2], [0, a/2, a/2]]
+   au = Batoms(label = "au", 
+               species = ["Au"]*len(positions), 
+               positions = positions,
+               pbc = True, 
+               cell = (a, a, a))
 
 .. image:: /images/build_bulk_au.png
    :width: 5cm
@@ -44,7 +53,7 @@ We can also use an ``Atoms`` object from ``ASE``.
 .. image:: /images/batoms-h2o.png
    :width: 3cm
 
-Here, the keyword ``atoms`` specifies the ase ``Atoms`` object.
+Here, the keyword ``from_ase`` specifies the ase ``Atoms`` object.
 
 We can also read an structure from a file:
 
@@ -96,21 +105,14 @@ Here, four polyhedra model are supported.
      -  .. image:: /images/batoms_polyhedra_style_2.png 
      -  .. image:: /images/batoms_polyhedra_style_3.png
   
-Materials_style
-===================
 
-Set materials style for atoms. Select materials style from ['default', 'glass', 'ceramic', 'plastic', 'mirror'].
+Individual Atom
+====================
 
->>> h2o = Batoms(from_ase = atoms, label = 'h2o', model_style = '1', material_style = 'mirror')
+One get and set the properties of individual atom by (Here is the first atom):
 
-.. image:: /images/h2o-mirror.png
-   :width: 3cm
-
-
-Or set your own materials by setting the bsdf_inputs dict.
-
->>> bsdf_inputs = {'Metallic': 1.0, 'Specular': 1.0, 'Roughness': 0.01, }
->>> h2o = Batoms(from_ase = atoms, label = 'h2o', model_style = '1', bsdf_inputs = bsdf_inputs)
+>>> h2o[0].position
+>>> h2o[0].scale = 1.2
 
 
 Other methods
@@ -138,18 +140,14 @@ For example, copy h2o molecule:
 
 For example, delete the second atom in h2o molecule. Please note that index start from 0.
 
->>> h2o.delete('H', [1])
-
-Or,
-
->>> h2o['H'].delete([1])
+>>> h2o.delete([1])
 
 
 * :meth:`~Batoms.replace`
 
 For example, replace the all H in h2o molecule by S.
 
->>> h2o.replace('H', 'S', [1])
+>>> h2o.replace([1], 'S')
 
 * :meth:`~Batoms.repeat`
 
@@ -157,7 +155,6 @@ For example, replace the all H in h2o molecule by S.
 >>> from batoms import Batoms
 >>> au = bulk('Au', cubic = True)
 >>> au = Batoms(from_ase = au)
->>> au.draw()
 >>> au.repeat([2, 2, 2])
 
 
@@ -170,7 +167,7 @@ For example, replace the all H in h2o molecule by S.
 >>> co = Batoms(label = 'co', from_ase = co)
 >>> au = fcc111('Au', (5, 5, 4), vacuum=5.0)
 >>> au = Batoms(label = 'au', from_ase = au)
->>> co.translate(au.atoms[-1].position + np.array([0, 0, 2]))
+>>> co.translate(au[-1].position + np.array([0, 0, 2.5]))
 >>> au.extend(co)
 
 or,
@@ -185,7 +182,7 @@ Set boundary
 >>> from batoms import Batoms
 >>> from ase.io import read
 >>> atoms = read('docs/source/_static/datas/tio2.cif')
->>> tio2 = Batoms(label = 'tio2', from_ase = atoms, model_style = '2', polyhedra_dict = {'Ti': ['O']}, color_style="VESTA")
+>>> tio2 = Batoms(label = 'tio2', from_ase = atoms)
 >>> tio2.boundary = 0.5
 
 
@@ -197,20 +194,16 @@ Save atoms to file, please vist write method in ASE, https://wiki.fysik.dtu.dk/a
 
 * :meth:`~Batoms.get_distances`
 
->>> h2o.get_distances('O', 0, 'H', [0, 1])
+>>> h2o.get_distances(0, [1, 2])
 
 * :meth:`~Batoms.get_angle`
 
->>> h2o.get_angle('H', 0, 'O', 0, 'H', 1)
+>>> h2o.get_angle(0, 1, 2)
 
 
->>> au.show_index(index_type = 0)
+Show the species symbol of atoms.
 
-* :meth:`~Batoms.show_index`
-
-Show the index of atoms. Please change to ``Edit`` mode.
-
->>> au.show_index(index_type = 0)
+>>> au.show_label = 'species'
 
 * :meth:`~Batoms.get_image`
 
@@ -219,24 +212,6 @@ Render the atoms, and save to a png image.
 >>> h2o.get_image(viewport = [1, 0, 0], output_image = 'h2o.png')
 
 
-
-Collection 
-================
-The :class:`Batoms` object is a interface to a ``batoms`` collection in Blender. A batoms collections is organised in the following way.
-
-| label                             
-| ├── lable_atom                      
-| │   ├── atom_label_species1
-| │   ├── atom_label_species2
-| ├── label_cell          
-| │   ├── cell_label_edge
-| ├── label_bond
-| ├── label_polyhedra          
-| ├── label_instancer          
-| └── label...
-
-.. image:: /images/batoms_collection.png
-   :width: 8cm
 
 List of all Methods
 ===================

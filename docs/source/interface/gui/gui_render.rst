@@ -1,4 +1,5 @@
-.. _gui_render:
+.. _guirender:
+
 ================
 Rendering
 ================

@@ -9,7 +9,7 @@ After you have created a structure, you can export nice images for publications 
 GUI panel
 ============
 
-Please read :ref:`gui_render` page for the GUI setup.
+Please read :ref:`guirender` page for the GUI setup.
 
 Python
 ===========
