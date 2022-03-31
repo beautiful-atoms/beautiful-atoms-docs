@@ -26,6 +26,7 @@ Tutorials
    restart
    blender
    export
+   export_3d_mesh
    thridparty/index
    copy
 
