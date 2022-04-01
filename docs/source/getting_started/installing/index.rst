@@ -17,7 +17,7 @@ Optional:
 * matplotlib_
 * openbabel_
 
-
+.. _beautiful-atoms: https://github.com/superstar54/beautiful-atoms
 .. _Blender: https://www.blender.org/
 .. _Python: https://www.python.org/
 .. _pip: https://pypi.org/project/pip/
@@ -29,6 +29,7 @@ Optional:
 .. _openbabel: https://open-babel.readthedocs.io/en/latest/index.html
 .. _Anaconda: https://docs.anaconda.com/anaconda/install
 .. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
+.. _Docker: https://www.docker.com/get-started/
 
 
 
@@ -52,7 +53,7 @@ Before starting, make sure you have a working Anaconda_ or Miniconda_ with
 
 For all platforms, the installation workflows contains 3 steps:
 
-1. Clone ``beautiful-atoms`` to your local machine.
+1. Clone beautiful-atoms_ to your local machine.
 2. Create a new conda environment (e.g. ``beautiful_atoms``) and activate it.
 3. Use conda's default python interpreter to run ``install.py``
 
@@ -195,6 +196,7 @@ You may omit the path to Blender's bundled python on macOS and Windows if instal
 
 Manual installations
 =====================================
+Please check the OS-specific tutorials below:
 
 .. toctree::
    :maxdepth: 1
@@ -205,14 +207,54 @@ Manual installations
 
 .. _docker image:
 
-Docker container image
+Container image
 ====================================
+We also provide a container image `luciusm/beautiful_atoms <https://hub.docker.com/r/luciusm/beautiful_atoms>`_ 
+for users familiar with Docker_ or other container platforms. 
+You may find it useful if your workflow does not depend on GUI, such as automatic code unit tests, 
+high-throughput rendering and working with HPC systems.
+
+To use the container image in Docker_ (may need to run as admin):
+
+.. code-block:: bash
+
+    docker pull luciusm/beautiful_atoms:latest
+
+The container image should be compatible with `Shifter <https://docs.nersc.gov/development/shifter/>`_ 
+or `Singularity <https://sylabs.io/guides/3.5/user-guide/index.html>`_ on HPC systems, 
+check their manuals for more information.
+    
+To run a local python script (e.g. `./render.py`) inside the container (may need to run as admin):
+
+.. code-block:: bash
+
+    docker run --rm \
+           -v $(pwd):/workdir \
+           luciusm/beautiful_atoms:latest \
+           blender -b -P render.py
+
+Use GUI with the docker container
+---------------------------------
+It is possible to run Blender GUI within the docker container (only tested on Linux) 
+by `X11` forwarding. 
+Please check `this tutorial <https://github.com/nytimes/rd-blender-docker/wiki/Using-the-Blender-GUI-in-containers>`_ 
+for more details.
+
+.. warning::
+
+    There are several known limitations with Blender docker container, especially on macOS.
+
+    1. Cannot be run with macOS with ARM processor (`issue https://github.com/docker/for-mac/issues/6047`_)
+    2. GUI forwarding not working with `XQuart` (`issue https://github.com/XQuartz/XQuartz/issues/54`_)
+    3. Blender cannot render using EEVEE without a display. Choose cycles as the renderer if you want to render headlessly.
 
 
-
-
+Other Troubleshooting
+======================
 
 Please read :ref:`tips` page for more setup.
+
+
 
 ..
     Others
