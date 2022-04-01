@@ -28,12 +28,15 @@ Optional:
 .. _matplotlib: https://matplotlib.org/stable/users/installing.html
 .. _openbabel: https://open-babel.readthedocs.io/en/latest/index.html
 .. _Anaconda: https://docs.anaconda.com/anaconda/install
+.. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
+.. _link: 
 
 
 Use Cross-Platform Installation script
 =====================================
 Manually installing dependencies in Blender's can be non-trivial.
-Beautil Atoms provides a cross-platform script ``install.py`` to automate the process. 
+Beautil Atoms provides a cross-platform script `install.py <https://raw.githubusercontent.com/superstar54/beautiful-atoms/main/install.py>`_ 
+to automate the process. 
 We recommend you try it first. 
 
 How it works
@@ -41,8 +44,8 @@ How it works
 
 The installation script replaces Blender's bundled python distribution with a ``conda`` 
 environment.
-Before starting, make sure you have a working ``Anaconda`` or ``Miniconda`` with 
-``Python>=3.6`` on your system. 
+Before starting, make sure you have a working Anaconda_ or Miniconda_ with 
+``Python>=3.6`` on your system.
 
 
 For all platforms, the installation workflows contains 3 steps:
@@ -66,8 +69,11 @@ The detailed steps are slightly per operation system:
 
         .. code-block:: bash
 
+            # Step 1
             git clone https://github.com/superstar54/beautiful-atoms.git && cd beautiful-atoms
+            # Step 2
             conda create -n beautiful_atoms && conda activate beautiful_atoms
+            # Step 3
             $CONDA_PYTHON_EXE install.py ~/apps/Blender/3.1
         
         Change ``~/apps/Blender/3.1`` in step 3 to the path on your system.
@@ -88,8 +94,11 @@ The detailed steps are slightly per operation system:
         
         .. code-block:: zsh
 
+            # Step 1
             git clone https://github.com/superstar54/beautiful-atoms.git && cd beautiful-atoms
+            # Step 2
             conda create -n beautiful_atoms && conda activate beautiful_atoms
+            # Step 3
             $CONDA_PYTHON_EXE install.py 
 
         .. note::
@@ -112,9 +121,11 @@ The detailed steps are slightly per operation system:
         Run the steps in "Anaconda Prompt as Administrator" for the installation
         
 
-        .. code-block:: dos
+        .. code-block:: dosbatch
 
+            :: Step 1
             git clone https://github.com/superstar54/beautiful-atoms.git && cd beautiful-atoms
+            :: Step 2
             python install.py --use-pip
 
 
@@ -126,7 +137,7 @@ The detailed steps are slightly per operation system:
               provide the path to ``install.py``. 
               For example if Blender version 3.1.0 is installed to ``%UserProfile%\Blender``, run step 3 with:
 
-              .. code-block:: dos
+              .. code-block:: dosbatch
 
                 python install.py %UserProfile%\Blender\3.1
 
@@ -137,15 +148,48 @@ The detailed steps are slightly per operation system:
               ``install.py`` will try its best to fetch a compatible ``spglib`` version from ``conda-forge`` so that most
               of Beautil Atoms' functionalities are usable. 
               Note in this case openbabel utilities (e.g. adding SMILES) will be disabled.
-       
 
-
-On Windows and OSX, if Blender is installed in the default location, you can simply provide the version number.
+You can check the usage of ``install.py`` by:
 
 .. code-block:: bash
+    
+    python install.py --help
 
-    conda activate blender
-    python -m compas_blender.install -v 2.93
+Uninstallation
+------------
+``install.py`` allows uninstalling the ``batoms`` with its dependencies 
+to revert Blender to its previous state. 
+
+.. tabs::
+
+    .. tab:: Linux and macOS
+        :active:
+
+        Remove the ``batoms`` plugin and restore Blender's bundled python.
+
+        .. code-block:: bash
+
+            python install.py --uninstall <path/to/blender/3.x>
+        
+        (Optional) Remove the conda environment:
+
+        .. code-block:: bash
+
+            conda deactivate
+            conda remove -n beautiful_atoms
+
+    .. tab:: Windows
+
+        Remove the ``batoms`` plugin and its dependencies.
+
+        .. code-block:: dosbatch
+
+            python install.py --uninstall --use-pip <path\to\blender\3.x>
+
+You may omit the path to Blender's bundled python on macOS and Windows if installed using the same option.
+
+
+
 
 
 Choose your system
