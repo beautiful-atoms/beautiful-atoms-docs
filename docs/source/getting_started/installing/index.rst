@@ -29,7 +29,7 @@ Optional:
 .. _openbabel: https://open-babel.readthedocs.io/en/latest/index.html
 .. _Anaconda: https://docs.anaconda.com/anaconda/install
 .. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
-.. _link: 
+
 
 
 Use Cross-Platform Installation script
@@ -38,6 +38,8 @@ Manually installing dependencies in Blender's can be non-trivial.
 Beautil Atoms provides a cross-platform script `install.py <https://raw.githubusercontent.com/superstar54/beautiful-atoms/main/install.py>`_ 
 to automate the process. 
 We recommend you try it first. 
+
+Alternatively, you may use :ref:`manual installation` or use our :ref:`docker image`.
 
 How it works
 ------------
@@ -189,10 +191,9 @@ to revert Blender to its previous state.
 You may omit the path to Blender's bundled python on macOS and Windows if installed using the same option.
 
 
+.. _manual installation:
 
-
-
-Choose your system
+Manual installations
 =====================================
 
 .. toctree::
@@ -202,35 +203,41 @@ Choose your system
    windows
    macos
 
+.. _docker image:
+
+Docker container image
+====================================
+
 
 
 
 
 Please read :ref:`tips` page for more setup.
 
-Others
-================================
+..
+    Others
+    ================================
 
 
-Pymatgen
-----------
+    Pymatgen
+    ----------
 
-If you want to use ``batoms`` with ``Pymatgen``. Rename you blender python folder (``blender-3.0.0-linux-x64/3.0/python``) to ``_python``. Create a virtual environment for your blender using conda::
+    If you want to use ``batoms`` with ``Pymatgen``. Rename you blender python folder (``blender-3.0.0-linux-x64/3.0/python``) to ``_python``. Create a virtual environment for your blender using conda::
 
-    conda create --prefix $Path_to_blener/blender-3.0.0-linux-x64/3.0/python python=3.9.7
-
-
-On Linux, go to the new python directory, e.g. ``blender-3.0.0-linux-x64/3.0/python/bin``, and install ASE_,  scikit-image_ and Pymatgen_ inside Blender::
-
-    $ ./pip3 install --upgrade ase
-    
-    $ ./pip3 install scikit-image
-
-    $ ./pip3 install pymatgen
+        conda create --prefix $Path_to_blener/blender-3.0.0-linux-x64/3.0/python python=3.9.7
 
 
-Troubleshooting
-================================
+    On Linux, go to the new python directory, e.g. ``blender-3.0.0-linux-x64/3.0/python/bin``, and install ASE_,  scikit-image_ and Pymatgen_ inside Blender::
 
-Windows
--------------
+        $ ./pip3 install --upgrade ase
+        
+        $ ./pip3 install scikit-image
+
+        $ ./pip3 install pymatgen
+
+
+    Troubleshooting
+    ================================
+
+    Windows
+    -------------
