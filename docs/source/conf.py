@@ -67,5 +67,3 @@ html_css_files = ["css/theme_overrides.css",
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-# Tabs
-# sphinx_tabs_disable_css_loading = True
