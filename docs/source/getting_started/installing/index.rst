@@ -30,42 +30,114 @@ Optional:
 .. _Anaconda: https://docs.anaconda.com/anaconda/install
 
 
-Use All-Platform Installation script
+Use Cross-Platform Installation script
 =====================================
-Configuring Blender to use the newly installed environment is slightly different per OS.
+Manually installing dependencies in Blender's can be non-trivial.
+Beautil Atoms provides a cross-platform script ``install.py`` to automate the process. 
+We recommend you try it first. 
+
+How it works
+------------
+
+The installation script replaces Blender's bundled python distribution with a ``conda`` 
+environment.
+Before starting, make sure you have a working ``Anaconda`` or ``Miniconda`` with 
+``Python>=3.6`` on your system. 
+
+
+For all platforms, the installation workflows contains 3 steps:
+
+1. Clone ``beautiful-atoms`` to your local machine.
+2. Create a new conda environment (e.g. ``beautiful_atoms``) and activate it.
+3. Use conda's default python interpreter to run ``install.py``
+
+
+
+The detailed steps are slightly per operation system:
 
 .. tabs::
 
-    .. tab:: Windows
+    .. tab:: Linux
         :active:
 
-        .. code-block:: bash
-
-            conda activate blender
-            python -m compas_blender.install -v 2.93
-
-        Note that the path ``%PROGRAMFILES%\\Blender Foundation\\Blender 2.93\\2.93`` might be different on your system.
-        Check your Blender installation and change the path accordingly.
-
-    .. tab:: OSX
+        Find out where Blender's bundled python is located on your system. 
+        For example, if you have installed Blender version 3.1.0 at ``~/apps/Blender``, 
+        its python bundle is at ``~/apps/Blender/3.1``.
 
         .. code-block:: bash
 
-            conda activate blender
-            python -m compas_blender.install /Applications/blender.app/Contents/Resources/2.93
+            git clone https://github.com/superstar54/beautiful-atoms.git && cd beautiful-atoms
+            conda create -n beautiful_atoms && conda activate beautiful_atoms
+            $CONDA_PYTHON_EXE install.py ~/apps/Blender/3.1
+        
+        Change ``~/apps/Blender/3.1`` in step 3 to the path on your system.
 
-        Note that the path ``/Applications/blender.app/Contents/Resources/2.93`` might be different on your system.
-        Check your Blender installation and change the path accordingly.
+        .. note::
 
-    .. tab:: Linux
+            - In step 2, it is important to use a python interpreter **outside** the activated conda environment, 
+              such as ``$CONDA_PYTHON_EXE``.
+            - In step 3, Blender installed via ``Flatpak`` or ``Snap`` may have complex directory hierachy. 
+              Check their documentations for details or try with a portable Blender distribution.
+            
 
-        .. code-block:: bash
+    .. tab:: macOS
 
-            conda activate blender
-            python -m compas_blender.install ~/Blender/2.93
+        If you have installed Blender into ``/Applications`` or ``~/Applications``, 
+        ``install.py`` will find the correct Blender python bundle for you. 
+        If there are multiple versions, it will prompt for your choice.
+        
+        .. code-block:: zsh
 
-        Note that the path ``~/Blender/2.93`` might be different on your system.
-        Check your Blender installation and change the path accordingly.
+            git clone https://github.com/superstar54/beautiful-atoms.git && cd beautiful-atoms
+            conda create -n beautiful_atoms && conda activate beautiful_atoms
+            $CONDA_PYTHON_EXE install.py 
+
+        .. note::
+
+            - In step 2, it is important to use a python interpreter **outside** the activated conda environment, 
+              such as ``$CONDA_PYTHON_EXE``.
+            - In step 3, if Blender is installed at a non-default location, find its python bundle and
+              provide the path to ``install.py``. 
+              For example if Blender version 3.1.0 is installed to ``~/apps/Blender.app``, run step 3 with:
+
+              .. code-block:: zsh
+
+                $CONDA_PYTHON_EXE install.py ~/apps/Blender.app/Contents/Resources/3.1
+
+    .. tab:: Windows
+
+        If you have installed Blender into ``%PROGRAMFILES%``, 
+        ``install.py`` will find the correct Blender python bundle for you. 
+        If there are multiple versions, it will prompt for your choice. 
+        Run the steps in "Anaconda Prompt as Administrator" for the installation
+        
+
+        .. code-block:: dos
+
+            git clone https://github.com/superstar54/beautiful-atoms.git && cd beautiful-atoms
+            python install.py --use-pip
+
+
+        .. note::
+            - Due to a `bug in anaconda <https://github.com/ContinuumIO/anaconda-issues/issues/11994>`_,
+              replacing conda environment may cause issue with DLLs. 
+              ``install.py`` falls back to use ``pip`` and no new conda envionment is needed in this case.
+            - In step 2, if Blender is installed at a non-default location, find its python bundle and
+              provide the path to ``install.py``. 
+              For example if Blender version 3.1.0 is installed to ``%UserProfile%\Blender``, run step 3 with:
+
+              .. code-block:: dos
+
+                python install.py %UserProfile%\Blender\3.1
+
+            - You may need Visual Studio C++ Build Tools for building ``openbabel`` & ``spglib``,
+              check the `tutorial <https://www.scivision.dev/python-windows-visual-c-14-required/>`_ for details
+              (requires ~4 GiB disk space).
+            - Without the build tools, 
+              ``install.py`` will try its best to fetch a compatible ``spglib`` version from ``conda-forge`` so that most
+              of Beautil Atoms' functionalities are usable. 
+              Note in this case openbabel utilities (e.g. adding SMILES) will be disabled.
+       
 
 
 On Windows and OSX, if Blender is installed in the default location, you can simply provide the version number.
