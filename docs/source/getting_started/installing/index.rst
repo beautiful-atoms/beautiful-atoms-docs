@@ -180,7 +180,7 @@ to revert Blender to its previous state.
 
     .. tab:: Windows
 
-        Remove the ``batoms`` plugin and its dependencies.
+        Remove the ``batoms`` plugin and its dependencies via ``pip``.
 
         .. code-block:: dosbatch
 
