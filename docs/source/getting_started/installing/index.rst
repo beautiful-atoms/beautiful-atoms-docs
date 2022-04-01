@@ -30,7 +30,50 @@ Optional:
 .. _Anaconda: https://docs.anaconda.com/anaconda/install
 
 
+Use All-Platform Installation script
+=====================================
+Configuring Blender to use the newly installed environment is slightly different per OS.
 
+.. tabs::
+
+    .. tab:: Windows
+        :active:
+
+        .. code-block:: bash
+
+            conda activate blender
+            python -m compas_blender.install -v 2.93
+
+        Note that the path ``%PROGRAMFILES%\\Blender Foundation\\Blender 2.93\\2.93`` might be different on your system.
+        Check your Blender installation and change the path accordingly.
+
+    .. tab:: OSX
+
+        .. code-block:: bash
+
+            conda activate blender
+            python -m compas_blender.install /Applications/blender.app/Contents/Resources/2.93
+
+        Note that the path ``/Applications/blender.app/Contents/Resources/2.93`` might be different on your system.
+        Check your Blender installation and change the path accordingly.
+
+    .. tab:: Linux
+
+        .. code-block:: bash
+
+            conda activate blender
+            python -m compas_blender.install ~/Blender/2.93
+
+        Note that the path ``~/Blender/2.93`` might be different on your system.
+        Check your Blender installation and change the path accordingly.
+
+
+On Windows and OSX, if Blender is installed in the default location, you can simply provide the version number.
+
+.. code-block:: bash
+
+    conda activate blender
+    python -m compas_blender.install -v 2.93
 
 
 Choose your system
