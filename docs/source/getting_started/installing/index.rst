@@ -33,10 +33,10 @@ Optional:
 
 
 
-Use Cross-Platform Installation script
+Use Cross-Platform Installation Script
 =====================================
 Manually installing dependencies in Blender's can be non-trivial.
-Beautil Atoms provides a cross-platform script `install.py <https://raw.githubusercontent.com/superstar54/beautiful-atoms/main/install.py>`_ 
+beautiful-atoms_ provides a cross-platform script `install.py <https://raw.githubusercontent.com/superstar54/beautiful-atoms/main/install.py>`_ 
 to automate the process. 
 We recommend you try it first. 
 
@@ -51,7 +51,7 @@ Before starting, make sure you have a working Anaconda_ or Miniconda_ with
 ``Python>=3.6`` on your system.
 
 
-For all platforms, the installation workflows contains 3 steps:
+For all platforms, the installation workflow contains 3 steps:
 
 1. Clone beautiful-atoms_ to your local machine.
 2. Create a new conda environment (e.g. ``beautiful_atoms``) and activate it.
@@ -67,7 +67,7 @@ The detailed steps are slightly per operation system:
         :active:
 
         Find out where Blender's bundled python is located on your system. 
-        For example, if you have installed Blender version 3.1.0 at ``~/apps/Blender``, 
+        For example, if you have installed Blender 3.1.0 at ``~/apps/Blender``, 
         its python bundle is at ``~/apps/Blender/3.1``.
 
         .. code-block:: bash
@@ -93,7 +93,7 @@ The detailed steps are slightly per operation system:
 
         If you have installed Blender into ``/Applications`` or ``~/Applications``, 
         ``install.py`` will find the correct Blender python bundle for you. 
-        If there are multiple versions, it will prompt for your choice.
+        If there are multiple versions, it will prompt your choice.
         
         .. code-block:: zsh
 
@@ -120,7 +120,7 @@ The detailed steps are slightly per operation system:
 
         If you have installed Blender into ``%PROGRAMFILES%``, 
         ``install.py`` will find the correct Blender python bundle for you. 
-        If there are multiple versions, it will prompt for your choice. 
+        If there are multiple versions, it will prompt your choice. 
         Run the steps in "Anaconda Prompt as Administrator" for the installation
         
 
@@ -134,11 +134,11 @@ The detailed steps are slightly per operation system:
 
         .. note::
             - Due to a `bug in anaconda <https://github.com/ContinuumIO/anaconda-issues/issues/11994>`_,
-              replacing conda environment may cause issue with DLLs. 
+              replacing conda environment may cause an issue with DLLs. 
               ``install.py`` falls back to use ``pip`` and no new conda envionment is needed in this case.
             - In step 2, if Blender is installed at a non-default location, find its python bundle and
               provide the path to ``install.py``. 
-              For example if Blender version 3.1.0 is installed to ``%UserProfile%\Blender``, run step 3 with:
+              For example, if Blender 3.1.0 is installed to ``%UserProfile%\Blender``, run step 3 with:
 
               .. code-block:: dosbatch
 
@@ -149,7 +149,7 @@ The detailed steps are slightly per operation system:
               (requires ~4 GiB disk space).
             - Without the build tools, 
               ``install.py`` will try its best to fetch a compatible ``spglib`` version from ``conda-forge`` so that most
-              of Beautil Atoms' functionalities are usable. 
+              of Beautiful Atoms' functionalities are usable. 
               Note in this case openbabel utilities (e.g. adding SMILES) will be disabled.
 
 You can check the usage of ``install.py`` by:
@@ -212,7 +212,7 @@ Container image
 We also provide a container image `luciusm/beautiful_atoms <https://hub.docker.com/r/luciusm/beautiful_atoms>`_ 
 for users familiar with Docker_ or other container platforms. 
 You may find it useful if your workflow does not depend on GUI, such as automatic code unit tests, 
-high-throughput rendering and working with HPC systems.
+high-throughput rendering, and working with HPC systems.
 
 To use the container image in Docker_ (may need to run as admin):
 
@@ -236,7 +236,7 @@ To run a local python script (e.g. `./render.py`) inside the container (may need
 Use GUI with the docker container
 ---------------------------------
 It is possible to run Blender GUI within the docker container (only tested on Linux) 
-by `X11` forwarding. 
+by ``X11`` forwarding. 
 Please check `this tutorial <https://github.com/nytimes/rd-blender-docker/wiki/Using-the-Blender-GUI-in-containers>`_ 
 for more details.
 
@@ -244,8 +244,8 @@ for more details.
 
     There are several known limitations with Blender docker container, especially on macOS.
 
-    1. Cannot be run with macOS with ARM processor (`issue https://github.com/docker/for-mac/issues/6047`_)
-    2. GUI forwarding not working with `XQuart` (`issue https://github.com/XQuartz/XQuartz/issues/54`_)
+    1. Cannot be run with macOS with ARM processor (`issue <https://github.com/docker/for-mac/issues/6047>`_)
+    2. GUI forwarding not working with `XQuart` (`issue <https://github.com/XQuartz/XQuartz/issues/54>`_)
     3. Blender cannot render using EEVEE without a display. Choose cycles as the renderer if you want to render headlessly.
 
 
