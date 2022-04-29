@@ -17,25 +17,10 @@ Optional:
 * matplotlib_
 * openbabel_
 
-.. _beautiful-atoms: https://github.com/superstar54/beautiful-atoms
-.. _Blender: https://www.blender.org/
-.. _Python: https://www.python.org/
-.. _pip: https://pypi.org/project/pip/
-.. _ASE: https://wiki.fysik.dtu.dk/ase/index.html
-.. _Pymatgen: https://pymatgen.org/
-.. _scikit-image: https://scikit-image.org/
-.. _spglib: https://spglib.github.io/spglib/python-spglib.html
-.. _matplotlib: https://matplotlib.org/stable/users/installing.html
-.. _openbabel: https://open-babel.readthedocs.io/en/latest/index.html
-.. _Anaconda: https://docs.anaconda.com/anaconda/install
-.. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
-.. _Docker: https://www.docker.com/get-started/
-
-
 
 Use Cross-Platform Installation Script
 =====================================
-Manually installing dependencies in Blender's can be non-trivial.
+Manually installing dependencies in Blender can be non-trivial.
 beautiful-atoms_ provides a cross-platform script `install.py <https://raw.githubusercontent.com/superstar54/beautiful-atoms/main/install.py>`_ 
 to automate the process. 
 We recommend you try it first. 
@@ -196,7 +181,7 @@ You may omit the path to Blender's bundled python on macOS and Windows if instal
 
 Manual installations
 =====================================
-Please check the OS-specific tutorials below:
+For a basic installation. Please check the OS-specific tutorials below:
 
 .. toctree::
    :maxdepth: 1
@@ -283,3 +268,19 @@ Please read :ref:`tips` page for more setup.
 
     Windows
     -------------
+
+
+
+.. _beautiful-atoms: https://github.com/superstar54/beautiful-atoms
+.. _Blender: https://www.blender.org/
+.. _Python: https://www.python.org/
+.. _pip: https://pypi.org/project/pip/
+.. _ASE: https://wiki.fysik.dtu.dk/ase/index.html
+.. _Pymatgen: https://pymatgen.org/
+.. _scikit-image: https://scikit-image.org/
+.. _spglib: https://spglib.github.io/spglib/python-spglib.html
+.. _matplotlib: https://matplotlib.org/stable/users/installing.html
+.. _openbabel: https://open-babel.readthedocs.io/en/latest/index.html
+.. _Anaconda: https://docs.anaconda.com/anaconda/install
+.. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
+.. _Docker: https://www.docker.com/get-started/

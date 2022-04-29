@@ -20,7 +20,7 @@ Install ASE_ and scikit-image_ inside Blender::
 Install batoms inside Blender
 ===============================
 
-- Download the latest stable release (`beautiful-atoms.zip <https://github.com/superstar54/beautiful-atoms/archive/refs/heads/release/2.0.0.zip>`__).
+- Download the latest version (`beautiful-atoms.zip <https://github.com/superstar54/beautiful-atoms/archive/refs/heads/main.zip>`__).
 
 - Extract the file, move the folder ``batoms`` to Blender addons folder ``$HOME/.config/blender/3.1/scripts/addons/``. 
 
@@ -33,7 +33,7 @@ Install batoms inside Blender
     bpy.ops.wm.save_userpref()
 
 .. note::
-    Or, you can vist here to learn how to enable an addon by hand. https://docs.blender.org/manual/en/latest/editors/preferences/addons.html.
+    Or, you can visit here to learn how to enable an addon by hand. https://docs.blender.org/manual/en/latest/editors/preferences/addons.html.
 
 
 
@@ -56,12 +56,12 @@ If you saw a water molecule, you have run a successful installation, congratulat
 Install batoms-api on your computer (Optional)
 ==================================================
 
-First install ASE on your computer. On Windows, open Anaconda_ Prompt (suggest to Anaconda_). On Linux, open a terminal, and run::
+First install ASE on your computer. On Linux, open a terminal, and run::
     
     $ pip3 install --upgrade ase
     $ pip3 install batoms-api
 
-Then set a ``BLENDER_COMMAND`` environment variables. On Linux, set these permanently in your :file:`~/.bashrc` file::
+Then set a ``BLENDER_COMMAND`` environment variables. Set these permanently in your :file:`~/.bashrc` file::
 
     export BLENDER_COMMAND='<path-to-blender>/blender'
 
