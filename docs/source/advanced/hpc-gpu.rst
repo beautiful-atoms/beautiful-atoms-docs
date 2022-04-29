@@ -4,13 +4,15 @@
 Rendering on HPC using GPU
 ==========================================
 
+
+
 Please read :ref:`hpc` page for setup on HPC.
 
 
 Use ``batoms``
 ==================
 
-Save the following code as a python file (eg. h2o.py). In ``run`` fucntion, set ``gpu = True``.:
+Save the following code as a python file (eg. h2o.py). In the ``get_image`` function, set ``gpu = True`` if you want to use the GPU for the rendering.
 
 .. code:: python
 
@@ -21,7 +23,7 @@ Save the following code as a python file (eg. h2o.py). In ``run`` fucntion, set 
     h2o.get_image([1, 0 ,0], engine = "cycles", gpu = True, output = "h2o.png")
 
 
-Set up a job script to use GPU on HPC, and save it (eg. job.slurm). Here is an example for SLURM system on the Ubelix cluster in the University of Bern.
+Set up a job script to use GPU on HPC, and save it (eg. job.slurm). Here is an example of the SLURM system on the Ubelix cluster at the University of Bern.
 
 .. code:: bash
 
@@ -51,7 +53,7 @@ And then submit the job.
 Use ``blend`` file
 ===================
 
-Creat your model locally. To set up your GPU rendering, please vist https://docs.blender.org/manual/en/latest/render/cycles/gpu_rendering.html. Save the file to ``myfile.blend``. 
+Create your model locally. To set up your GPU rendering, please visit https://docs.blender.org/manual/en/latest/render/cycles/gpu_rendering.html. Save the file to ``myfile.blend``. 
 
 .. code:: bash
 
@@ -95,7 +97,7 @@ Here is a test for a system with 63 atoms. The performance is shown below. 1 GPU
 .. note::
     Blender does not support headless rendering using ``EEVEE``. So please use ``CYCLES`` engine.
 
-    For multi-nodes, you have to build Blender manually. Suggest to use the EasyBuild recipes.
+    For multi-nodes, you have to build Blender manually. Suggest using the EasyBuild recipes.
 
 
 
