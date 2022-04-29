@@ -12,7 +12,7 @@ Please read :ref:`hpc` page for setup on HPC.
 Use ``batoms``
 ==================
 
-Save the following code as a python file (eg. h2o.py). In the ``get_image`` function, set ``gpu = True`` if you want to use the GPU for the rendering.
+Save the following code as a python file (eg. h2o.py). In the ``get_image`` function, set ``gpu = True`` to use the GPU for the rendering.
 
 .. code:: python
 
