@@ -33,7 +33,7 @@ How it works
 The installation script replaces Blender's bundled python distribution with a ``conda`` 
 environment.
 Before starting, make sure you have a working Anaconda_ or Miniconda_ with 
-``Python>=3.6`` on your system.
+``Python>=3.6``, and git_ on your system.
 
 
 For all platforms, the installation workflow contains 3 steps:
@@ -284,3 +284,4 @@ Please read :ref:`tips` page for more setup.
 .. _Anaconda: https://docs.anaconda.com/anaconda/install
 .. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
 .. _Docker: https://www.docker.com/get-started/
+.. _git: https://git-scm.com/download/
