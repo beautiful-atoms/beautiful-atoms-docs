@@ -6,9 +6,11 @@ Installation
 
 Requirements
 ============
+
 * Blender_ 3.0 or newer, please install Blender first.
 * ASE_
 * Scikit-image_
+
 
 Optional:
 
@@ -19,11 +21,10 @@ Optional:
 
 
 Use Cross-Platform Installation Script
-=====================================
+========================================
 Manually installing dependencies in Blender can be non-trivial.
 beautiful-atoms_ provides a cross-platform script `install.py <https://raw.githubusercontent.com/superstar54/beautiful-atoms/main/install.py>`_ 
-to automate the process. 
-We recommend you try it first. 
+to automate the process. We recommend you try it first. 
 
 Alternatively, you may use :ref:`manual installation` or use our :ref:`docker image`.
 
@@ -61,8 +62,11 @@ The detailed steps are slightly per operation system:
             git clone https://github.com/superstar54/beautiful-atoms.git && cd beautiful-atoms
             # Step 2
             conda create -n beautiful_atoms && conda activate beautiful_atoms
-            # Step 3
-            $CONDA_PYTHON_EXE install.py ~/apps/Blender/3.1
+            # Step 3. The "--use-startup --use-preferences" options are 
+            # suggested for a beginner of Blender. However, if you want to keep
+            # your own startup and preferences of Blender, please remove these 
+            # options.
+            $CONDA_PYTHON_EXE install.py ~/apps/Blender/3.1  --use-startup --use-preferences
         
         Change ``~/apps/Blender/3.1`` in step 3 to the path on your system.
 
@@ -72,6 +76,7 @@ The detailed steps are slightly per operation system:
               such as ``$CONDA_PYTHON_EXE``.
             - In step 3, Blender installed via ``Flatpak`` or ``Snap`` may have complex directory hierachy. 
               Check their documentations for details or try with a portable Blender distribution.
+
             
 
     .. tab:: macOS
@@ -86,8 +91,11 @@ The detailed steps are slightly per operation system:
             git clone https://github.com/superstar54/beautiful-atoms.git && cd beautiful-atoms
             # Step 2
             conda create -n beautiful_atoms && conda activate beautiful_atoms
-            # Step 3
-            $CONDA_PYTHON_EXE install.py 
+            # Step 3 The "--use-startup --use-preferences" options are 
+            # suggested for a beginner of Blender. However, if you want to keep
+            # your own startup and preferences of Blender, please remove these 
+            # options.
+            $CONDA_PYTHON_EXE install.py --use-startup --use-preferences
 
         .. note::
 
@@ -113,8 +121,11 @@ The detailed steps are slightly per operation system:
 
             :: Step 1
             git clone https://github.com/superstar54/beautiful-atoms.git && cd beautiful-atoms
-            :: Step 2
-            python install.py --use-pip
+            :: Step 2 The "--use-startup --use-preferences" options are 
+            :: suggested for a beginner of Blender. However, if you want to keep
+            :: your own startup and preferences of Blender, please remove these 
+            :: options.
+            python install.py --use-pip --use-startup --use-preferences
 
 
         .. note::
