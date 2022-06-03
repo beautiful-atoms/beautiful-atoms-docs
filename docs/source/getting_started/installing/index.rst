@@ -6,9 +6,11 @@ Installation
 
 Requirements
 ============
+
 * Blender_ 3.0 or newer, please install Blender first.
 * ASE_
 * Scikit-image_
+
 
 Optional:
 
@@ -17,28 +19,12 @@ Optional:
 * matplotlib_
 * openbabel_
 
-.. _beautiful-atoms: https://github.com/superstar54/beautiful-atoms
-.. _Blender: https://www.blender.org/
-.. _Python: https://www.python.org/
-.. _pip: https://pypi.org/project/pip/
-.. _ASE: https://wiki.fysik.dtu.dk/ase/index.html
-.. _Pymatgen: https://pymatgen.org/
-.. _scikit-image: https://scikit-image.org/
-.. _spglib: https://spglib.github.io/spglib/python-spglib.html
-.. _matplotlib: https://matplotlib.org/stable/users/installing.html
-.. _openbabel: https://open-babel.readthedocs.io/en/latest/index.html
-.. _Anaconda: https://docs.anaconda.com/anaconda/install
-.. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
-.. _Docker: https://www.docker.com/get-started/
-
-
 
 Use Cross-Platform Installation Script
-=====================================
-Manually installing dependencies in Blender's can be non-trivial.
+========================================
+Manually installing dependencies in Blender can be non-trivial.
 beautiful-atoms_ provides a cross-platform script `install.py <https://raw.githubusercontent.com/superstar54/beautiful-atoms/main/install.py>`_ 
-to automate the process. 
-We recommend you try it first. 
+to automate the process. We recommend you try it first. 
 
 Alternatively, you may use :ref:`manual installation` or use our :ref:`docker image`.
 
@@ -48,7 +34,7 @@ How it works
 The installation script replaces Blender's bundled python distribution with a ``conda`` 
 environment.
 Before starting, make sure you have a working Anaconda_ or Miniconda_ with 
-``Python>=3.6`` on your system.
+``Python>=3.6``, and git_ on your system.
 
 
 For all platforms, the installation workflow contains 3 steps:
@@ -76,8 +62,11 @@ The detailed steps are slightly per operation system:
             git clone https://github.com/superstar54/beautiful-atoms.git && cd beautiful-atoms
             # Step 2
             conda create -n beautiful_atoms && conda activate beautiful_atoms
-            # Step 3
-            $CONDA_PYTHON_EXE install.py ~/apps/Blender/3.1
+            # Step 3. The "--use-startup --use-preferences" options are 
+            # suggested for a beginner of Blender. However, if you want to keep
+            # your own startup and preferences of Blender, please remove these 
+            # options.
+            $CONDA_PYTHON_EXE install.py ~/apps/Blender/3.1  --use-startup --use-preferences
         
         Change ``~/apps/Blender/3.1`` in step 3 to the path on your system.
 
@@ -87,6 +76,7 @@ The detailed steps are slightly per operation system:
               such as ``$CONDA_PYTHON_EXE``.
             - In step 3, Blender installed via ``Flatpak`` or ``Snap`` may have complex directory hierachy. 
               Check their documentations for details or try with a portable Blender distribution.
+
             
 
     .. tab:: macOS
@@ -101,8 +91,11 @@ The detailed steps are slightly per operation system:
             git clone https://github.com/superstar54/beautiful-atoms.git && cd beautiful-atoms
             # Step 2
             conda create -n beautiful_atoms && conda activate beautiful_atoms
-            # Step 3
-            $CONDA_PYTHON_EXE install.py 
+            # Step 3 The "--use-startup --use-preferences" options are 
+            # suggested for a beginner of Blender. However, if you want to keep
+            # your own startup and preferences of Blender, please remove these 
+            # options.
+            $CONDA_PYTHON_EXE install.py --use-startup --use-preferences
 
         .. note::
 
@@ -128,8 +121,11 @@ The detailed steps are slightly per operation system:
 
             :: Step 1
             git clone https://github.com/superstar54/beautiful-atoms.git && cd beautiful-atoms
-            :: Step 2
-            python install.py --use-pip
+            :: Step 2 The "--use-startup --use-preferences" options are 
+            :: suggested for a beginner of Blender. However, if you want to keep
+            :: your own startup and preferences of Blender, please remove these 
+            :: options.
+            python install.py --use-pip --use-startup --use-preferences
 
         .. warning::
             Do not run ``install.py`` in a Windows Subsystem for Linux (WSL) environment 
@@ -201,7 +197,7 @@ You may omit the path to Blender's bundled python on macOS and Windows if instal
 
 Manual installations
 =====================================
-Please check the OS-specific tutorials below:
+For a basic installation. Please check the OS-specific tutorials below:
 
 .. toctree::
    :maxdepth: 1
@@ -288,3 +284,20 @@ Please read :ref:`tips` page for more setup.
 
     Windows
     -------------
+
+
+
+.. _beautiful-atoms: https://github.com/superstar54/beautiful-atoms
+.. _Blender: https://www.blender.org/
+.. _Python: https://www.python.org/
+.. _pip: https://pypi.org/project/pip/
+.. _ASE: https://wiki.fysik.dtu.dk/ase/index.html
+.. _Pymatgen: https://pymatgen.org/
+.. _scikit-image: https://scikit-image.org/
+.. _spglib: https://spglib.github.io/spglib/python-spglib.html
+.. _matplotlib: https://matplotlib.org/stable/users/installing.html
+.. _openbabel: https://open-babel.readthedocs.io/en/latest/index.html
+.. _Anaconda: https://docs.anaconda.com/anaconda/install
+.. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
+.. _Docker: https://www.docker.com/get-started/
+.. _git: https://git-scm.com/download/

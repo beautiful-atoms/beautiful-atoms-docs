@@ -4,7 +4,7 @@
 Rendering on HPC using multi-process
 ==========================================
 
-For a basic use (one node with OpenMP), the installation process of Blender on HPC is the same as on a local Linux computer. But you need to load the required modules when running. Blender needs OpenGL library. In high-performance computing center, there are usually a couple of packages / libraries available. These include Mesa (open source implementation of OpenGL) and also libGLU for GPU.
+For a basic use (one node with OpenMP), the installation process of Blender on HPC is the same as on a local Linux computer. But you need to load the required modules when running. Blender needs OpenGL library. In a high-performance computing center, there are usually a couple of packages/libraries available. These include Mesa (open-source implementation of OpenGL) and also libGLU for GPU.
 
 
 Use ``batoms``
@@ -21,7 +21,7 @@ Save the following code as a python file (eg. h2o.py):
     h2o.get_image([1, 0 ,0], engine = 'cycles', output = 'h2o.png')
 
 
-Set up a job script on HPC, and save it (eg. job.slurm). Here is an example for SLURM system on the Ubelix cluster in the University of Bern.
+Set up a job script on HPC, and save it (eg. job.slurm). Here is an example of the SLURM system on the Ubelix cluster at the University of Bern.
 
 .. code:: bash
 
@@ -49,7 +49,7 @@ And then submit the job.
 Use ``blend`` file
 ===================
 
-Creat your model locally, and save the file to ``myfile.blend``. 
+Create your model locally, and save the file to ``myfile.blend``. 
 
 .. code:: bash
 
@@ -73,7 +73,7 @@ This will render an animation of the file ``myfile.blend`` with the settings wit
 Performance
 ============
 
-Here is a test for a system with 63 atoms. The performance is shown below. The speed scales well with the number of CPU.
+Here is a test for a system with 63 atoms. The performance is shown below. The speed scales well with the number of CPUs.
 
 .. list-table::
    :widths: 25 25
@@ -98,7 +98,7 @@ Here is a test for a system with 63 atoms. The performance is shown below. The s
 .. note::
     Blender does not support headless rendering using ``EEVEE``. So please use ``CYCLES`` engine.
 
-    For multi-nodes, you have to build Blender manually. Suggest to use the EasyBuild recipes.
+    For multi-nodes, you have to build Blender manually. Suggest using the EasyBuild recipes.
 
 
 

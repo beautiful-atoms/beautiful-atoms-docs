@@ -40,7 +40,7 @@ Sections
       .. container:: descr
 
          .. figure:: images/interface_window-system_introduction_default-startup.png
-            :target: /interface/index.html
+            :target: /en/latest/interface/index.html
 
          :doc:`/interface/index`
             An introduction to Blender's window system, Batoms's panels and tools.
@@ -49,7 +49,7 @@ Sections
       .. container:: descr
 
          .. figure:: /images/modeling_primitives_partiion.png
-            :target: /modeling/index.html
+            :target: /en/latest/modeling/index.html
 
          :doc:`/modeling/index`
             Modeling tools: molecules, crystals, surfaces and nanoparticles.
@@ -57,7 +57,7 @@ Sections
       .. container:: descr
 
          .. figure:: /images/animation_c2h6so.gif
-            :target: /animation/index.html
+            :target: /en/latest/animation/index.html
 
          :doc:`/animation/index`
             Overview of the animation.
@@ -65,7 +65,7 @@ Sections
       .. container:: descr
 
          .. figure:: /images/gallery_c60.png
-            :target: /rendering/index.html
+            :target: /en/latest/rendering/index.html
 
          :doc:`/rendering/index`
             Rendering
@@ -73,7 +73,7 @@ Sections
       .. container:: descr
 
          .. figure:: /images/section_python.png
-            :target: /python/index.html
+            :target: /en/latest/python/index.html
 
          :doc:`/python/index`
             Python interface and API.
@@ -82,7 +82,7 @@ Sections
       .. container:: descr
 
          .. figure:: /images/boundary_au_cubic_1.png
-            :target: /tutorial/index.html
+            :target: /en/latest/tutorial/index.html
 
          :doc:`/tutorial/index`
             Tutorials
@@ -90,7 +90,7 @@ Sections
       .. container:: descr
 
          .. figure:: /images/section_animation.png
-            :target: /advanced/index.html
+            :target: /en/latest/advanced/index.html
 
          :doc:`/advanced/index`
             Advanced topics
@@ -98,7 +98,7 @@ Sections
       .. container:: descr
 
          .. figure:: /images/gallery_cavity.png
-            :target: /gallery.html
+            :target: /en/latest/gallery.html
 
          :doc:`/gallery`
             Gallery images.

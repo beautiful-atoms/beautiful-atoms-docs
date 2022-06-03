@@ -16,9 +16,9 @@ Please wait a few seconds for the installation.
 Install batoms inside Blender
 ===============================
 
-- Download the latest stable release (`beautiful-atoms.zip <https://github.com/superstar54/beautiful-atoms/archive/refs/heads/main.zip>`__).
+- Download the latest version (`beautiful-atoms.zip <https://github.com/superstar54/beautiful-atoms/archive/refs/heads/main.zip`__).
 
-- Extract the file, move the folder ``batoms`` to Blender addons folder, could be ``C:\Program Files\Blender Foundation\Blender 3.0\3.0\scripts\addons\`` or ``%USERPROFILE%\AppData\Roaming\Blender Foundation\Blender\3.0\scripts\addons\``. 
+- Extract the file, move the folder ``batoms`` to Blender addons folder, could be ``C:\Program Files\Blender Foundation\Blender 3.1\3.1\scripts\addons\`` or ``%USERPROFILE%\AppData\Roaming\Blender Foundation\Blender\3.1\scripts\addons\``. 
 
 - Enable the addon in the Preferences setting. Please open a Blender Python console, and run the following code to enable the batoms::
 
@@ -29,7 +29,7 @@ Install batoms inside Blender
     bpy.ops.wm.save_userpref()
 
 .. note::
-    Or, you can vist here to learn how to enable an addon by hand. https://docs.blender.org/manual/en/latest/editors/preferences/addons.html.
+    Or, you can visit here to learn how to enable an addon by hand. https://docs.blender.org/manual/en/latest/editors/preferences/addons.html.
     If you can not find the Blender addons folder, please see the directory layout docs. https://docs.blender.org/manual/en/dev/advanced/blender_directory_layout.html#blender-directory-layout
 
 
@@ -55,7 +55,7 @@ If you saw a water molecule, you have run a successful installation, congratulat
 Install batoms-api on your computer (Optional)
 =================================================
 
-First, install ASE on your computer. On Windows, open Anaconda_ Prompt (suggest to Anaconda_). On Linux, open a terminal, and run::
+First, install ASE on your computer. On Windows, open Anaconda_ Prompt (suggest to Anaconda_), and run::
     
     $ pip3 install --upgrade ase
     $ pip3 install batoms-api
