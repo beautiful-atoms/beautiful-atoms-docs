@@ -131,7 +131,12 @@ The detailed steps are slightly per operation system:
             :: Step 2
             python install.py --use-pip
 
-
+        .. warning::
+            Do not run ``install.py`` in a Windows Subsystem for Linux (WSL) environment 
+            while point to the Blender installation on the Windows host. If you prefer 
+            running the script in a bash-like shell, consider using `Git Bash <https://gitforwindows.org>`_ 
+            or similar shell emulators on the Windows host.
+        
         .. note::
             - Due to a `bug in anaconda <https://github.com/ContinuumIO/anaconda-issues/issues/11994>`_,
               replacing conda environment may cause an issue with DLLs. 
