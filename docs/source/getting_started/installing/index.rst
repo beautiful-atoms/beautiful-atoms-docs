@@ -111,7 +111,7 @@ The detailed steps are slightly per operation system:
 
     .. tab:: Windows
 
-        If you have installed Blender into ``%PROGRAMFILES%``, 
+        If Blender is installed into ``%PROGRAMFILES%`` (e.g. by the default installer program), 
         ``install.py`` will find the correct Blender python bundle for you. 
         If there are multiple versions, it will prompt your choice. 
         Run the steps in "Anaconda Prompt as Administrator" for the installation
@@ -129,9 +129,11 @@ The detailed steps are slightly per operation system:
 
         .. warning::
             Do not run ``install.py`` in a Windows Subsystem for Linux (WSL) environment 
-            while point to the Blender installation on the Windows host. If you prefer 
-            running the script in a bash-like shell, consider using `Git Bash <https://gitforwindows.org>`_ 
-            or similar shell emulators on the Windows host.
+            while installing into the Blender on the Windows host. 
+
+            - If you want `beautiful-atoms` on Windows but just prefer bash-like prompt, consider using `Git Bash <https://gitforwindows.org>`_ or similar shell emulators.
+
+            - Otherwise if you wish to install ``beautiful-atoms`` inside WSL, follow the steps for Linux systems.
         
         .. note::
             - Due to a `bug in anaconda <https://github.com/ContinuumIO/anaconda-issues/issues/11994>`_,
@@ -246,7 +248,7 @@ for more details.
     There are several known limitations with Blender docker container, especially on macOS.
 
     1. Cannot be run with macOS with ARM processor (`issue <https://github.com/docker/for-mac/issues/6047>`_)
-    2. GUI forwarding not working with `XQuart` (`issue <https://github.com/XQuartz/XQuartz/issues/54>`_)
+    2. GUI forwarding not working with `XQuartz` (`issue <https://github.com/XQuartz/XQuartz/issues/54>`_)
     3. Blender cannot render using EEVEE without a display. Choose cycles as the renderer if you want to render headlessly.
 
 
