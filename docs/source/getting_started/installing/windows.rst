@@ -16,7 +16,7 @@ Please wait a few seconds for the installation.
 Install batoms inside Blender
 ===============================
 
-- Download the latest version (`beautiful-atoms.zip <https://github.com/superstar54/beautiful-atoms/archive/refs/heads/main.zip`__).
+- Download the latest version (`beautiful-atoms.zip <https://github.com/beautiful-atoms/beautiful-atoms/archive/refs/heads/main.zip`__).
 
 - Extract the file, move the folder ``batoms`` to Blender addons folder, could be ``C:\Program Files\Blender Foundation\Blender 3.1\3.1\scripts\addons\`` or ``%USERPROFILE%\AppData\Roaming\Blender Foundation\Blender\3.1\scripts\addons\``. 
 

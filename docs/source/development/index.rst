@@ -5,7 +5,7 @@ Development
 ============
 
 
-Feel free to create Merge Requests on our Github page: https://github.com/superstar54/beautiful-atoms
+Feel free to create Merge Requests on our Github page: https://github.com/beautiful-atoms/beautiful-atoms
 
 
 .. toctree::
