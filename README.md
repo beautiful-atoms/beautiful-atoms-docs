@@ -1,8 +1,8 @@
 ### Document for Beautiful Atoms
 
-<img src="docs/source/_static/figs/b-c2h6so.png" align="right" width="200"/>
+<img src="docs/source/images/b-c2h6so.png" align="right" width="200"/>
 
-Beautiful Atoms is a Python package for editing and rendering atoms and molecules objects using blender. A Python interface that allows for automating workflows.
+Beautiful Atoms is a Python package for creating, editing and rendering atoms and molecules structures using Blender. A Python interface that allows for automating workflows.
 
 Features:
 
@@ -20,13 +20,6 @@ Features:
 
 ### Author
 * Xing Wang  <xingwang1991@gmail.com>
-
-### Dependencies
-
-* Python
-* Blender
-* ASE
-* Scikit-image
 
 
 ### How to use
