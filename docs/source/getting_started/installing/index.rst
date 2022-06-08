@@ -212,7 +212,9 @@ For a basic installation. Please check the OS-specific tutorials below:
 
 Container image
 ====================================
-We also provide a container image `luciusm/beautiful_atoms <https://hub.docker.com/r/luciusm/beautiful_atoms>`_ 
+We also provide a container image `ghcr.io/beautiful-atoms/beautiful-atoms <https://github.com/beautiful-atoms/beautiful-atoms/pkgs/container/beautiful-atoms>`_
+(a mirrored image  `luciusm/beautiful_atoms <https://hub.docker.com/r/luciusm/beautiful_atoms>`_ is hosted at Dockerhub
+if you cannot access Github's container registry),
 for users familiar with Docker_ or other container platforms. 
 You may find it useful if your workflow does not depend on GUI, such as automatic code unit tests, 
 high-throughput rendering, and working with HPC systems.
@@ -221,7 +223,7 @@ To use the container image in Docker_ (may need to run as admin):
 
 .. code-block:: bash
 
-    docker pull luciusm/beautiful_atoms:latest
+    docker pull ghcr.io/beautiful-atoms/beautiful-atoms:latest
 
 The container image should be compatible with `Shifter <https://docs.nersc.gov/development/shifter/>`_ 
 or `Singularity <https://sylabs.io/guides/3.5/user-guide/index.html>`_ on HPC systems, 
@@ -233,7 +235,7 @@ To run a local python script (e.g. `./render.py`) inside the container (may need
 
     docker run --rm \
            -v $(pwd):/workdir \
-           luciusm/beautiful_atoms:latest \
+           ghcr.io/beautiful-atoms/beautiful-atoms:latest \
            blender -b -P render.py
 
 Use GUI with the docker container
