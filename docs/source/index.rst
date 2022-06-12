@@ -130,12 +130,10 @@ Sections
    rendering/index
    python/index
    tutorial/index
-   module/index
    advanced/index
    gallery
 
 .. toctree::
-   .. :caption: Sections
    :maxdepth: 1
 
    ops/index

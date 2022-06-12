@@ -15,5 +15,5 @@ This panel is used to set and draw the cavity for porous structure.
 
 Here is a example to find and draw cavity (as a sphere) in MOF-5 crystal.
 
-.. image:: /images/gui_cavity_2.png
+.. image:: /images/gallery_cavity.png
    :width: 10 cm

@@ -19,14 +19,11 @@ Here are the panels of Beautiful Atoms.
    :maxdepth: 1
 
    gui_batoms
-   .. gui_batom
    gui_render
    gui_species
    gui_bond
-   .. gui_polyhedra
    gui_cell
    gui_surface
    gui_pymatgen
    gui_pubchem
    gui_rscb
-   .. gui_real

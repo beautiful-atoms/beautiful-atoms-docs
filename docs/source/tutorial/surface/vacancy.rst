@@ -13,7 +13,7 @@ Build a Au (111) surface.
 
 Select gold atoms, press ``Tab`` key to switch to ``Edit`` mode. Choose the index of atom for the vacancy.
 
-.. image:: ..//images/vacancy-edit.png
+.. image:: /images/vacancy-edit.png
    :width: 20cm
 
 
@@ -32,7 +32,7 @@ Save structure to file, and renering the image:
 >>> au111.get_image([1, -0.4, 0.4], output = "au111-vacancy.png")
 
 
-.. image:: ..//images/vacancy-au111.png
+.. image:: /images/vacancy-au111.png
    :width: 8cm
 
 
@@ -56,7 +56,7 @@ Save structure to file, and renering the image:
     >>> au111.render.engine = "cycles"
     >>> au111.get_image([1, -0.4, 0.4], output = "au111-vacancy-cycles.png")
 
-    .. image:: ..//images/vacancy-au111-cycles.png
+    .. image:: /images/vacancy-au111-cycles.png
         :width: 12cm
 
 
