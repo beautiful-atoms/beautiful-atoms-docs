@@ -70,8 +70,3 @@ For example, copy cell:
    :width: 6cm
 
 
-List of all Methods
-===================
-
-.. autoclass:: Bcell
-   :members:

@@ -119,8 +119,3 @@ Other methods
 
 
 
-List of all Methods
-===================
-
-.. autoclass:: Render
-   :members:

@@ -16,19 +16,15 @@ Here are the main classes of Beautiful Atoms.
 
    batoms
    cell
-   .. batom
+   batom
    render
    species
    bonds
    polyhedras
    isosurfaces
    ms
-   .. lattice_plane
-   .. crystal_shape
-   .. pymatgen
-   .. pubchem
-   .. rscb
-   .. real
+   lattice_plane
+   crystal_shape
 
 
 

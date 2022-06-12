@@ -19,12 +19,6 @@ One change a setting by.
 >>> au.lattice_plane.setting[(1, 1, 1)].distance = 3.0
 >>> au.draw_lattice_plane()
 
-.. image:: /images/volume_h2o.png
+.. image:: /images/planesetting_au_plane.png
    :width: 5cm
 
-
-List of all Methods
-====================
-
-.. autoclass:: LatticePlaneSetting
-   :members:

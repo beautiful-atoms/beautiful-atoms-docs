@@ -84,7 +84,7 @@ To change setting for ``search`` by:
 >>> tio2.model_style = 2
 
 
-.. image:: images/bondsetting_tio2_2.png
+.. image:: /images/bondsetting_tio2_2.png
    :width: 8cm
 
 
@@ -129,8 +129,3 @@ Or one can set the bond order automaticaly based on `pybel <http://openbabel.org
 >>> c6h6.bonds.bond_order_auto_set()
 
 
-List of all Methods
-===================
-
-.. autoclass:: Bondsetting
-   :members:

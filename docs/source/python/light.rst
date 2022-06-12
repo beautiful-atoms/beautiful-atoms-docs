@@ -20,8 +20,3 @@ One can ``remove`` or ``add`` a light by:
 >>> ch4.render.lights.add('front', direction = [1, 0, 0])
 >>> ch4.render.lights.remove('front')
 
-List of all Methods
-===================
-
-.. autoclass:: Lights
-   :members:

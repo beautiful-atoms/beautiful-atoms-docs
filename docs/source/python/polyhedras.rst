@@ -18,8 +18,3 @@ One can change color for polyhedra ``C`` by.
 >>> ch4.model_style = 2
 
 
-List of all Methods
-===================
-
-.. autoclass:: Polyhedrasetting
-   :members:

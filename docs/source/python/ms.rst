@@ -95,8 +95,3 @@ You can get the solvent-excluded surface area (SESA) by:
 >>> area = kras.ms.get_sesa()
 
 
-List of all Methods
-====================
-
-.. autoclass:: MSsettings
-   :members:

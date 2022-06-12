@@ -29,8 +29,3 @@ One add a setting by.
    :width: 5cm
 
 
-List of all Methods
-====================
-
-.. autoclass:: IsosurfaceSettings
-   :members:

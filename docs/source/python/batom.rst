@@ -102,8 +102,3 @@ or,
          images.append(positions + [0, 0, i])
 >>> h.load_frames(images)
 
-List of all Methods
-===================
-
-.. autoclass:: Batom
-   :members:

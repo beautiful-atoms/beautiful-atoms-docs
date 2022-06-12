@@ -213,8 +213,3 @@ Render the atoms, and save to a png image.
 
 
 
-List of all Methods
-===================
-
-.. autoclass:: Batoms
-   :members:

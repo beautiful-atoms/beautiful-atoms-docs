@@ -31,8 +31,3 @@ Or set your own materials by setting the bsdf_inputs dict.
 
 
 
-List of all Methods
-===================
-
-.. autoclass:: Bspecies
-   :members:
