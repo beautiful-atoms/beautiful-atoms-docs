@@ -237,6 +237,19 @@ To run a local python script (e.g. `./render.py`) inside the container (may need
            -v $(pwd):/workdir \
            ghcr.io/beautiful-atoms/beautiful-atoms:latest \
            blender -b -P render.py
+           
+If you encounter issues with write permission to the output image, this is likely because the owner of your current directory
+has different user id (UID) or group id (GID) than the default value (1000:100). You can find the currently owner of the directory using ``ls -ln .``, the UID & GID will be displayed on the 3rd and 4th columns. For example, if the host directory is owned by 1001:101, the docker command becomes:
+
+.. code-block:: bash
+
+    docker run --rm \
+           -v $(pwd):/workdir \
+           -u 1001:101 \
+           ghcr.io/beautiful-atoms/beautiful-atoms:latest \
+           blender -b -P render.py
+
+You can find the UID & GID of current directory owner by running ``ls -aln .``.
 
 Use GUI with the docker container
 ---------------------------------
