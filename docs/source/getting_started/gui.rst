@@ -15,7 +15,7 @@ On the left bottom corner of VIEW_3D window, click the `Add molecule` menu (if t
 
 
 
-On the right side of VIEW_3D window, click the `Render` sidebar. Change the `Viewport` to: x=1, y=0, z=0. Then press `F12` to render the image.
+On the right side of VIEW_3D window, click the `Attach Render` sidebar. Change the `Viewport` to: (1, 0, 0). Click the `Attach Render` again. Then press `F12` to render the image.
 
 .. image:: /images/getting_started_gui_3.png
    :width: 20cm
