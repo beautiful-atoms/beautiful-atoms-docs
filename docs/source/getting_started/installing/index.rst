@@ -160,6 +160,9 @@ You can check the usage of ``install.py`` by:
 .. code-block:: bash
     
     python install.py --help
+   
+There are several useful options in ``install.py``. For example, if you're developing the source code for ``batoms``, adding ``--develop`` option 
+to the installation process makes a symlink between your local code and the blender plugin folder and keeps the plugin up-to-date.
 
 Uninstallation
 ------------
