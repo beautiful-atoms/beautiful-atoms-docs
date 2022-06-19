@@ -122,7 +122,7 @@ Ti_1-O      0.000   2.760      1            True        1
 Also add ``Ti_1`` to polyhedras. To make the polyhedra different from another ``Ti`` species, we change its color.
 
 >>> tio2.polyhedras.setting.add('Ti_1')
->>> tio2.polyhedras.setting['Ti_1'].color = (0, 1, 1, 1)
+>>> tio2.polyhedras.setting['Ti_1'].color = (0, 1, 1, 0.8)
 
 Here we see that there are two different Ti species for polyhedras:
 
@@ -131,6 +131,10 @@ Center                color         width
 Ti           [0.75  0.76  0.78  1.00]   0.010 
 Ti_1         [0.00  1.00  1.00  1.00]   0.010 
 ------------------------------------------------------------
+
+Redraw the structure:
+
+>>> tio2.model_style = 2
 
 .. image:: /images/tutorial-species-polyhedra-2.png
    :width: 6cm
