@@ -26,6 +26,10 @@ Getting Started
 
       .. container:: descr
 
+         :doc:`/getting_started/installing/update`
+
+      .. container:: descr
+
          :doc:`/getting_started/gui`
 
       .. container:: descr
