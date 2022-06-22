@@ -54,7 +54,7 @@ Another example:
 
    The name should not be longer than four characters.
 
-If you only need to change the scale of individule atoms. You can use:
+If you only need to change the scale of individual atoms. You can use:
 
 >>> Au[0].scale = 2
 
@@ -65,7 +65,7 @@ If you only need to change the scale of individule atoms. You can use:
 
 Polyhedra with different species
 ------------------------------------
-This is an example to show different polyhedras for the same element, but different species. First, we read a TiO\ :sub:`2`\  structure from file.
+This is an example to show different polyhedras for the same element, but different species. First, we read a TiO\ :sub:`2`\  structure from the file.
 
 >>> from batoms.bio import read
 >>> tio2 = read("../tests/datas/tio2.cif")
@@ -75,14 +75,14 @@ This is an example to show different polyhedras for the same element, but differ
    :width: 6cm
 
 
-There are two ``Ti`` atoms in the unit cell. Swithing to ``Edit`` mode (shortcut key:``Tab``), we find the indices are 0 and 1 for these two ``Ti`` atoms. 
+There are two ``Ti`` atoms in the unit cell. Switching to ``Edit`` mode (shortcut key:``Tab``), we find the indices are 0 and 1 for these two ``Ti`` atoms. 
 
 
-Swithing back to ``Object`` mode (shortcut key:``Tab``). We set the first one to a new species ``Ti_1``.
+Switching back to ``Object`` mode (shortcut key:``Tab``). We set the first one to a new species ``Ti_1``.
 
 >>> tio2.replace([0], 'Ti_1')
 
-For the new added ``Ti_1`` species, there is a default setting for the bonds. As shown by:
+For the newly added ``Ti_1`` species, there is a default setting for the bonds. As shown by:
 
 >>> tio2.bonds.setting
 Bondpair    min     max   Search_bond    Polyhedra style
@@ -153,4 +153,6 @@ Change color for the polyhedra of different species.
 >>> magnetite.model_style = 2
 
 .. image:: /images/tutorial-species-auto-build-species-0.png
-   :width: 6cm
+   :width: 10cm
+
+One can download the python script for the aboved image: :download:`tutorial_species_auto_build_species.py </_static/scripts/tutorial_species_auto_build_species.py>`
