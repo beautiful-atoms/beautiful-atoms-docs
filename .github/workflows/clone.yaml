@@ -7,6 +7,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Clone docs repository
+      uses: actions/checkout@v2
+
     - name: Clone beautiful-atoms repository
       uses: actions/checkout@v2
       with:
