@@ -1,0 +1,17 @@
+name: Git clone batoms modules
+
+on: [push, pull_request]
+
+jobs:  
+  gitclone:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone beautiful-atoms repository
+      uses: actions/checkout@v2
+      with:
+        repository: beautiful-atoms/beautiful-atoms
+    # clone the repo into the given `path`
+        path: src/
+    # checks out the branch defined at `ref`
+        ref: main
