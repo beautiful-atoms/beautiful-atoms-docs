@@ -1,10 +1,10 @@
-.. module:: batoms.ms.mssetting
+.. module:: batoms.plugins.molecular_surface
 
 =============================
-The MSsetting object
+The MolecularSurface object
 =============================
 
-The :class:`MSsetting` object is used to store and set all parameters related with molecular surface. Here the molecular surface includes:
+The :class:`MolecularSurface` object is used draw molecular surface for :class:`Batoms`. It has a ``settings`` attribute (:class:`MolecularSurfaceSettings` object), which store and set all parameters related with molecular surface. Here the molecular surface includes:
 
     - Solvent accessible surface (SAS)
     - van der Waals surface, a special case of SAS with probe radius equal to 0)
@@ -62,7 +62,7 @@ Here we show a example of draw SAS for the protein kras.
 >>> from batoms import Batoms
 >>> kras = read("kras.pdb")
 >>> kras = Batoms("kras", from_ase = kras)
->>> kras.ms.draw()
+>>> kras.molecular_surface.draw()
 >>> kras.get_image(padding = 3, output = "ms_sas_kras.png")
 
 .. image:: /images/ms_sas_kras.png
@@ -71,7 +71,7 @@ Here we show a example of draw SAS for the protein kras.
 
 You can get the solvent accessible surface area (SASA) by:
 
->>> area = kras.ms.get_sasa()[0]
+>>> area = kras.molecular_surface.get_sasa()[0]
 
 
 Solvent-excluded surface
@@ -83,8 +83,8 @@ Here we show a example of draw SES for the protein kras.
 >>> from batoms import Batoms
 >>> kras = read("kras.pdb")
 >>> kras = Batoms("kras", from_ase = kras)
->>> kras.ms.setting["1"].type = "SES"
->>> kras.ms.draw()
+>>> kras.molecular_surface.settings["1"].type = "SES"
+>>> kras.molecular_surface.draw()
 >>> kras.get_image(padding = 3, output = "ms_ses_kras.png")
 
 .. image:: /images/ms_ses_kras.png
@@ -92,6 +92,6 @@ Here we show a example of draw SES for the protein kras.
 
 You can get the solvent-excluded surface area (SESA) by:
 
->>> area = kras.ms.get_sesa()
+>>> area = kras.molecular_surface.get_sesa()
 
 

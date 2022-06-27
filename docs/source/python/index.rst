@@ -15,6 +15,7 @@ Here are the main classes of Beautiful Atoms.
    :maxdepth: 1
 
    batoms
+   slicebatoms
    cell
    batom
    render
@@ -22,7 +23,7 @@ Here are the main classes of Beautiful Atoms.
    bonds
    polyhedras
    isosurfaces
-   ms
+   molecular_surface
    lattice_plane
    crystal_shape
 

@@ -3,7 +3,7 @@
 Lattice Plane and Crystal shape
 ================================
 
-The :mod:`LatticePlaneSetting <batoms.lattice_plane.lattice_plane_setting>` object controls various settings related with lattice plane data.
+The :mod:`LatticePlaneSetting <batoms.plugins.lattice_plane.setting>` object controls various settings related with lattice plane data.
 
 Lattice Plane
 ----------------
@@ -12,7 +12,7 @@ Here we show a example of inserting a lattice plane in the unit cell.
 
 >>> from batoms.build import bulk
 >>> au = bulk("au", "Au", cubic = True)
->>> au.lattice_plane.setting[(1, 1, 0)] = {"distance": au.cell[0, 0]/np.sqrt(2)}
+>>> au.lattice_plane.settings[(1, 1, 0)] = {"distance": au.cell[0, 0]/np.sqrt(2)}
 >>> au.draw()
 
 .. image:: /images/planesetting_au_plane.png
@@ -22,7 +22,7 @@ Here we show a example of inserting a lattice plane in the unit cell.
 
 One change a planesetting by. 
 
->>> au.lattice_plane.setting[(1, 1, 1)].distance = 3.0
+>>> au.lattice_plane.settings[(1, 1, 1)].distance = 3.0
 >>> au.draw()
 
 

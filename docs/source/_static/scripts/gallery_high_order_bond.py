@@ -17,6 +17,6 @@ c6h6.render.lights['Default'].direction = [0.3, 0.3, 1]
 c6h6.get_image(output='gallery_c6h6_ball.png')
 # Bond
 c6h6.model_style = 1
-c6h6.bonds.bond_order_auto_set()
+c6h6.bond.bond_order_auto_set()
 plane.location = [0, 0, c6h6.get_all_vertices()[:, 2].min() - c6h6.size[0]]
 c6h6.get_image(output='gallery_c6h6_bond.png')

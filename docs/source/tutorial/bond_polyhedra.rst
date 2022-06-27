@@ -3,7 +3,7 @@
 Bond and Polyhedra
 ========================
 
-The :mod:`Bondsettings <batoms.bonds.setting>` object controls various settings such as the bondlength and the polyhedra. 
+The :mod:`Bondsettings <batoms.bond.settings>` object controls various settings such as the bondlength and the polyhedra. 
 
 One can set ``model_style`` to draw the bond and polyhedra.
 
@@ -16,7 +16,7 @@ One can set ``model_style`` to draw the bond and polyhedra.
 
 You can print the default bondsetting by:
 
->>> tio2.bonds.setting
+>>> tio2.bond.settings
 Bondpair    min     max   Search_bond    Polyhedra style
 Ti-O        0.000   2.938      1            True        1    
 O-O         0.000   1.716      1            False       1    
@@ -26,7 +26,7 @@ To build up coordination polyhedra, set ``model_style`` to 2.
 
 >>> tio2.model_style = 2
 >>> # show atoms
->>> tio2.bonds.show_search = True
+>>> tio2.bond.show_search = True
 
 
 .. image:: /images/bondsetting_tio2_1.png
@@ -34,8 +34,8 @@ To build up coordination polyhedra, set ``model_style`` to 2.
 
 One can ``remove`` or ``add`` a bond pair by:
 
->>> tio2.bonds.setting.remove(("Ti", "O"))
->>> tio2.bonds.setting.add(("Ti", "O"))
+>>> tio2.bond.settings.remove(("Ti", "O"))
+>>> tio2.bond.settings.add(("Ti", "O"))
 
 
 Search bond mode
@@ -43,7 +43,7 @@ Search bond mode
 
 * Do not search atoms beyond the boundary. The value for ``search`` should be set to 0.  
 
->>> tio2.bonds.setting[("Ti", "O")].search = 0
+>>> tio2.bond.settings[("Ti", "O")].search = 0
 >>> tio2.boundary.update()
 >>> tio2.model_style = 2
 
@@ -53,10 +53,10 @@ Search bond mode
 * Search additional atoms if species1 is included in the boundary, the value for ``search`` should be set to `>0`. To change setting for a bond pair by.
 
 >>> tio2.boundary = 0.01
->>> tio2.bonds.setting[("Ti", "O")].search = 1
+>>> tio2.bond.settings[("Ti", "O")].search = 1
 >>> tio2.model_style = 2
 >>> # show atoms
->>> tio2.bonds.show_search = True
+>>> tio2.bond.show_search = True
 
 .. image:: /images/bondsetting_tio2_3.png
    :width: 8cm
@@ -69,7 +69,7 @@ Search bond mode
 >>> mol = read("urea.cif")
 >>> mol.boundary = 0.01
 >>> mol.model_style = 1
->>> mol.bonds.show_search = True
+>>> mol.bond.show_search = True
 >>> mol.get_image([1, -0.3, 0.1], engine = "eevee", output = "bondsetting_search_molecule.png")
 
 
@@ -85,8 +85,8 @@ Hydrogen bond
 
 To build up hydrogen bond for ``X-H -- Y``. Set the minimum and maximum distances of ``H-Y``, and set the ``bondlinewdith`` to a small value. Such as ``H-O`` and ``H-N`` bond.
 
->>> h2o.bonds.setting[("H", "O")].min = 2.0
->>> h2o.bonds.setting[("H", "O")].max = 3.0
+>>> h2o.bond.settings[("H", "O")].min = 2.0
+>>> h2o.bond.settings[("H", "O")].max = 3.0
 
 .. image:: /images/hydrogen-bond.png
    :width: 5cm
@@ -110,5 +110,5 @@ One can set bond order for each bond:
 
 Or one can set the bond order automaticaly based on `pybel <http://openbabel.org/wiki/Bond_Orders>`_:
 
->>> c6h6.bonds.bond_order_auto_set()
+>>> c6h6.bond.bond_order_auto_set()
 
