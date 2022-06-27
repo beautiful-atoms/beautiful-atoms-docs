@@ -7,7 +7,8 @@ The Bcell object
 The :class:`Bcell` object is an object for unit cell. Here is how to creat a cubic unit cell:
 
 >>> from batoms.cell import Bcell
->>> cell = Bcell(label = 'pt', array = [3.98, 3.98, 3.98])
+>>> pt = Batoms(label = 'pt')
+>>> pt.cell = [3.98, 3.98, 3.98]
 
 .. image:: /images/bcell-pt.png
    :width: 3cm
@@ -16,20 +17,20 @@ Here, the ``label`` keyword to specify the name, and ``array`` keyword to specif
 
 See the cell:
 
->>> cell
+>>> pt.cell
 Cell([[3.98, 0.0, 0.0], [0.0, 3.98, 0.0], [0.0, 0.0, 3.98]])
 
->>> cell.length
+>>> pt.cell.length
 array([3.98000002, 3.98000002, 3.98000002])
 
->>> cell.reciprocal
+>>> pt.cell.reciprocal
 array([[1.57868977, 0.        , 0.        ],
        [0.        , 1.57868977, 0.        ],
        [0.        , 0.        , 1.57868977]]
 
 Set the cell component:
 
->>> cell[2, 2] += 5
+>>> pt.cell[2, 2] += 5
 
 .. image:: /images/bcell-pt-2.png
    :width: 3cm
@@ -38,7 +39,7 @@ Set the cell component:
 
 More details
 =======================
-A cell contains eight vertices, and is a three-dimensional object. However, only the first four vertices are independent. Therefore, editing these four vertices will change the positoins of other four vertices as well.
+A cell contains four vertices and 12 edges, and is a three-dimensional object. However, only the first four vertices are independent. Therefore, editing these four vertices will change the positoins of the edges.
 
 .. image:: /images/bcell_vertices.png
    :width: 6cm
@@ -58,13 +59,11 @@ Other methods
   
 For example, copy cell:
         
->>> cell_new = cell.copy('pt_new')
+>>> cell_new = pt.cell.copy('pt_new')
 
 * :meth:`~Bcell.repeat`
 
->>> from batoms.cell import Bcell
->>> cell = Bcell(label = 'pt', array = [2, 2, 2])
->>> cell.repeat([3, 1, 1])
+>>> pt.cell.repeat([3, 1, 1])
 
 .. image:: /images/bcell-pt-3.png
    :width: 6cm

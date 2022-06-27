@@ -3,9 +3,9 @@ from batoms.utils.butils import removeAll, set_world
 from batoms.draw import draw_plane
 removeAll()
 au = bulk('au', 'Au', cubic=True)
-au.crystal_shape.setting[(1, 1, 1)] = {'distance': 8, 'crystal': True,
+au.crystal_shape.settings[(1, 1, 1)] = {'distance': 8, 'crystal': True,
                                        'symmetry': True, 'color': [0, 0.2, 0.8, 1]}
-au.crystal_shape.setting[(0, 0, 1)] = {'distance': 10, 'crystal': True,
+au.crystal_shape.settings[(0, 0, 1)] = {'distance': 10, 'crystal': True,
                                        'symmetry': True, 'color': [0.6, 0.2, 0, 1]}
 au.crystal_shape.draw()
 set_world(color=[0.2, 0.2, 0.2, 1.0])

@@ -6,7 +6,7 @@ removeAll()
 kras = read('datas/kras.pdb')
 kras.center(1.0)
 kras = Batoms('kras', from_ase=kras)
-kras.ms.draw()
+kras.molecular_surface.draw()
 set_world(color=[0.2, 0.2, 0.2, 1.0])
 draw_plane(location=[0, 0, min(kras.positions[:, 2]) - 3],
            size=5000, color=(0.9, 0.9, 0.9, 1))
@@ -16,7 +16,7 @@ kras.render.lights['Default'].direction = [0.4, 0.5, 1]
 kras.get_image([1, -0.3, 0.3], padding=[12, 12, 12],
                output='gallery_sas.png')
 
-kras.ms.setting["1"].type = "SES"
-kras.ms.draw()
+kras.molecular_surface.settings["1"].type = "SES"
+kras.molecular_surface.draw()
 kras.get_image([1, -0.3, 0.3], padding=[12, 12, 12],
                output='gallery_ses.png')

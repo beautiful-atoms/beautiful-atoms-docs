@@ -84,7 +84,7 @@ Switching back to ``Object`` mode (shortcut key:``Tab``). We set the first one t
 
 For the newly added ``Ti_1`` species, there is a default setting for the bonds. As shown by:
 
->>> tio2.bonds.setting
+>>> tio2.bond.setting
 Bondpair    min     max   Search_bond    Polyhedra style
 Ti-O        0.000   2.760      1            True        1    
 O-O         0.000   1.820      1            False       1    
@@ -93,7 +93,7 @@ Ti_1-O      0.000   2.760      1            True        1
 
 There is also a default setting of ``Ti_1`` for polyhedras. As shown by:
 
->>> tio2.polyhedras.setting
+>>> tio2.polyhedra.settings
 Center                color         width 
 Ti           [0.75  0.76  0.78  1.00]   0.010 
 Ti_1         [0.75  0.76  0.78  1.00]   0.010 
@@ -101,7 +101,7 @@ Ti_1         [0.75  0.76  0.78  1.00]   0.010
 
 To make the polyhedra different from another ``Ti`` species, we change its color.
 
->>> tio2.polyhedras.setting['Ti_1'].color = (0, 1, 1, 0.8)
+>>> tio2.polyhedra.settings['Ti_1'].color = (0, 1, 1, 0.8)
 
 Redraw the structure:
 
@@ -148,8 +148,8 @@ Bspecies(species = 'O_1', elements = [('O', 1.0)], color = [1.   0.05 0.05 1.  ]
 In this case, one can easily draw different polyhedra for different species.
 Change color for the polyhedra of different species.
 
->>> magnetite.polyhedras.setting['Fe_1'].color[:] = [0, 0.8, 0, 0.8]
->>> magnetite.polyhedras.setting['Fe_2'].color[:] = [0, 0, 0.8, 0.8]
+>>> magnetite.polyhedra.settings['Fe_1'].color[:] = [0, 0.8, 0, 0.8]
+>>> magnetite.polyhedra.settings['Fe_2'].color[:] = [0, 0, 0.8, 0.8]
 >>> magnetite.model_style = 2
 
 .. image:: /images/tutorial-species-auto-build-species-0.png

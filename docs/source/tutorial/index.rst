@@ -19,7 +19,7 @@ Tutorials
    species
    occupancy
    ribbon
-   ms
+   molecular_surface
    metaball
    surface/index
    api

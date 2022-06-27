@@ -6,12 +6,19 @@ The render function
 The :meth:`render` function is to run batoms and blender in the background.
 
 >>> from ase.build import molecule
->>> from batoms import render
->>> atoms = molecule("C2H6SO")
->>> render_input = {"output": "figs/c2h6so.png",}
->>> render(atoms = atoms, render_input = render_input)
+>>> from batoms_api import render
+>>> config = {
+    "batoms_input": {"label": "test_batoms"},
+    "settings": {
+        "model_style": 2,
+        "render": {"engine": "cycles", "samples": 1, "resolution": [20, 20]},
+        "bonds": {
+            "show_search": True,
+        },
+        "polyhedras": {
+            "setting": {"Ti": {"color": [0, 0.5, 0.5, 0.5]}}},
+    }
+}
+>>> render(atoms, **config)
 
-Here, the first keyword ``batoms`` specifies the ASE atomic structure for :class:`Batoms`, and 
-second keyword ``batoms`` keywords to specify the setting for :class:`batoms`.  Other
-possible keywords are: ``display``.
 

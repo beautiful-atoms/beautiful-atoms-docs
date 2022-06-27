@@ -1,10 +1,10 @@
-.. module:: batoms.bond.bondsetting
+.. module:: batoms.bond
 
 ========================
-The Bondsettings object
+The Bond object
 ========================
 
-The :class:`Bondsettings` object is used to store and set all parameters related with bonds. Possible keywords are: ``symbol1``, ``symbol2``, ``min``, ``max``, ``search``, ``polyhedra``, ``color1``, ``color2``, ``bondlinewidth``, ``style``, ``material_style``.
+The :class:`Bond` object is used draw bond for :class:`Batoms`. It has a ``settings`` attribute (:class:`BondSettings` object), which store and set all parameters related with bonds. Possible keywords for ``settings`` are: ``symbol1``, ``symbol2``, ``min``, ``max``, ``search``, ``polyhedra``, ``color1``, ``color2``, ``bondlinewidth``, ``style``, ``material_style``.
 
 
 >>> from ase.build import molecule
@@ -15,9 +15,9 @@ The :class:`Bondsettings` object is used to store and set all parameters related
 .. image:: /images/bondsetting_ch4_0.png
    :width: 5cm
 
-You can print the default bonds.setting by:
+You can print the default bond.settings by:
 
->>> ch4.bonds.setting
+>>> ch4.bond.settings
 
 .. image:: /images/bondsetting_ch4_1.png
    :width: 15cm
@@ -29,7 +29,7 @@ Style
 ===========
 One set the bond style for a bond pair by:
 
->>> ch4.bonds.setting[('C', 'H')].style = '3'
+>>> ch4.bond.settings[('C', 'H')].style = '3'
 
 .. image:: /images/bond_style_setting_0.png
    :width: 3cm
@@ -62,7 +62,7 @@ Polyhedra
 
 One can change setting for a bond pair. For example, to build up coordination polyhedra, the value for ``polyhedra`` should be set to ``True``:
 
->>> ch4.bonds.setting[('C', 'H')].polyhedra = True
+>>> ch4.bond.settings[('C', 'H')].polyhedra = True
 >>> ch4.model_style = 2
 
 
@@ -79,7 +79,7 @@ Search bond mode
 
 To change setting for ``search`` by:
 
->>> tio2.bonds.setting[('Ti', 'O')].search = 0
+>>> tio2.bond.settings[('Ti', 'O')].search = 0
 >>> tio2.update_boundary()
 >>> tio2.model_style = 2
 
@@ -93,12 +93,12 @@ Color
 
 One can print the default color by:
 
->>> ch4.bonds.setting[('C', 'H')].color1[:]
+>>> ch4.bond.settings[('C', 'H')].color1[:]
 
 One can change color for a bond pair. 
 
->>> ch4.bonds.setting[('C', 'H')].color1 = [0.8, 0.1, 0.3, 0.5]
->>> ch4.bonds.setting[('C', 'H')].color2 = [0.1, 0.3, 0.2, 1.0]
+>>> ch4.bond.settings[('C', 'H')].color1 = [0.8, 0.1, 0.3, 0.5]
+>>> ch4.bond.settings[('C', 'H')].color2 = [0.1, 0.3, 0.2, 1.0]
 >>> ch4.model_style = 1
 
 

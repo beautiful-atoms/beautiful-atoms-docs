@@ -1,7 +1,7 @@
 .. batoms documentation master file.
 
 =================================================
-Welcome to Beautiful Atoms 2.0's documentation!
+Welcome to Beautiful Atoms 2.2.0's documentation!
 =================================================
 
 .. figure:: images/batoms-h2o.png

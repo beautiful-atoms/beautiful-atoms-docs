@@ -11,11 +11,11 @@ mag = read("magnetite.cif")
 mag.auto_build_species()
 mag.boundary = 0
 # Change color for the polyhedra of different species.
-mag.polyhedras.setting['Fe'].color[:] = [0.8, 0.8, 0, 1]
-mag.polyhedras.setting['Fe_1'].color[:] = [0, 0.8, 0, 1]
-mag.polyhedras.setting['Fe_2'].color[:] = [0, 0, 0.8, 1]
+mag.polyhedra.settings['Fe'].color[:] = [0.8, 0.8, 0, 1]
+mag.polyhedra.settings['Fe_1'].color[:] = [0, 0.8, 0, 1]
+mag.polyhedra.settings['Fe_2'].color[:] = [0, 0, 0.8, 1]
 mag.model_style = 2
-mag.bonds.show_search = True
+mag.bond.show_search = True
 mag.cell.draw()
 # ====================================
 # Following code is used to set the rendering parameters
