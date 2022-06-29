@@ -4,7 +4,7 @@
 The Bond object
 ========================
 
-The :class:`Bond` object is used draw bond for :class:`Batoms`. It has a ``settings`` attribute (:class:`BondSettings` object), which store and set all parameters related with bonds. Possible keywords for ``settings`` are: ``symbol1``, ``symbol2``, ``min``, ``max``, ``search``, ``polyhedra``, ``color1``, ``color2``, ``bondlinewidth``, ``style``, ``material_style``.
+The :class:`Bond` object is used to draw bond for :class:`Batoms`. It has a ``settings`` attribute (:class:`BondSettings` object), which stores and sets all parameters related to bonds. Possible keywords for ``settings`` are: ``symbol1``, ``symbol2``, ``min``, ``max``, ``search``, ``polyhedra``, ``color1``, ``color2``, ``bondlinewidth``, ``style``, ``material_style``.
 
 
 >>> from ase.build import molecule

@@ -4,10 +4,10 @@
 The Isosurface object
 =============================
 
-The :class:`Isosurface` object is used draw isosurface for :class:`Batoms`. It has a ``settings`` attribute (:class:`IsosurfaceSettings` object), which store and set all parameters related with volumetric data. It should always bind with a :class:`Batoms` object. Possible keywords for ``settings`` are: ``level``, ``color``. 
+The :class:`Isosurface` object is used to draw isosurface for :class:`Batoms`. It has a ``settings`` attribute (:class:`IsosurfaceSettings` object), which stores and sets all parameters related to volumetric data. Possible keywords for ``settings`` are: ``level``, ``color``. 
 
 
-Here we show a example of draw isosurfaces from cube file.
+Here we show an example of drawing isosurfaces from cube file.
 
 >>> from ase.io.cube import read_cube_data
 >>> from batoms import Batoms

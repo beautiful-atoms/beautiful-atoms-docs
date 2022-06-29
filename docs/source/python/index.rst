@@ -26,6 +26,7 @@ Here are the main classes of Beautiful Atoms.
    molecular_surface
    lattice_plane
    crystal_shape
+   cavity
 
 
 

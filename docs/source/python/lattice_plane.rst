@@ -4,10 +4,10 @@
 The LatticePlane object
 ================================
 
-The :class:`LatticePlane` object is used draw molecular surface for :class:`Batoms`. It has a ``settings`` attribute (:class:`LatticePlaneSettings` object), which store and set all parameters related with lattice plane data. It should always bind with a :class:`Batoms` object. Possible keywords are: ``indices``, ``distance``, ``crystal``, ``symmetry`` and ``color``. 
+The :class:`LatticePlane` object is used to draw molecular surface for :class:`Batoms`. It has a ``settings`` attribute (:class:`LatticePlaneSettings` object), which stores and sets all parameters related to lattice plane data. Possible keywords are: ``indices``, ``distance``, ``crystal``, ``symmetry`` and ``color``. 
 
 
-Here we show a example of insert a lattice plane in the unit cell.
+Here we show an example of inserting a lattice plane in the unit cell.
 
 >>> from batoms.build import bulk
 >>> au = bulk('au', 'Au', cubic = True)

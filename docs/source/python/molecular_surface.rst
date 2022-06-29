@@ -4,7 +4,7 @@
 The MolecularSurface object
 =============================
 
-The :class:`MolecularSurface` object is used draw molecular surface for :class:`Batoms`. It has a ``settings`` attribute (:class:`MolecularSurfaceSettings` object), which store and set all parameters related with molecular surface. Here the molecular surface includes:
+The :class:`MolecularSurface` object is used to draw molecular surface for :class:`Batoms`. It has a ``settings`` attribute (:class:`MolecularSurfaceSettings` object), which stores and sets all parameters related to molecular surface. Here the molecular surface includes:
 
     - Solvent accessible surface (SAS)
     - van der Waals surface, a special case of SAS with probe radius equal to 0)
@@ -56,7 +56,7 @@ The isosurface then build by the BVH algorithm.
 Solvent accessible surface
 ===========================
 
-Here we show a example of draw SAS for the protein kras.
+Here we show an example of drawing SAS for the protein kras.
 
 >>> from ase.io import read
 >>> from batoms import Batoms
@@ -77,7 +77,7 @@ You can get the solvent accessible surface area (SASA) by:
 Solvent-excluded surface
 ===========================
 
-Here we show a example of draw SES for the protein kras.
+Here we show an example of drawing SES for the protein kras.
 
 >>> from ase.io import read
 >>> from batoms import Batoms

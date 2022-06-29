@@ -4,7 +4,7 @@
 The Polyhedra object
 ===========================
 
-The :class:`Polyhedra` object is used draw polyhedra for :class:`Batoms`. It has a ``settings`` attribute (:class:`PolyhedraSettings` object), which store and set all parameters related with polyhedra. Possible keywords for ``settings`` are: ``symbol``, ``color`` and ``linewidth``. 
+The :class:`Polyhedra` object is used to draw polyhedra for :class:`Batoms`. It has a ``settings`` attribute (:class:`PolyhedraSettings` object), which stores and sets all parameters related with polyhedra. Possible keywords for ``settings`` are: ``symbol``, ``color`` and ``linewidth``. 
 
 
 
