@@ -6,7 +6,6 @@ import numpy as np
 removeAll()
 au = bulk('au', 'Au', cubic=True)
 au.lattice_plane.settings[(1, 1, 0)] = {'distance': au.cell[0, 0]/np.sqrt(2)}
-au.cell.draw()
 au.lattice_plane.draw()
 set_world(color=[0.2, 0.2, 0.2, 1.0])
 draw_plane(location=[0, 0, -au.size[0]], size=200, color=(0.9, 0.9, 0.9, 1))

@@ -16,7 +16,6 @@ mag.polyhedra.settings['Fe_1'].color[:] = [0, 0.8, 0, 1]
 mag.polyhedra.settings['Fe_2'].color[:] = [0, 0, 0.8, 1]
 mag.model_style = 2
 mag.bond.show_search = True
-mag.cell.draw()
 # ====================================
 # Following code is used to set the rendering parameters
 # world color

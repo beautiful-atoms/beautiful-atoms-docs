@@ -5,7 +5,6 @@ removeAll()
 atoms = fcc111('Au', size=(5, 5, 4), vacuum=0)
 au111 = Batoms(label='au111', from_ase=atoms)
 au111.cell[2, 2] += 10
-au111.cell.draw()
 au111.replace([87], "X")
 au111[87].scale = 1.2
 au111['X'].color = [0.8, 0.0, 0.8, 0.2]

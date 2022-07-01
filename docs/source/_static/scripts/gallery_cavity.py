@@ -12,7 +12,7 @@ mof.bond.settings.remove(('H', 'O'))
 mof.polyhedra.settings['Zn'].color = [0.1, 0.4, 0.7, 1.0]
 mof.model_style = 2
 mof.cavity.draw()
-mof.cell.draw()
+mof.cell.width = 0.05
 set_world(color=[0.2, 0.2, 0.2, 1.0])
 draw_plane(location=[0, 0, 0], size=200, color=(0.9, 0.9, 0.9, 1))
 mof.render.viewport = [0.3, 1, 0.3]

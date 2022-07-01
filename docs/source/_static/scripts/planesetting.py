@@ -4,8 +4,7 @@ from batoms import Batoms
 import numpy as np
 removeAll()
 au = bulk('au', 'Au', cubic = True)
-au.lattice_plane.setting[(1, 1, 0)] = {'distance': au.cell[0, 0]/np.sqrt(2)}
-au.cell.draw()
+au.lattice_plane.settings[(1, 1, 0)] = {'distance': au.cell[0, 0]/np.sqrt(2)}
 au.get_image(viewport = [0.2, -1, 0.4], output = 'figs/planesetting_au_plane.png')
 
 au.crystal_shape.settings[(1, 1, 0)].crystal = True
