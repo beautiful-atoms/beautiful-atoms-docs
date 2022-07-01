@@ -4,7 +4,7 @@ Volumetric data and isosurface
 
 The :mod:`Isosurfacesetting <batoms.isosurface.isosurfacesetting>` object is used to store and set all parameters related with volumetric data. It should always bind with a :class:`Batoms` object. Possible keywords are: ``level``, ``color``. 
 
-Isosurface
+Cube file
 ---------------------
 
 Here we show a example of draw isosurfaces from cube file.
@@ -52,6 +52,22 @@ The name of a setting can be any string, for example:
    >>> origin = cube["origin"]
    >>> atoms.translate(-origin[0:3])
    >>> h2o = Batoms("h2o", from_ase = atoms, volume = volume, draw = False)
+
+
+CHGCAR
+-------------
+For calculation using VASP, the CHGCAR can be read by pymatgen, and then load the data into Batoms.
+
+
+>>> from pymatgen.io.vasp.outputs import VolumetricData
+>>> from batoms import Batoms
+>>> # read CHGCAR
+>>> poscar, data, data_aug = VolumetricData.parse_file('CHGCAR')
+>>> # load structure and vlumetric data into Batoms
+>>> batoms = Batoms('batoms', from_pymatgen = poscar.structure, volume = data['total'])
+>>> # set color and level for isosurface
+>>> batoms.isosurface.settings["1"] = {'level': 14.0, 'color': [1, 1, 0, 0.9]}
+>>> batoms.isosurface.draw()
 
 
 2D slicing
