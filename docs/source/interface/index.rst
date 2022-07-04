@@ -14,6 +14,7 @@ The graphical user-interface allows users to creat, manipulate, and render atoms
    right-click-menu
    view3d-menu
    toolbar
+   asset
 
 
    

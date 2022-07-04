@@ -178,7 +178,7 @@ Protein
 .. |ses|  image:: /images/gallery_ses.png
    :width: 10cm
 
-:download:`gallery_ms.py <_static/scripts/gallery_ms.py>`
+:download:`gallery_molecular_surface.py <_static/scripts/gallery_molecular_surface.py>`
 
 Animation
 ============

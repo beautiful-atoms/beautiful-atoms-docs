@@ -120,6 +120,7 @@ Sections
 
    getting_started/about/index.rst
    getting_started/installing/index.rst
+   getting_started/installing/update.rst
    getting_started/gui.rst
    getting_started/python.rst
 

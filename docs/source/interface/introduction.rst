@@ -24,7 +24,17 @@ There are four Editors in the image: 3D Viewport, Outliner, Timeline and Propert
   Editors
 ============
 
-Blender provides a number of different editors for displaying and modifying different aspects of data. The Editors used for Beautiful Atoms are labeled by red arrows.
+Blender provides a number of different editors for displaying and modifying different aspects of data. The Editors used for Beautiful Atoms are: 
+
+    #. 3D Viewport
+    #. Timeline
+    #. Text Editor
+    #. Python Console
+    #. Outliner
+    #. Properties
+    #. Asset Browser
+    #. Spreadsheet
+
 
 .. figure:: ../images/editors_index_menu.png
    :align: center

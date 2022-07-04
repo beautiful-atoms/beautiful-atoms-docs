@@ -17,7 +17,6 @@ Here are the main classes of Beautiful Atoms.
    batoms
    slicebatoms
    cell
-   batom
    render
    species
    bonds
