@@ -25,16 +25,31 @@ Name       min   max   scale                color
 ------------------------------------------------------------
 
 
+One can add a setting by:
+
+>>> mof_5.cavity.settings['cave1'] = {'min':6, 'max': 7, 'color': [1, 0, 0, 1]}
+>>> mof.cavity.draw()
+
+In this case, only sphere with radius in a the range 6--7 Å will be drawn.
+
+
+
 Auto-search cavity
 ---------------------
-First, we call the `draw` function to auto-search and draw the cavities.
+If no setting item is added, the the `draw` function will search and draw all cavities automatically.
 
+>>> # remove previous settings
+>>> mof_5.cavity.settings.remove('cave1')
+>>> mof_5.cavity.settings
+Name       min   max   scale                color  
+------------------------------------------------------------
 >>> mof.cavity.draw()
+
 
 .. image:: /images/python_cavity_mof_5_0.png
    :width: 10cm
 
-After that, two different cavities (names are `"0"` and `"1"`) with different radii are found.
+In the case of MOF-5, two different cavities (names are `"0"` and `"1"`) with different radii are found.
 
 >>> mof.cavity.settings
 Name       min   max   scale                color  
@@ -56,6 +71,19 @@ One change the settings.
 .. image:: /images/python_cavity_mof_5_1.png
    :width: 10cm
 
+
+
+--
+
+.. note::
+   **Small caveity**
+
+   The default smallest cavity to be searched is 4 Å. You can change it by:
+
+   >>> mof.minCave = 3.
+   >>> # for small cave, a small resolution is need. The default resolution is 1 Å.
+   >>> mof.resolution = 0.5
+   >>> mof.cavity.draw()
 
 GUI
 ---------
