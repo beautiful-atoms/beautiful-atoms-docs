@@ -11,9 +11,10 @@ Here we show a example of draw isosurfaces from cube file.
 
 >>> from ase.io.cube import read_cube_data
 >>> from batoms import Batoms
->>> volume, atoms = read_cube_data("docs/source/_static/datas/h2o-homo.cube")
->>> h2o = Batoms("h2o", from_ase = atoms, volume = volume, draw = False)
-
+>>> volumetric_data, atoms = read_cube_data("../tests/datas/h2o-homo.cube")
+>>> h2o = Batoms('h2o', from_ase = atoms)
+>>> # add volumetric data
+>>> h2o.volumetric_data['homo'] = volumetric_data
 
 You can print the default setting by:
 
@@ -64,7 +65,9 @@ For calculation using VASP, the CHGCAR can be read by pymatgen, and then load th
 >>> # read CHGCAR
 >>> poscar, data, data_aug = VolumetricData.parse_file('CHGCAR')
 >>> # load structure and vlumetric data into Batoms
->>> batoms = Batoms('batoms', from_pymatgen = poscar.structure, volume = data['total'])
+>>> batoms = Batoms('batoms', from_pymatgen = poscar.structure)
+>>> # add volumetric data
+>>> h2o.volumetric_data['chgcar'] = data['total'])
 >>> # set color and level for isosurface
 >>> batoms.isosurface.settings["1"] = {'level': 14.0, 'color': [1, 1, 0, 0.9]}
 >>> batoms.isosurface.draw()

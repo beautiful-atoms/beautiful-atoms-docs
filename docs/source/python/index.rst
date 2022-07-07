@@ -26,6 +26,7 @@ Here are the main classes of Beautiful Atoms.
    lattice_plane
    crystal_shape
    cavity
+   volumetric_data
 
 
 
