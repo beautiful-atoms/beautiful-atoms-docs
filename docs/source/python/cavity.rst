@@ -18,7 +18,7 @@ Here we show an example of drawing cavities for MOF-5. First, we read a MOF-5 st
 >>> # change width of cell
 >>> mof.cell.width = 0.05
 
-There is no default settings, as shown bellow:
+There are no default settings, as shown below:
 
 >>> mof.cavity.settings
 Name       min   max   scale                color  
@@ -30,13 +30,13 @@ One can add a setting by:
 >>> mof_5.cavity.settings['cave1'] = {'min':6, 'max': 7, 'color': [1, 0, 0, 1]}
 >>> mof.cavity.draw()
 
-In this case, only sphere with radius in a the range 6--7 Å will be drawn.
+In this case, only the spheres with radius in the range of 6--7 Å will be drawn.
 
 
 
 Auto-search cavity
 ---------------------
-If no setting item is added, the the `draw` function will search and draw all cavities automatically.
+If no setting item is added, the `draw` function will search and draw all cavities automatically.
 
 >>> # remove previous settings
 >>> mof_5.cavity.settings.remove('cave1')
@@ -76,17 +76,17 @@ One change the settings.
 --
 
 .. note::
-   **Small caveity**
+   **Small cavity**
 
    The default smallest cavity to be searched is 4 Å. You can change it by:
 
    >>> mof.minCave = 3.
-   >>> # for small cave, a small resolution is need. The default resolution is 1 Å.
+   >>> # for a small cave, a small resolution is needed. The default resolution is 1 Å.
    >>> mof.resolution = 0.5
    >>> mof.cavity.draw()
 
 GUI
 ---------
-One can also set the cavity using GUI panel. Please read :ref:`gui_cavity` page for more setup.
+One can also set the cavity using the GUI panel. Please read :ref:`gui_cavity` page for more setup.
 
 
