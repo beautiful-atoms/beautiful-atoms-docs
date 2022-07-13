@@ -15,10 +15,7 @@ This panel is used to set the overall properties related with :class:`Batoms` ob
 .. image:: /images/gui_batoms.png
    :width: 5 cm
 
-Import and Export
-====================
 
-Import structures from file, or save selected structures into file.
 
 Style
 ==============

@@ -20,6 +20,7 @@ Tutorials
    occupancy
    ribbon
    molecular_surface
+   electrostatic_potential_map
    metaball
    surface/index
    api

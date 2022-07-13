@@ -10,7 +10,7 @@ Species Panel
    :Panel:     :menuselection:`Sidebar region --> Species`
 
 
-The `Batom` panel is used to set properties for individual atoms.  The `Species` panel is used to set properties for each species.
+The `Species` panel is used to set properties for each species. The `Batom` panel is used to set properties for individual atoms.  
 
 
 .. image:: /images/gui_species.png

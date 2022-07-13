@@ -16,3 +16,8 @@ Here is a example to draw isosurfaces for electron density of H2O molecule.
 
 .. image:: /images/gui_isosurface_2.png
    :width: 10 cm
+
+
+Colored by volumetric data
+===================================
+One can choose the volumetric data for the coloring in ``color_by``.

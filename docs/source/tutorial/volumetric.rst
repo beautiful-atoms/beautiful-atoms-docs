@@ -67,7 +67,7 @@ For calculation using VASP, the CHGCAR can be read by pymatgen, and then load th
 >>> # load structure and vlumetric data into Batoms
 >>> batoms = Batoms('batoms', from_pymatgen = poscar.structure)
 >>> # add volumetric data
->>> h2o.volumetric_data['chgcar'] = data['total'])
+>>> batoms.volumetric_data['chgcar'] = data['total']
 >>> # set color and level for isosurface
 >>> batoms.isosurface.settings["1"] = {'level': 14.0, 'color': [1, 1, 0, 0.9]}
 >>> batoms.isosurface.draw()
