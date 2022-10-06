@@ -4,13 +4,16 @@
 Installation
 ============
 
+.. Caution::
+   The latest version Blender 3.3 is not supported yet. Please use Blender 3.0~3.2. You can download it in https://download.blender.org/release/
+
+
 Requirements
 ============
 
-* Blender_ 3.0 or newer, please install Blender first.
+* Blender 3.0_, 3.1_ or 3.2_, please install Blender first.
 * ASE_
 * Scikit-image_
-
 
 Optional:
 
@@ -307,6 +310,9 @@ Please read :ref:`tips` page for more setup.
 
 
 
+.. _3.0: https://download.blender.org/release/Blender3.0/blender-3.0.1-linux-x64.tar.xz
+.. _3.1: https://download.blender.org/release/Blender3.1/blender-3.1.2-linux-x64.tar.xz
+.. _3.2: https://download.blender.org/release/Blender3.2/blender-3.2.2-linux-x64.tar.xz
 .. _beautiful-atoms: https://github.com/beautiful-atoms/beautiful-atoms
 .. _Blender: https://www.blender.org/
 .. _Python: https://www.python.org/
