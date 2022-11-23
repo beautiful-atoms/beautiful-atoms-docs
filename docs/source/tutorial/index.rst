@@ -17,6 +17,7 @@ Tutorials
    color
    label
    species
+   highlight
    occupancy
    ribbon
    molecular_surface

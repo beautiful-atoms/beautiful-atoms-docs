@@ -24,6 +24,7 @@ The ``Plugins`` panel is used to set properties related with the plugins:
    gui_isosurface
    gui_lattice_plane
    gui_molecular_surface
+   gui_highlight
 
 
 
