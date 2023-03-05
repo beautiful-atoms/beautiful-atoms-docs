@@ -5,13 +5,13 @@ Installation
 ============
 
 .. Caution::
-   The latest version Blender 3.3 is not supported yet. Please use Blender 3.0~3.2. You can download it in https://download.blender.org/release/
+   The latest version only support Blender version >= 3.4.
 
 
 Requirements
 ============
 
-* Blender 3.0_, 3.1_ or 3.2_, please install Blender first.
+* Blender_, please install Blender (version >= 3.4) first.
 * ASE_
 * Scikit-image_
 
@@ -56,8 +56,8 @@ The detailed steps are slightly per operation system:
         :active:
 
         Find out where Blender's bundled python is located on your system. 
-        For example, if you have installed Blender 3.1.0 at ``~/apps/Blender``, 
-        its python bundle is at ``~/apps/Blender/3.1``.
+        For example, if you have installed Blender 3.4.0 at ``~/apps/Blender``, 
+        its python bundle is at ``~/apps/Blender/3.4``.
 
         .. code-block:: bash
 
@@ -69,9 +69,9 @@ The detailed steps are slightly per operation system:
             # suggested for a beginner of Blender. However, if you want to keep
             # your own startup and preferences of Blender, please remove these 
             # options.
-            $CONDA_PYTHON_EXE install.py ~/apps/Blender/3.1  --use-startup --use-preferences
+            $CONDA_PYTHON_EXE install.py ~/apps/Blender/3.4  --use-startup --use-preferences
         
-        Change ``~/apps/Blender/3.1`` in step 3 to the path on your system.
+        Change ``~/apps/Blender/3.4`` in step 3 to the path on your system.
 
         .. note::
 
@@ -106,11 +106,11 @@ The detailed steps are slightly per operation system:
               such as ``$CONDA_PYTHON_EXE``.
             - In step 3, if Blender is installed at a non-default location, find its python bundle and
               provide the path to ``install.py``. 
-              For example if Blender version 3.1.0 is installed to ``~/apps/Blender.app``, run step 3 with:
+              For example if Blender version 3.4.0 is installed to ``~/apps/Blender.app``, run step 3 with:
 
               .. code-block:: zsh
 
-                $CONDA_PYTHON_EXE install.py ~/apps/Blender.app/Contents/Resources/3.1
+                $CONDA_PYTHON_EXE install.py ~/apps/Blender.app/Contents/Resources/3.4
 
     .. tab:: Windows
 
@@ -144,11 +144,11 @@ The detailed steps are slightly per operation system:
               ``install.py`` falls back to use ``pip`` and no new conda envionment is needed in this case.
             - In step 2, if Blender is installed at a non-default location, find its python bundle and
               provide the path to ``install.py``. 
-              For example, if Blender 3.1.0 is installed to ``%UserProfile%\Blender``, run step 3 with:
+              For example, if Blender 3.4.0 is installed to ``%UserProfile%\Blender``, run step 3 with:
 
               .. code-block:: dosbatch
 
-                python install.py %UserProfile%\Blender\3.1
+                python install.py %UserProfile%\Blender\3.4
 
             - You may need Visual Studio C++ Build Tools for building ``openbabel`` & ``spglib``,
               check the `tutorial <https://www.scivision.dev/python-windows-visual-c-14-required/>`_ for details

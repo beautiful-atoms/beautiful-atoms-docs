@@ -5,7 +5,7 @@ MacOS
 Install Python dependencies
 ============================================
 
-Go to your Blender python directory, e.g. ``/Applications/Blender.app/Contents/Resources/3.1/python/bin``, install pip_::
+Go to your Blender python directory, e.g. ``/Applications/Blender.app/Contents/Resources/3.4/python/bin``, install pip_::
     
     $ ./python3.10 -m ensurepip
     $ ./python3.10 -m pip install --upgrade pip
@@ -24,7 +24,7 @@ Install batoms
 
 - Download the latest version (`beautiful-atoms.zip <https://github.com/beautiful-atoms/beautiful-atoms/archive/refs/heads/main.zip>`__).
 
-- Extract the file, move the folder ``batoms`` to Blender addons folder ``/Applications/Blender.app/Contents/Resources/3.1/scripts/addons/``. 
+- Extract the file, move the folder ``batoms`` to Blender addons folder ``/Applications/Blender.app/Contents/Resources/3.4/scripts/addons/``. 
 
 - Enable the addon in the Preferences setting. Please open a Blender Python console, and run the following code to enable the batoms::
 

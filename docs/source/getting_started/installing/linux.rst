@@ -5,7 +5,7 @@ Linux
 Install ASE_ inside Blender
 ===============================
 
-On Linux and MacOS, go to your Blender python directory, e.g. ``blender-3.1.0-linux-x64/3.1/python/bin``, install pip_::
+On Linux and MacOS, go to your Blender python directory, e.g. ``blender-3.4.0-linux-x64/3.4/python/bin``, install pip_::
     
     $ ./python3.10 -m ensurepip
     $ ./python3.10 -m pip install --upgrade pip
@@ -22,7 +22,7 @@ Install batoms inside Blender
 
 - Download the latest version (`beautiful-atoms.zip <https://github.com/beautiful-atoms/beautiful-atoms/archive/refs/heads/main.zip>`__).
 
-- Extract the file, move the folder ``batoms`` to Blender addons folder ``$HOME/.config/blender/3.1/scripts/addons/``. 
+- Extract the file, move the folder ``batoms`` to Blender addons folder ``$HOME/.config/blender/3.4/scripts/addons/``. 
 
 - Enable the addon in the Preferences setting. Please open a Blender Python console, and run the following code to enable the batoms::
 
