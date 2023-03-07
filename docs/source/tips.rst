@@ -70,3 +70,19 @@ Python
 
     export BLENDER_COMMAND='blender --python-use-system-env'
 
+
+Troubleshooting during installation
+==============
+
+Here are our advices to some of the issues (albeit rare) you may encounter during the setup:
+
+1. Error: `ImportError: /usr/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.30' not found`
+
+Newer versions of `scipy` and `numpy` distributed by conda-forge are compiled using 
+gcc-toolchain and requires the up-to-date dynamic library to run them. You may specify the 
+`LD_LIBRARY_PATH` to let Blender know where to find these libraries instead of your system's default:
+
+```bash
+export LD_LIBRARY_PATH=$CONDA_DIR/lib:$LD_LIBRARY_PATH
+```
+

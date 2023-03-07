@@ -5,7 +5,9 @@ Installation
 ============
 
 .. Caution::
-   The latest version only support Blender version >= 3.4.
+   The latest version only support Blender version >= 3.4. 
+   If for some reason you need to use Blender version 3.0 -- 3.2, 
+   please check out the source code beautiful-atoms to `blender-3.2` branch first.
 
 
 Requirements
