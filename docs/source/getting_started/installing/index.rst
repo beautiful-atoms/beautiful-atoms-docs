@@ -130,7 +130,7 @@ The detailed steps are slightly per operation system:
             :: suggested for a beginner of Blender. However, if you want to keep
             :: your own startup and preferences of Blender, please remove these 
             :: options.
-            python install.py --use-pip --use-startup --use-preferences
+            python install.py --use-startup --use-preferences
 
         .. warning::
             Do not run ``install.py`` in a Windows Subsystem for Linux (WSL) environment 
@@ -152,13 +152,10 @@ The detailed steps are slightly per operation system:
 
                 python install.py %UserProfile%\Blender\3.4
 
-            - You may need Visual Studio C++ Build Tools for building ``openbabel`` & ``spglib``,
+            - You may need Visual Studio C++ Build Tools for building ``openbabel``,
               check the `tutorial <https://www.scivision.dev/python-windows-visual-c-14-required/>`_ for details
-              (requires ~4 GiB disk space).
-            - Without the build tools, 
-              ``install.py`` will try its best to fetch a compatible ``spglib`` version from ``conda-forge`` so that most
-              of Beautiful Atoms' functionalities are usable. 
-              Note in this case openbabel utilities (e.g. adding SMILES) will be disabled.
+              (requires ~4 GiB disk space). Without the build tools, the openbabel utilities (e.g. adding SMILES) 
+              will be disabled.
 
 You can check the usage of ``install.py`` by:
 
@@ -167,7 +164,9 @@ You can check the usage of ``install.py`` by:
     python install.py --help
    
 There are several useful options in ``install.py``. For example, if you're developing the source code for ``batoms``, adding ``--develop`` option 
-to the installation process makes a symlink between your local code and the blender plugin folder and keeps the plugin up-to-date.
+to the installation process makes a symlink between your local code and the blender plugin folder and keeps the plugin up-to-date. 
+You can also run `python install.py --dry-run [options]` to get a preview of what steps will the installer
+perform and which files will be changed.
 
 Uninstallation
 ------------
