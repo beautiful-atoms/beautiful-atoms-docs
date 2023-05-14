@@ -15,7 +15,12 @@ Viewpoint
 
 The ``viewport`` keyword is used to set the direction of camera. By default, the camera will look at the center of a Batoms object from the viewport direction.
 
->>> h2o.render.viewport = [0, 0, 1] 
+>>> h2o.render.viewport = [0, 0, 1]
+>>> # from b axis of Au (111) surface
+>>> au111.render.viewport = au111.cell[1]
+>>> # Look at any surface with the Miller index (hkl)
+>>> import numpy as np
+>>> au111.render.viewport = np.dot([h, k, l], au111.cell)
 
 
 .. list-table::
