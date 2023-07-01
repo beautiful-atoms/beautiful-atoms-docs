@@ -11,7 +11,10 @@ Welcome to Beautiful Atoms 2.2.0's documentation!
 Beautiful Atoms is a Python package for creating, editing and rendering atoms and molecules structures using Blender. A Python interface that allows for automating workflows.
 
 .. Caution::
-   The latest version only support Blender version >= 3.4.
+   The latest version only supports Blender version >= 3.4.
+
+.. note::
+   Need help? Please can ask questions at: https://groups.google.com/g/beautiful-atoms
 
 Getting Started
 ==================
