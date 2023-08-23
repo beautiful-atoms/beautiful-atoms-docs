@@ -18,6 +18,7 @@ Tutorials
    label
    species
    highlight
+   hide_atoms
    occupancy
    ribbon
    molecular_surface
