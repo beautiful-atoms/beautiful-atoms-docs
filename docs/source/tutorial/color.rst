@@ -37,6 +37,29 @@ Make transparency for ``H`` atoms by setting ``Alpha`` value ``< 1``:
    :width: 5cm
 
 
+Color by attributes
+===================
+It is usefull to color atoms by their attributes (e.g. positions, charges). For example, one can color atoms by their z coordinate:
+
+
+.. code-block:: python
+
+   from ase.build import bulk
+   from batoms import Batoms
+   import numpy as np
+   au = bulk("Au", cubic=True)*[5, 5, 5]
+   au = Batoms(label = "au", from_ase = au)
+   # add z coordinate as a new attribute, normalized it to [0, 1]
+   z = au.positions[:, 2]
+   au.set_attributes({"z_coor": (z-np.min(z))/(np.max(z)-np.min(z)) })
+   # color atoms by their z coordinate
+   au.species.color_by_attribute("z_coor")
+   au.get_image(viewport = [1, 0, 0], output = "color_by_z_coordinate.png")
+
+.. image:: /images/color_by_z_coordinate.png
+   :width: 5cm
+
+
 Bond
 ===================
 
