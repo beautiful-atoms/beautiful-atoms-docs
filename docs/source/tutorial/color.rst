@@ -39,7 +39,7 @@ Make transparency for ``H`` atoms by setting ``Alpha`` value ``< 1``:
 
 Color by attributes
 ===================
-It is usefull to color atoms by their attributes (e.g. positions, charges). For example, one can color atoms by their z coordinate:
+It is useful to color atoms by their attributes (e.g. positions, charges). For example, one can color atoms by their z coordinate:
 
 
 .. code-block:: python

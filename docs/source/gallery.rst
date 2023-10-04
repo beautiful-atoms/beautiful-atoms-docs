@@ -180,6 +180,16 @@ Protein
 
 :download:`gallery_molecular_surface.py <_static/scripts/gallery_molecular_surface.py>`
 
+Color by attribute
+=======================
+
+.. image:: /images/color_by_attribute.png
+   :width: 10cm
+
+:download:`color_by_attribute.py <_static/scripts/color_by_attribute.py.py>`
+
+
+
 Animation
 ============
 
