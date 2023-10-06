@@ -18,6 +18,7 @@ Tutorials
    label
    species
    highlight
+   look_at
    hide_atoms
    occupancy
    ribbon

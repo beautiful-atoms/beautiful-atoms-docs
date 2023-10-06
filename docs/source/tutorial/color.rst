@@ -59,6 +59,21 @@ It is useful to color atoms by their attributes (e.g. positions, charges). For e
 .. image:: /images/color_by_z_coordinate.png
    :width: 5cm
 
+One can select the color map by setting the parameters `cmap`, which uses the color map from matplotlib. e.g.
+
+.. code-block:: python
+
+   au.species.color_by_attribute("charges", cmap = "plasma")
+
+
+Random color
+-----------------
+
+.. code-block:: python
+
+   # add random values as a attribute
+   au.set_attributes({"random_coor": np.random.random(len(au)) })
+   au.species.color_by_attribute("random_coor")
 
 Bond
 ===================
