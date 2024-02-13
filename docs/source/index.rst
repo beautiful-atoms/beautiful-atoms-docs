@@ -16,6 +16,11 @@ Beautiful Atoms is a Python package for creating, editing and rendering atoms an
 .. note::
    Need help? Please can ask questions at: https://groups.google.com/g/beautiful-atoms
 
+
+.. note::
+   View and edit structure in Jupyter Notebook? You can use weas-widget_
+
+
 Getting Started
 ==================
 
@@ -157,3 +162,6 @@ Sections
 * :ref:`modindex`
 * :ref:`search`
 
+
+
+.. _weas-widget: https://github.com/superstar54/weas-widget
