@@ -87,6 +87,7 @@ To build up hydrogen bond for ``X-H -- Y``. Set the minimum and maximum distance
 
 >>> h2o.bond.settings[("H", "O")].min = 2.0
 >>> h2o.bond.settings[("H", "O")].max = 3.0
+>>> h2o.bond.show_hydrogen_bond = True
 
 .. image:: /images/hydrogen-bond.png
    :width: 5cm
